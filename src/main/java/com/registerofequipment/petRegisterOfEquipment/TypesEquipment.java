@@ -10,15 +10,19 @@ public class TypesEquipment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "fridge")
-    @JoinColumn()
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fridge_id")
     private Fridge fridge;
-    @Column(name = "hoover")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "hoover_id")
     private Hoover hoover;
-    @Column(name = "personal_computer")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "personal_computer_id")
     private PersonalComputer personalComputer;
-    @Column(name = "smartphone")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "smartphone_id")
     private Smartphone smartphone;
-    @Column(name = "television")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "television_id")
     private Television television;
 }

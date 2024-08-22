@@ -1,8 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
@@ -10,6 +8,9 @@ import java.util.Objects;
 @Table(name = "television_tech")
 public class Television {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     @Column(name = "category_tv")
     private String category;
     @Column(name = "technology_tv")

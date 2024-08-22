@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegistryController {
 
     @Autowired
-    EquipmentService equipmentService;
+    private EquipmentService equipmentService;
 
     public ResponseEntity<EquipmentDto> addPosition(EquipmentDto equipmentDto){
         EquipmentDto localEquipment = equipmentService.createPosition(equipmentDto);

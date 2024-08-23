@@ -16,7 +16,7 @@ public class Equipment {
     @Column(name = "name_type_technic")
     @Enumerated(EnumType.STRING)
     private TypeEquipmentEnum nameTypeTechnic; //TV
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "types_equipment_id")
     private Model modelDetails;
     @Column(name = "manufacturer_country")

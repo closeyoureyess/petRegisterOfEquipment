@@ -44,24 +44,28 @@ public class EquipmentMapper {
         return equipmentDto;
     }
 
-    public List<Equipment> transferEquipmentDtoListToEquipment(List<EquipmentDto> equipmentDtoList){
+    public List<Equipment> transferEquipmentDtoListToEquipment(List<EquipmentDto> equipmentDtoList) {
         List<Equipment> equipmentList = new LinkedList<>();
-        for (int i = 0; i < equipmentDtoList.size(); i++) {
-            equipmentList.add(new Equipment(equipmentDtoList.get(i).getId(), equipmentDtoList.get(i).getNameTypeTechnic(),
-                    modelMapper.convertDtoToModel(equipmentDtoList.get(i).getModelDtoDetails()), equipmentDtoList.get(i).getManufacturerCountry(),
-                    equipmentDtoList.get(i).getManufacturerCompany(), equipmentDtoList.get(i).getIsOrderOnline(),
-                    equipmentDtoList.get(i).getIsPossibilityInstallments(), null));
+        if (equipmentDtoList != null) {
+            for (int i = 0; i < equipmentDtoList.size(); i++) {
+                equipmentList.add(new Equipment(equipmentDtoList.get(i).getId(), equipmentDtoList.get(i).getNameTypeTechnic(),
+                        modelMapper.convertDtoToModel(equipmentDtoList.get(i).getModelDtoDetails()), equipmentDtoList.get(i).getManufacturerCountry(),
+                        equipmentDtoList.get(i).getManufacturerCompany(), equipmentDtoList.get(i).getIsOrderOnline(),
+                        equipmentDtoList.get(i).getIsPossibilityInstallments(), null));
+            }
         }
         return equipmentList;
     }
 
-    public List<EquipmentDto> transferEquipmentToEquipmentDtoList(List<Equipment> equipmentlList){
+    public List<EquipmentDto> transferEquipmentToEquipmentDtoList(List<Equipment> equipmentlList) {
         List<EquipmentDto> equipmentDtoList = new LinkedList<>();
-        for (int i = 0; i < equipmentlList.size(); i++) {
-            equipmentDtoList.add(new EquipmentDto(equipmentlList.get(i).getId(), equipmentlList.get(i).getNameTypeTechnic(),
-                    modelMapper.convertModelToDto(equipmentlList.get(i).getModelDetails()), equipmentlList.get(i).getManufacturerCountry(),
-                    equipmentlList.get(i).getManufacturerCompany(), equipmentlList.get(i).getIsOrderOnline(),
-                    equipmentlList.get(i).getIsPossibilityInstallments(), null));
+        if (equipmentlList != null) {
+            for (int i = 0; i < equipmentlList.size(); i++) {
+                equipmentDtoList.add(new EquipmentDto(equipmentlList.get(i).getId(), equipmentlList.get(i).getNameTypeTechnic(),
+                        modelMapper.convertModelToDto(equipmentlList.get(i).getModelDetails()), equipmentlList.get(i).getManufacturerCountry(),
+                        equipmentlList.get(i).getManufacturerCompany(), equipmentlList.get(i).getIsOrderOnline(),
+                        equipmentlList.get(i).getIsPossibilityInstallments(), null));
+            }
         }
         return equipmentDtoList;
     }

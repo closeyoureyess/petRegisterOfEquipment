@@ -14,7 +14,7 @@ public class Model {
     private Integer id;
     @Column(name = "unique_name_device")
     private String nameDevice;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "types_equipment_id")
     private TypesEquipment typesEquipment;
     @Column(name = "serial_number")

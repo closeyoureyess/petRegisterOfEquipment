@@ -16,7 +16,7 @@ public class ModelMapper {
     @Autowired
     private TypesEquipmentMapper typesEquipmentMapper;
 
-    public Model convertDtoToModel(ModelDto modelDto){
+    public Model convertDtoToModel(ModelDto modelDto) {
         Model model = new Model();
         if (modelDto != null) {
             model.setId(modelDto.getId());
@@ -31,9 +31,9 @@ public class ModelMapper {
         return model;
     }
 
-    public ModelDto convertModelToDto(Model model){
+    public ModelDto convertModelToDto(Model model) {
         ModelDto modelDto = new ModelDto();
-        if (model != null){
+        if (model != null) {
             modelDto.setId(model.getId());
             modelDto.setNameDevice(model.getNameDevice());
             modelDto.setTypesEquipmentDto(typesEquipmentMapper.convertTypesEquipmentToDto(model.getTypesEquipment()));
@@ -46,24 +46,28 @@ public class ModelMapper {
         return modelDto;
     }
 
-    public List<Model> transferModelDtoListToModel(List<ModelDto> modelDtoList){
+    public List<Model> transferModelDtoListToModel(List<ModelDto> modelDtoList) {
         List<Model> modelList = new LinkedList<>();
-        for (int i = 0; i < modelList.size(); i++) {
-            modelList.add(new Model(modelDtoList.get(i).getId(), modelDtoList.get(i).getNameDevice(),
-                    typesEquipmentMapper.convertDtoToTypesEquipment(modelDtoList.get(i).getTypesEquipmentDto()), modelDtoList.get(i).getSerialNumber(),
-                    modelDtoList.get(i).getColor(), modelDtoList.get(i).getSize(), modelDtoList.get(i).getPrice(), modelDtoList.get(i).getIsAvailability(),
-                    null));
+        if (modelDtoList != null) {
+            for (int i = 0; i < modelList.size(); i++) {
+                modelList.add(new Model(modelDtoList.get(i).getId(), modelDtoList.get(i).getNameDevice(),
+                        typesEquipmentMapper.convertDtoToTypesEquipment(modelDtoList.get(i).getTypesEquipmentDto()), modelDtoList.get(i).getSerialNumber(),
+                        modelDtoList.get(i).getColor(), modelDtoList.get(i).getSize(), modelDtoList.get(i).getPrice(), modelDtoList.get(i).getIsAvailability(),
+                        null));
+            }
         }
         return modelList;
     }
 
-    public List<ModelDto> transferModelToModelDtoList(List<Model> modelList){
+    public List<ModelDto> transferModelToModelDtoList(List<Model> modelList) {
         List<ModelDto> modelDtoList = new LinkedList<>();
-        for (int i = 0; i < modelList.size(); i++) {
-            modelDtoList.add(new ModelDto(modelList.get(i).getId(), modelList.get(i).getNameDevice(),
-                    typesEquipmentMapper.convertTypesEquipmentToDto(modelList.get(i).getTypesEquipment()), modelList.get(i).getSerialNumber(),
-                    modelList.get(i).getColor(), modelList.get(i).getSize(), modelList.get(i).getPrice(), modelList.get(i).getIsAvailability(),
-                    null));
+        if (modelList != null) {
+            for (int i = 0; i < modelList.size(); i++) {
+                modelDtoList.add(new ModelDto(modelList.get(i).getId(), modelList.get(i).getNameDevice(),
+                        typesEquipmentMapper.convertTypesEquipmentToDto(modelList.get(i).getTypesEquipment()), modelList.get(i).getSerialNumber(),
+                        modelList.get(i).getColor(), modelList.get(i).getSize(), modelList.get(i).getPrice(), modelList.get(i).getIsAvailability(),
+                        null));
+            }
         }
         return modelDtoList;
     }

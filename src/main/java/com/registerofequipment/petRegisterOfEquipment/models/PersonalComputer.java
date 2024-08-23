@@ -21,6 +21,20 @@ public class PersonalComputer {
         this.category = category;
     }
 
+    public PersonalComputer(Integer id, String typeProcessor) {
+        this.id = id;
+        this.typeProcessor = typeProcessor;
+    }
+
+    public PersonalComputer(String typeProcessor, String category) {
+        this.typeProcessor = typeProcessor;
+        this.category = category;
+    }
+
+    public PersonalComputer(Integer id) {
+        this.id = id;
+    }
+
     public PersonalComputer(){
 
     }

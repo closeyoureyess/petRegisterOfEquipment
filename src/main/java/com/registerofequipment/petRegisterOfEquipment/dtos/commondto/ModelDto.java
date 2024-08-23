@@ -32,6 +32,18 @@ public class ModelDto implements Serializable {
         this.equipmentListDto = equipmentListDto;
     }
 
+    public ModelDto(Integer id, String nameDevice, TypesEquipmentDto typesEquipmentDto, Integer serialNumber, ColorEquipment color, Integer size,
+                    Integer price, boolean isAvailability) {
+        this.id = id;
+        this.nameDevice = nameDevice;
+        this.typesEquipmentDto = typesEquipmentDto;
+        this.serialNumber = serialNumber;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.isAvailability = isAvailability;
+    }
+
     public ModelDto(){
 
     }

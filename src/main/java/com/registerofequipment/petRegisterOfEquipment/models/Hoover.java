@@ -23,6 +23,15 @@ public class Hoover {
         this.countsRegime = countsRegime;
     }
 
+    public Hoover(Integer id, Integer sizeDustCollect) {
+        this.id = id;
+        this.sizeDustCollect = sizeDustCollect;
+    }
+
+    public Hoover(Integer id) {
+        this.id = id;
+    }
+
     public Hoover(){
 
     }

@@ -29,6 +29,17 @@ public class EquipmentDto implements Serializable {
         this.modelsAvailabilityDto = modelsAvailabilityDto;
     }
 
+    public EquipmentDto(Integer id, TypeEquipmentEnum nameTypeTechnic, ModelDto modelDtoDetails, String manufacturerCountry,
+                        String manufacturerCompany, boolean isOrderOnline, boolean isPossibilityInstallments) {
+        this.id = id;
+        this.nameTypeTechnic = nameTypeTechnic;
+        this.modelDtoDetails = modelDtoDetails;
+        this.manufacturerCountry = manufacturerCountry;
+        this.manufacturerCompany = manufacturerCompany;
+        this.isOrderOnline = isOrderOnline;
+        this.isPossibilityInstallments = isPossibilityInstallments;
+    }
+
     public EquipmentDto(){
 
     }

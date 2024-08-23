@@ -44,6 +44,18 @@ public class Model {
         this.equipmentList = equipmentList;
     }
 
+    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Integer serialNumber, ColorEquipment color, Integer size,
+                 Integer price, boolean isAvailability) {
+        this.id = id;
+        this.nameDevice = nameDevice;
+        this.typesEquipment = typesEquipment;
+        this.serialNumber = serialNumber;
+        this.color = color;
+        this.size = size;
+        this.price = price;
+        this.isAvailability = isAvailability;
+    }
+
     public Model(){
 
     }

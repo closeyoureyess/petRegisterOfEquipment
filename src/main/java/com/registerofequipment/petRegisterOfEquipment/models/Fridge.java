@@ -20,6 +20,20 @@ public class Fridge {
         this.typeCompressor = typeCompressor;
     }
 
+    public Fridge(Integer id, Integer countsDoor){
+        this.id = id;
+        this.countsDoor = countsDoor;
+    }
+
+    public Fridge(Integer countsDoor, String typeCompressor){
+        this.countsDoor = countsDoor;
+        this.typeCompressor = typeCompressor;
+    }
+
+    public Fridge(Integer id){
+        this.id = id;
+    }
+
     public Fridge(){
 
     }

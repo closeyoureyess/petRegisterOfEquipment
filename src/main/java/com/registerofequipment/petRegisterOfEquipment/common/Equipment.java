@@ -42,7 +42,18 @@ public class Equipment {
         this.modelsAvailability = modelsAvailability;
     }
 
-    public Equipment(){
+    public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, Model modelDetails, String manufacturerCountry,
+                     String manufacturerCompany, boolean isOrderOnline, boolean isPossibilityInstallments) {
+        this.id = id;
+        this.nameTypeTechnic = nameTypeTechnic;
+        this.modelDetails = modelDetails;
+        this.manufacturerCountry = manufacturerCountry;
+        this.manufacturerCompany = manufacturerCompany;
+        this.isOrderOnline = isOrderOnline;
+        this.isPossibilityInstallments = isPossibilityInstallments;
+    }
+
+    public Equipment() {
 
     }
 

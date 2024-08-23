@@ -26,6 +26,7 @@ public class EquipmentMapper {
             equipment.setManufacturerCompany(equipmentDto.getManufacturerCompany());
             equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
             equipment.setIsPossibilityInstallments(equipmentDto.getIsPossibilityInstallments());
+            equipment.setModelsAvailability(modelMapper.transferModelDtoListToModel(equipmentDto.getModelsAvailabilityDto()));
         }
         return equipment;
     }
@@ -33,13 +34,14 @@ public class EquipmentMapper {
     public EquipmentDto convertEquipmentToDto(Equipment equipment) {
         EquipmentDto equipmentDto = new EquipmentDto();
         if (equipment != null) {
-            equipmentDto.setId(equipmentDto.getId());
+            equipmentDto.setId(equipment.getId());
             equipmentDto.setNameTypeTechnic(equipment.getNameTypeTechnic());
             equipmentDto.setModelDtoDetails(modelMapper.convertModelToDto(equipment.getModelDetails()));
             equipmentDto.setManufacturerCountry(equipment.getManufacturerCountry());
             equipmentDto.setManufacturerCompany(equipment.getManufacturerCompany());
             equipmentDto.setIsOrderOnline(equipment.getIsOrderOnline());
             equipmentDto.setIsPossibilityInstallments(equipment.getIsPossibilityInstallments());
+            equipmentDto.setModelsAvailabilityDto(modelMapper.transferModelToModelDtoList(equipment.getModelsAvailability()));
         }
         return equipmentDto;
     }
@@ -51,7 +53,7 @@ public class EquipmentMapper {
                 equipmentList.add(new Equipment(equipmentDtoList.get(i).getId(), equipmentDtoList.get(i).getNameTypeTechnic(),
                         modelMapper.convertDtoToModel(equipmentDtoList.get(i).getModelDtoDetails()), equipmentDtoList.get(i).getManufacturerCountry(),
                         equipmentDtoList.get(i).getManufacturerCompany(), equipmentDtoList.get(i).getIsOrderOnline(),
-                        equipmentDtoList.get(i).getIsPossibilityInstallments(), null));
+                        equipmentDtoList.get(i).getIsPossibilityInstallments()));
             }
         }
         return equipmentList;
@@ -64,7 +66,7 @@ public class EquipmentMapper {
                 equipmentDtoList.add(new EquipmentDto(equipmentlList.get(i).getId(), equipmentlList.get(i).getNameTypeTechnic(),
                         modelMapper.convertModelToDto(equipmentlList.get(i).getModelDetails()), equipmentlList.get(i).getManufacturerCountry(),
                         equipmentlList.get(i).getManufacturerCompany(), equipmentlList.get(i).getIsOrderOnline(),
-                        equipmentlList.get(i).getIsPossibilityInstallments(), null));
+                        equipmentlList.get(i).getIsPossibilityInstallments()));
             }
         }
         return equipmentDtoList;

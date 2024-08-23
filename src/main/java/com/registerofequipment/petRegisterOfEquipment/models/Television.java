@@ -22,6 +22,20 @@ public class Television {
         this.technology = technology;
     }
 
+    public Television(Integer id, String category) {
+        this.id = id;
+        this.category = category;
+    }
+
+    public Television(String category, String technology) {
+        this.category = category;
+        this.technology = technology;
+    }
+
+    public Television(Integer id) {
+        this.id = id;
+    }
+
     public Television(){
 
     }

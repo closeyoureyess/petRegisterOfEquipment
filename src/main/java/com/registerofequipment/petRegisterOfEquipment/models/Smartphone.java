@@ -20,6 +20,16 @@ public class Smartphone {
         this.countsSnaps = countsSnaps;
     }
 
+    public Smartphone(Integer id, Integer memoryPhone) {
+        this.id = id;
+        this.memoryPhone = memoryPhone;
+    }
+
+    public Smartphone(Integer id) {
+        this.id = id;
+
+    }
+
     public Smartphone(){
 
     }

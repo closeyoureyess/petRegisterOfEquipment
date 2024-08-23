@@ -86,19 +86,19 @@ public class Equipment {
         this.manufacturerCompany = manufacturerCompany;
     }
 
-    public boolean isOrderOnline() {
+    public boolean getIsOrderOnline() {
         return isOrderOnline;
     }
 
-    public void setOrderOnline(boolean orderOnline) {
+    public void setIsOrderOnline(boolean orderOnline) {
         isOrderOnline = orderOnline;
     }
 
-    public boolean isPossibilityInstallments() {
+    public boolean getIsPossibilityInstallments() {
         return isPossibilityInstallments;
     }
 
-    public void setPossibilityInstallments(boolean possibilityInstallments) {
+    public void setIsPossibilityInstallments(boolean possibilityInstallments) {
         isPossibilityInstallments = possibilityInstallments;
     }
 

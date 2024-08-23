@@ -1,6 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.dtos;
 
-import com.registerofequipment.petRegisterOfEquipment.models.*;
+import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.*;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -8,20 +8,19 @@ import java.util.Objects;
 public class TypesEquipmentDto implements Serializable {
 
     private Integer id;
-    private Fridge fridge;
-    private Hoover hoover;
-    private PersonalComputer personalComputer;
-    private Smartphone smartphone;
-    private Television television;
+    private FridgeDto fridgeDto;
+    private HooverDto hooverDto;
+    private PersonalComputerDto personalComputerDto;
+    private SmartphoneDto smartphoneDto;
+    private TelevisionDto televisionDto;
 
-    public TypesEquipmentDto(Integer id, Fridge fridge, Hoover hoover, PersonalComputer personalComputer, Smartphone smartphone,
-                             Television television) {
+    public TypesEquipmentDto(Integer id, FridgeDto fridgeDto, HooverDto hooverDto, PersonalComputerDto personalComputerDto, SmartphoneDto smartphoneDto, TelevisionDto televisionDto) {
         this.id = id;
-        this.fridge = fridge;
-        this.hoover = hoover;
-        this.personalComputer = personalComputer;
-        this.smartphone = smartphone;
-        this.television = television;
+        this.fridgeDto = fridgeDto;
+        this.hooverDto = hooverDto;
+        this.personalComputerDto = personalComputerDto;
+        this.smartphoneDto = smartphoneDto;
+        this.televisionDto = televisionDto;
     }
 
     public TypesEquipmentDto(){
@@ -36,44 +35,44 @@ public class TypesEquipmentDto implements Serializable {
         this.id = id;
     }
 
-    public Fridge getFridge() {
-        return fridge;
+    public FridgeDto getFridgeDto() {
+        return fridgeDto;
     }
 
-    public void setFridge(Fridge fridge) {
-        this.fridge = fridge;
+    public void setFridgeDto(FridgeDto fridgeDto) {
+        this.fridgeDto = fridgeDto;
     }
 
-    public Hoover getHoover() {
-        return hoover;
+    public HooverDto getHooverDto() {
+        return hooverDto;
     }
 
-    public void setHoover(Hoover hoover) {
-        this.hoover = hoover;
+    public void setHooverDto(HooverDto hooverDto) {
+        this.hooverDto = hooverDto;
     }
 
-    public PersonalComputer getPersonalComputer() {
-        return personalComputer;
+    public PersonalComputerDto getPersonalComputerDto() {
+        return personalComputerDto;
     }
 
-    public void setPersonalComputer(PersonalComputer personalComputer) {
-        this.personalComputer = personalComputer;
+    public void setPersonalComputerDto(PersonalComputerDto personalComputerDto) {
+        this.personalComputerDto = personalComputerDto;
     }
 
-    public Smartphone getSmartphone() {
-        return smartphone;
+    public SmartphoneDto getSmartphoneDto() {
+        return smartphoneDto;
     }
 
-    public void setSmartphone(Smartphone smartphone) {
-        this.smartphone = smartphone;
+    public void setSmartphoneDto(SmartphoneDto smartphoneDto) {
+        this.smartphoneDto = smartphoneDto;
     }
 
-    public Television getTelevision() {
-        return television;
+    public TelevisionDto getTelevisionDto() {
+        return televisionDto;
     }
 
-    public void setTelevision(Television television) {
-        this.television = television;
+    public void setTelevisionDto(TelevisionDto televisionDto) {
+        this.televisionDto = televisionDto;
     }
 
     @Override
@@ -81,13 +80,11 @@ public class TypesEquipmentDto implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TypesEquipmentDto that = (TypesEquipmentDto) o;
-        return Objects.equals(id, that.id) && Objects.equals(fridge, that.fridge) && Objects.equals(hoover, that.hoover)
-                && Objects.equals(personalComputer, that.personalComputer) && Objects.equals(smartphone, that.smartphone)
-                && Objects.equals(television, that.television);
+        return Objects.equals(id, that.id) && Objects.equals(fridgeDto, that.fridgeDto) && Objects.equals(hooverDto, that.hooverDto) && Objects.equals(personalComputerDto, that.personalComputerDto) && Objects.equals(smartphoneDto, that.smartphoneDto) && Objects.equals(televisionDto, that.televisionDto);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, fridge, hoover, personalComputer, smartphone, television);
+        return Objects.hash(id, fridgeDto, hooverDto, personalComputerDto, smartphoneDto, televisionDto);
     }
 }

@@ -1,7 +1,5 @@
 package com.registerofequipment.petRegisterOfEquipment.dtos.commondto;
 
-import com.registerofequipment.petRegisterOfEquipment.TypesEquipment;
-import com.registerofequipment.petRegisterOfEquipment.common.Model;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 
 import java.io.Serializable;
@@ -12,23 +10,23 @@ public class EquipmentDto implements Serializable {
 
     private Integer id;
     private TypeEquipmentEnum nameTypeTechnic; //TV
-    private Model modelDetails;
+    private ModelDto modelDtoDetails;
     private String manufacturerCountry; // Russia
     private String manufacturerCompany; // IBS
     private boolean isOrderOnline; // true
     private boolean isPossibilityInstallments; // true
-    private List<Model> modelsAvailability; //
+    private List<ModelDto> modelsAvailabilityDto; //
 
-    public EquipmentDto(Integer id, TypeEquipmentEnum nameTypeTechnic, Model modelDetails, String manufacturerCountry,
-                        String manufacturerCompany, boolean isOrderOnline, boolean isPossibilityInstallments, List<Model> modelsAvailability) {
+    public EquipmentDto(Integer id, TypeEquipmentEnum nameTypeTechnic, ModelDto modelDtoDetails, String manufacturerCountry,
+                        String manufacturerCompany, boolean isOrderOnline, boolean isPossibilityInstallments, List<ModelDto> modelsAvailabilityDto) {
         this.id = id;
         this.nameTypeTechnic = nameTypeTechnic;
-        this.modelDetails = modelDetails;
+        this.modelDtoDetails = modelDtoDetails;
         this.manufacturerCountry = manufacturerCountry;
         this.manufacturerCompany = manufacturerCompany;
         this.isOrderOnline = isOrderOnline;
         this.isPossibilityInstallments = isPossibilityInstallments;
-        this.modelsAvailability = modelsAvailability;
+        this.modelsAvailabilityDto = modelsAvailabilityDto;
     }
 
     public EquipmentDto(){
@@ -51,12 +49,12 @@ public class EquipmentDto implements Serializable {
         this.nameTypeTechnic = nameTypeTechnic;
     }
 
-    public Model getModelDetails() {
-        return modelDetails;
+    public ModelDto getModelDtoDetails() {
+        return modelDtoDetails;
     }
 
-    public void setModelDetails(Model modelDetails) {
-        this.modelDetails = modelDetails;
+    public void setModelDtoDetails(ModelDto modelDtoDetails) {
+        this.modelDtoDetails = modelDtoDetails;
     }
 
     public String getManufacturerCountry() {
@@ -75,28 +73,28 @@ public class EquipmentDto implements Serializable {
         this.manufacturerCompany = manufacturerCompany;
     }
 
-    public boolean isOrderOnline() {
+    public boolean getIsOrderOnline() {
         return isOrderOnline;
     }
 
-    public void setOrderOnline(boolean orderOnline) {
+    public void setIsOrderOnline(boolean orderOnline) {
         isOrderOnline = orderOnline;
     }
 
-    public boolean isPossibilityInstallments() {
+    public boolean getIsPossibilityInstallments() {
         return isPossibilityInstallments;
     }
 
-    public void setPossibilityInstallments(boolean possibilityInstallments) {
+    public void setIsPossibilityInstallments(boolean possibilityInstallments) {
         isPossibilityInstallments = possibilityInstallments;
     }
 
-    public List<Model> getModelsAvailability() {
-        return modelsAvailability;
+    public List<ModelDto> getModelsAvailabilityDto() {
+        return modelsAvailabilityDto;
     }
 
-    public void setModelsAvailability(List<Model> modelsAvailability) {
-        this.modelsAvailability = modelsAvailability;
+    public void setModelsAvailabilityDto(List<ModelDto> modelsAvailabilityDto) {
+        this.modelsAvailabilityDto = modelsAvailabilityDto;
     }
 
     @Override
@@ -105,14 +103,14 @@ public class EquipmentDto implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         EquipmentDto that = (EquipmentDto) o;
         return isOrderOnline == that.isOrderOnline && isPossibilityInstallments == that.isPossibilityInstallments && Objects.equals(id, that.id)
-                && nameTypeTechnic == that.nameTypeTechnic && Objects.equals(modelDetails, that.modelDetails)
+                && nameTypeTechnic == that.nameTypeTechnic && Objects.equals(modelDtoDetails, that.modelDtoDetails)
                 && Objects.equals(manufacturerCountry, that.manufacturerCountry) && Objects.equals(manufacturerCompany, that.manufacturerCompany)
-                && Objects.equals(modelsAvailability, that.modelsAvailability);
+                && Objects.equals(modelsAvailabilityDto, that.modelsAvailabilityDto);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nameTypeTechnic, modelDetails, manufacturerCountry, manufacturerCompany, isOrderOnline, isPossibilityInstallments,
-                modelsAvailability);
+        return Objects.hash(id, nameTypeTechnic, modelDtoDetails, manufacturerCountry, manufacturerCompany, isOrderOnline, isPossibilityInstallments,
+                modelsAvailabilityDto);
     }
 }

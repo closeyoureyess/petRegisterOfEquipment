@@ -1,7 +1,7 @@
 package com.registerofequipment.petRegisterOfEquipment.dtos.commondto;
 
-import com.registerofequipment.petRegisterOfEquipment.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
+import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 
 import java.io.Serializable;
@@ -11,24 +11,25 @@ public class ModelDto implements Serializable {
 
     private Integer id;
     private String nameDevice;
-    private TypesEquipment typesEquipment;
+    private TypesEquipmentDto typesEquipmentDto;
     private Integer serialNumber;
     private ColorEquipment color;
     private Integer size;
     private Integer price;
     private boolean isAvailability;
-    private List<Equipment> equipmentList;
+    private List<EquipmentDto> equipmentListDto;
 
-    public ModelDto(Integer id, String nameDevice, TypesEquipment typesEquipment, Integer serialNumber, ColorEquipment color, Integer size, Integer price, boolean isAvailability, List<Equipment> equipmentList) {
+    public ModelDto(Integer id, String nameDevice, TypesEquipmentDto typesEquipmentDto, Integer serialNumber, ColorEquipment color, Integer size,
+                    Integer price, boolean isAvailability, List<EquipmentDto> equipmentListDto) {
         this.id = id;
         this.nameDevice = nameDevice;
-        this.typesEquipment = typesEquipment;
+        this.typesEquipmentDto = typesEquipmentDto;
         this.serialNumber = serialNumber;
         this.color = color;
         this.size = size;
         this.price = price;
         this.isAvailability = isAvailability;
-        this.equipmentList = equipmentList;
+        this.equipmentListDto = equipmentListDto;
     }
 
     public ModelDto(){
@@ -51,12 +52,12 @@ public class ModelDto implements Serializable {
         this.nameDevice = nameDevice;
     }
 
-    public TypesEquipment getTypesEquipment() {
-        return typesEquipment;
+    public TypesEquipmentDto getTypesEquipmentDto() {
+        return typesEquipmentDto;
     }
 
-    public void setTypesEquipment(TypesEquipment typesEquipment) {
-        this.typesEquipment = typesEquipment;
+    public void setTypesEquipmentDto(TypesEquipmentDto typesEquipmentDto) {
+        this.typesEquipmentDto = typesEquipmentDto;
     }
 
     public Integer getSerialNumber() {
@@ -91,7 +92,7 @@ public class ModelDto implements Serializable {
         this.price = price;
     }
 
-    public boolean isAvailability() {
+    public boolean getIsAvailability() {
         return isAvailability;
     }
 
@@ -99,11 +100,11 @@ public class ModelDto implements Serializable {
         isAvailability = availability;
     }
 
-    public List<Equipment> getEquipmentList() {
-        return equipmentList;
+    public List<EquipmentDto> getEquipmentListDto() {
+        return equipmentListDto;
     }
 
-    public void setEquipmentList(List<Equipment> equipmentList) {
-        this.equipmentList = equipmentList;
+    public void setEquipmentListDto(List<EquipmentDto> equipmentListDto) {
+        this.equipmentListDto = equipmentListDto;
     }
 }

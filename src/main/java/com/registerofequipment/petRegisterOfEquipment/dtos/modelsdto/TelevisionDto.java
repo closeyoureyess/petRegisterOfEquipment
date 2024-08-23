@@ -5,24 +5,26 @@ import java.util.Objects;
 
 public class TelevisionDto implements Serializable {
 
+    private Integer id;
     private String category;
     private String technology;
 
-    public TelevisionDto(String category, String technology) {
+    public TelevisionDto(Integer id, String category, String technology) {
+        this.id = id;
         this.category = category;
-        this.technology = technology;
-    }
-
-    public TelevisionDto(String category) {
-        this.category = category;
-    }
-
-    public TelevisionDto(String technology, String... category) {
         this.technology = technology;
     }
 
     public TelevisionDto(){
 
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCategory() {
@@ -46,11 +48,11 @@ public class TelevisionDto implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TelevisionDto that = (TelevisionDto) o;
-        return Objects.equals(category, that.category) && Objects.equals(technology, that.technology);
+        return Objects.equals(id, that.id) && Objects.equals(category, that.category) && Objects.equals(technology, that.technology);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(category, technology);
+        return Objects.hash(id, category, technology);
     }
 }

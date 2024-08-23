@@ -1,6 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.repository;
 
-import com.registerofequipment.petRegisterOfEquipment.TypesEquipment;
+import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

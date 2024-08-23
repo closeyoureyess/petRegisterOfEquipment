@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "personal_computer")
+@Table(name = "personal_computer_tech")
 public class PersonalComputer {
 
     @Id

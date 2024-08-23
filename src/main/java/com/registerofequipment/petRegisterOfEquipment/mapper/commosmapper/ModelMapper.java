@@ -1,0 +1,59 @@
+package com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper;
+
+import com.registerofequipment.petRegisterOfEquipment.common.Model;
+import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.util.LinkedList;
+import java.util.List;
+
+@Component
+public class ModelMapper {
+
+    @Autowired
+    private TypesEquipmentMapper typesEquipmentMapper;
+
+    public Model convertDtoToModel(ModelDto modelDto){
+        Model model = new Model();
+        if (modelDto != null) {
+            model.setId(modelDto.getId());
+            model.setNameDevice(modelDto.getNameDevice());
+            model.setTypesEquipment(typesEquipmentMapper.convertDtoToTypesEquipment(modelDto.getTypesEquipmentDto()));
+            model.setSerialNumber(modelDto.getSerialNumber());
+            model.setColor(modelDto.getColor());
+            model.setSize(modelDto.getSize());
+            model.setPrice(modelDto.getPrice());
+            model.setAvailability(modelDto.getIsAvailability());
+            model.setEquipmentList(modelDto.getEquipmentListDto());
+        }
+        return model;
+    }
+
+    public ModelDto convertModelToDto(Model model){
+        ModelDto modelDto = new ModelDto();
+        if (model != null){
+            modelDto.setId(model.getId());
+            modelDto.setNameDevice(model.getNameDevice());
+            modelDto.setTypesEquipmentDto(typesEquipmentMapper.convertTypesEquipmentToDto(model.getTypesEquipment()));
+            modelDto.setSerialNumber(model.getSerialNumber());
+            modelDto.setColor(model.getColor());
+            modelDto.setSize(model.getSize());
+            modelDto.setPrice(model.getPrice());
+            modelDto.setAvailability(model.getIsAvailability());
+            modelDto.setEquipmentListDto(model.getEquipmentList());
+        }
+        return modelDto;
+    }
+
+    public List<ModelDto> transferModelToModelDtoList(List<Model> modelList){
+        List<ModelDto> modelDtoList = new LinkedList<>();
+        for (int i = 0; i < modelList.size(); i++) {
+            modelDtoList.add(new ModelDto(modelList.get(i).getId(), modelList.get(i).getNameDevice(),
+                    typesEquipmentMapper.convertTypesEquipmentToDto(modelList.get(i).getTypesEquipment()), modelList.get(i).getSerialNumber(),
+                    modelList.get(i).getColor(), modelList.get(i).getSize(), modelList.get(i).getPrice(), modelList.get(i).getIsAvailability(),
+                    modelList.get(i).getEquipmentList()));
+        }
+        return modelDtoList;
+    }
+}

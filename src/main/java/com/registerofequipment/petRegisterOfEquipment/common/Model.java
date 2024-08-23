@@ -1,13 +1,12 @@
 package com.registerofequipment.petRegisterOfEquipment.common;
 
-import com.registerofequipment.petRegisterOfEquipment.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
-@Table(name = "umodel_tech")
+@Table(name = "tmodel_tech")
 public class Model {
 
     @Id
@@ -27,12 +26,13 @@ public class Model {
     private Integer size;
     @Column(name = "price")
     private Integer price;
-    @Column(name = "availability_umodel")
+    @Column(name = "availability_tmodel")
     private boolean isAvailability;
     @ManyToMany(mappedBy = "modelsAvailability", fetch = FetchType.LAZY)
     private List<Equipment> equipmentList;
 
-    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Integer serialNumber, ColorEquipment color, Integer size, Integer price, boolean isAvailability, List<Equipment> equipmentList) {
+    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Integer serialNumber, ColorEquipment color, Integer size,
+                 Integer price, boolean isAvailability, List<Equipment> equipmentList) {
         this.id = id;
         this.nameDevice = nameDevice;
         this.typesEquipment = typesEquipment;
@@ -104,7 +104,7 @@ public class Model {
         this.price = price;
     }
 
-    public boolean isAvailability() {
+    public boolean getIsAvailability() {
         return isAvailability;
     }
 

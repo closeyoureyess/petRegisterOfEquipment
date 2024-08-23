@@ -3,7 +3,7 @@ package com.registerofequipment.petRegisterOfEquipment.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "fridge")
+@Table(name = "fridge_tech")
 public class Fridge {
 
     @Id

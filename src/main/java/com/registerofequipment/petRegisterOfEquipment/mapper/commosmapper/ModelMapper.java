@@ -12,6 +12,8 @@ import java.util.List;
 public class ModelMapper {
 
     @Autowired
+    private ModelMapper modelMapper;
+    @Autowired
     private TypesEquipmentMapper typesEquipmentMapper;
 
     public Model convertDtoToModel(ModelDto modelDto){
@@ -25,7 +27,6 @@ public class ModelMapper {
             model.setSize(modelDto.getSize());
             model.setPrice(modelDto.getPrice());
             model.setAvailability(modelDto.getIsAvailability());
-            model.setEquipmentList(modelDto.getEquipmentListDto());
         }
         return model;
     }
@@ -41,9 +42,19 @@ public class ModelMapper {
             modelDto.setSize(model.getSize());
             modelDto.setPrice(model.getPrice());
             modelDto.setAvailability(model.getIsAvailability());
-            modelDto.setEquipmentListDto(model.getEquipmentList());
         }
         return modelDto;
+    }
+
+    public List<Model> transferModelDtoListToModel(List<ModelDto> modelDtoList){
+        List<Model> modelList = new LinkedList<>();
+        for (int i = 0; i < modelList.size(); i++) {
+            modelList.add(new Model(modelDtoList.get(i).getId(), modelDtoList.get(i).getNameDevice(),
+                    typesEquipmentMapper.convertDtoToTypesEquipment(modelDtoList.get(i).getTypesEquipmentDto()), modelDtoList.get(i).getSerialNumber(),
+                    modelDtoList.get(i).getColor(), modelDtoList.get(i).getSize(), modelDtoList.get(i).getPrice(), modelDtoList.get(i).getIsAvailability(),
+                    null));
+        }
+        return modelList;
     }
 
     public List<ModelDto> transferModelToModelDtoList(List<Model> modelList){
@@ -52,7 +63,7 @@ public class ModelMapper {
             modelDtoList.add(new ModelDto(modelList.get(i).getId(), modelList.get(i).getNameDevice(),
                     typesEquipmentMapper.convertTypesEquipmentToDto(modelList.get(i).getTypesEquipment()), modelList.get(i).getSerialNumber(),
                     modelList.get(i).getColor(), modelList.get(i).getSize(), modelList.get(i).getPrice(), modelList.get(i).getIsAvailability(),
-                    modelList.get(i).getEquipmentList()));
+                    null));
         }
         return modelDtoList;
     }

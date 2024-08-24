@@ -18,6 +18,7 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     @Override
     public ModelDto createPosition(ModelDto modelDto) {
         Model localModel = modelMapper.convertDtoToModel(modelDto);
+
         localModel = modelRepository.save(localModel);
         return modelMapper.convertModelToDto(localModel);
     }

@@ -1,8 +1,11 @@
 package com.registerofequipment.petRegisterOfEquipment.service;
 
+import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
+import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.FridgeDto;
+import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper.FridgeMapper;
-import com.registerofequipment.petRegisterOfEquipment.models.Fridge;
+import com.registerofequipment.petRegisterOfEquipment.repository.TypesEquipmentRepository;
 import com.registerofequipment.petRegisterOfEquipment.repository.modelsrep.FridgeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +14,12 @@ import org.springframework.stereotype.Service;
 public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
 
     @Autowired
+    private TypesEquipmentRepository typesEquipmentRepository;
+    @Autowired
+    private TypesEquipmentMapper typesEquipmentMapper;
+    @Autowired
+    private TypesEquipmentService typesEquipmentService;
+    @Autowired
     private FridgeRepository fridgeRepository;
     @Autowired
     private FridgeMapper fridgeMapper;
@@ -18,9 +27,18 @@ public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
 
     @Override
     public FridgeDto createPosition(FridgeDto incomingObject) {
-        Fridge localFridge = fridgeMapper.convertDtoToFridge(incomingObject);
-        localFridge = fridgeRepository.save(localFridge);
-        return fridgeMapper.convertFridgeToDto(localFridge);
+        TypesEquipmentDto typesEquipmentDto = new TypesEquipmentDto();
+        typesEquipmentDto.setFridgeDto(incomingObject);
+        return typesEquipmentService.createPosition(typesEquipmentDto).getFridgeDto();
+        /*TypesEquipment localTypesEquipment = new TypesEquipment();*/
+        /*localTypesEquipment.setFridge(fridgeMapper.convertDtoToFridge(incomingObject));
+        localTypesEquipment = typesEquipmentRepository.save(localTypesEquipment);*/
+
+        /*TypesEquipmentDto typesEquipmentDto = typesEquipmentService.createPosition(localTypesEquipmentDto);*/
+        /*typesEquipmentDto.getFridgeDto()*/
+        /*localTypesEquipment = typesEquipmentRepository.save(localTypesEquipment);*/
+       /* return  *//*fridgeMapper.convertFridgeToDto(localTypesEquipment.getFridge());*/
+
     }
 
     @Override

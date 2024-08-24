@@ -12,7 +12,7 @@ public class Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "unique_name_device")
+    @Column(name = "name_device")
     private String nameDevice;
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "types_equipment_id")

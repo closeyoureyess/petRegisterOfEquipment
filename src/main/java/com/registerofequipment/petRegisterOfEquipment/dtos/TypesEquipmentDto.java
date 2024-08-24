@@ -1,6 +1,7 @@
 package com.registerofequipment.petRegisterOfEquipment.dtos;
 
 import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.*;
+import com.registerofequipment.petRegisterOfEquipment.models.*;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -20,6 +21,26 @@ public class TypesEquipmentDto implements Serializable {
         this.hooverDto = hooverDto;
         this.personalComputerDto = personalComputerDto;
         this.smartphoneDto = smartphoneDto;
+        this.televisionDto = televisionDto;
+    }
+
+    public TypesEquipmentDto(FridgeDto fridgeDto) {
+        this.fridgeDto = fridgeDto;
+    }
+
+    public TypesEquipmentDto(HooverDto hooverDto) {
+        this.hooverDto = hooverDto;
+    }
+
+    public TypesEquipmentDto(PersonalComputerDto personalComputerDto) {
+        this.personalComputerDto = personalComputerDto;
+    }
+
+    public TypesEquipmentDto(SmartphoneDto smartphoneDto) {
+        this.smartphoneDto = smartphoneDto;
+    }
+
+    public TypesEquipmentDto(TelevisionDto televisionDto){
         this.televisionDto = televisionDto;
     }
 

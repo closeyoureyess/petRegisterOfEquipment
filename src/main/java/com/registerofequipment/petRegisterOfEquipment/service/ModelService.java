@@ -41,4 +41,8 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     public ModelDto addModelNotSeparately(ModelDto modelDto){
         return modelDto;
     }
+
+    /*public ModelDto presenceModel(ModelDto modelDto){
+        if (modelDto.getNameDevice())
+    }*/
 }

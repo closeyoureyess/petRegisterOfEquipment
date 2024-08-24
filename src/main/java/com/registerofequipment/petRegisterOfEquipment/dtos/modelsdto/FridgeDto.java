@@ -21,14 +21,11 @@ public class FridgeDto implements Serializable {
     }
 
     public FridgeDto(Integer countsDoor, String typeCompressor) {
-        this.id = id;
         this.countsDoor = countsDoor;
         this.typeCompressor = typeCompressor;
     }
 
     public FridgeDto(String typeCompressor) {
-        this.id = id;
-        this.countsDoor = countsDoor;
         this.typeCompressor = typeCompressor;
     }
 

@@ -24,24 +24,44 @@ public class TypesEquipmentMapper {
         TypesEquipment typesEquipment = new TypesEquipment();
         if (typesEquipmentDto != null) {
             typesEquipment.setId(typesEquipment.getId());
-            typesEquipment.setFridge(fridgeMapper.convertDtoToFridge(typesEquipmentDto.getFridgeDto()));
-            typesEquipment.setHoover(hooverMapper.convertDtoToHoover(typesEquipmentDto.getHooverDto()));
-            typesEquipment.setPersonalComputer(personalComputerMapper.convertDtoToPersonalComputer(typesEquipmentDto.getPersonalComputerDto()));
-            typesEquipment.setSmartphone(smartphoneMapper.convertDtoToSmartphone(typesEquipmentDto.getSmartphoneDto()));
-            typesEquipment.setTelevision(televisionMapper.convertDtoToTelevision(typesEquipmentDto.getTelevisionDto()));
+            if (typesEquipmentDto.getFridgeDto() != null) {
+                typesEquipment.setFridge(fridgeMapper.convertDtoToFridge(typesEquipmentDto.getFridgeDto()));
+            }
+            if (typesEquipmentDto.getHooverDto() != null) {
+                typesEquipment.setHoover(hooverMapper.convertDtoToHoover(typesEquipmentDto.getHooverDto()));
+            }
+            if (typesEquipmentDto.getPersonalComputerDto() != null) {
+                typesEquipment.setPersonalComputer(personalComputerMapper.convertDtoToPersonalComputer(typesEquipmentDto.getPersonalComputerDto()));
+            }
+            if (typesEquipmentDto.getSmartphoneDto() != null) {
+                typesEquipment.setSmartphone(smartphoneMapper.convertDtoToSmartphone(typesEquipmentDto.getSmartphoneDto()));
+            }
+            if (typesEquipmentDto.getTelevisionDto() != null) {
+                typesEquipment.setTelevision(televisionMapper.convertDtoToTelevision(typesEquipmentDto.getTelevisionDto()));
+            }
         }
         return typesEquipment;
     }
 
-    public TypesEquipmentDto convertTypesEquipmentToDto(TypesEquipment typesEquipment){
+    public TypesEquipmentDto convertTypesEquipmentToDto(TypesEquipment typesEquipment) {
         TypesEquipmentDto typesEquipmentDto = new TypesEquipmentDto();
-        if (typesEquipment != null){
+        if (typesEquipment != null) {
             typesEquipmentDto.setId(typesEquipment.getId());
-            typesEquipmentDto.setFridgeDto(fridgeMapper.convertFridgeToDto(typesEquipment.getFridge()));
-            typesEquipmentDto.setHooverDto(hooverMapper.convertHooverToDto(typesEquipment.getHoover()));
-            typesEquipmentDto.setPersonalComputerDto(personalComputerMapper.convertPersonalComputerToDto(typesEquipment.getPersonalComputer()));
-            typesEquipmentDto.setSmartphoneDto(smartphoneMapper.convertSmartphoneToDto(typesEquipment.getSmartphone()));
-            typesEquipmentDto.setTelevisionDto(televisionMapper.convertTelevisionToDto(typesEquipment.getTelevision()));
+            if (typesEquipment.getFridge() != null) {
+                typesEquipmentDto.setFridgeDto(fridgeMapper.convertFridgeToDto(typesEquipment.getFridge()));
+            }
+            if (typesEquipment.getHoover() != null) {
+                typesEquipmentDto.setHooverDto(hooverMapper.convertHooverToDto(typesEquipment.getHoover()));
+            }
+            if (typesEquipment.getPersonalComputer() != null) {
+                typesEquipmentDto.setPersonalComputerDto(personalComputerMapper.convertPersonalComputerToDto(typesEquipment.getPersonalComputer()));
+            }
+            if (typesEquipment.getSmartphone() != null) {
+                typesEquipmentDto.setSmartphoneDto(smartphoneMapper.convertSmartphoneToDto(typesEquipment.getSmartphone()));
+            }
+            if (typesEquipment.getTelevision() != null) {
+                typesEquipmentDto.setTelevisionDto(televisionMapper.convertTelevisionToDto(typesEquipment.getTelevision()));
+            }
         }
         return typesEquipmentDto;
     }

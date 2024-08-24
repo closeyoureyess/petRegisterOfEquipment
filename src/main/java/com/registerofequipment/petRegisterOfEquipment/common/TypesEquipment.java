@@ -15,7 +15,7 @@ public class TypesEquipment {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "fridge_id")
     private Fridge fridge;
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = true)
     @JoinColumn(name = "hoover_id")
     private Hoover hoover;
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = true)
@@ -34,6 +34,26 @@ public class TypesEquipment {
         this.hoover = hoover;
         this.personalComputer = personalComputer;
         this.smartphone = smartphone;
+        this.television = television;
+    }
+
+    public TypesEquipment(Fridge fridge) {
+        this.fridge = fridge;
+    }
+
+    public TypesEquipment(Hoover hoover) {
+        this.hoover = hoover;
+    }
+
+    public TypesEquipment(PersonalComputer personalComputer) {
+        this.personalComputer = personalComputer;
+    }
+
+    public TypesEquipment(Smartphone smartphone) {
+        this.smartphone = smartphone;
+    }
+
+    public TypesEquipment(Television television){
         this.television = television;
     }
 

@@ -3,9 +3,12 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
+import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.EquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto> {
@@ -35,8 +38,24 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     }
 
     @Override
-    public EquipmentDto deletePosition(EquipmentDto equipmentDto) {
+    public boolean deletePosition(Integer equipmentDto) {
         return null;
+    }
+
+    public EquipmentDto searchForExistingEquipment(EquipmentDto equipmentDto) {
+        List<Equipment> listEquipment = equipmentRepository.findAllByNameTypeTechnic(String.valueOf(equipmentMapper.convertDtoToEquipment(
+                equipmentDto).getNameTypeTechnic()));
+        Equipment equipmentForCycle;
+        Equipment equipmentAfterCompare = new Equipment();
+        for (int i = 0; i < listEquipment.size(); i++) {
+            equipmentForCycle = listEquipment.get(i);
+            equipmentForCycle.setServiceFlag(ConstantsClass.ZERO_FLAG);
+            equipmentAfterCompare = equipmentMapper.compareEquipmentAndDto(equipmentDto, equipmentForCycle);
+            if (equipmentAfterCompare.getServiceFlag().equals(ConstantsClass.ZERO_FLAG)) {
+                break;
+            }
+        }
+        return equipmentMapper.convertEquipmentToDto(equipmentAfterCompare);
     }
 
 }

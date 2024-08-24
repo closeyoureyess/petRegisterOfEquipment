@@ -1,6 +1,5 @@
 package com.registerofequipment.petRegisterOfEquipment.service;
 
-import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.FridgeDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
@@ -52,7 +51,7 @@ public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
     }
 
     @Override
-    public FridgeDto deletePosition(FridgeDto deleteObject) {
+    public boolean deletePosition(Integer deleteObject) {
         return null;
     }
 }

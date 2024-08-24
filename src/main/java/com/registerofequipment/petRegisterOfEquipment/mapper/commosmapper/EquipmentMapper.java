@@ -26,6 +26,7 @@ public class EquipmentMapper {
             equipment.setManufacturerCompany(equipmentDto.getManufacturerCompany());
             equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
             equipment.setIsPossibilityInstallments(equipmentDto.getIsPossibilityInstallments());
+            equipment.setServiceFlag(equipmentDto.getServiceFlag());
         }
         return equipment;
     }
@@ -39,6 +40,7 @@ public class EquipmentMapper {
             equipmentDto.setManufacturerCompany(equipment.getManufacturerCompany());
             equipmentDto.setIsOrderOnline(equipment.getIsOrderOnline());
             equipmentDto.setIsPossibilityInstallments(equipment.getIsPossibilityInstallments());
+            equipmentDto.setServiceFlag(equipment.getServiceFlag());
         }
         return equipmentDto;
     }

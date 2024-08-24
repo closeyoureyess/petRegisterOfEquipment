@@ -1,6 +1,7 @@
 package com.registerofequipment.petRegisterOfEquipment.service;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Model;
+import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.ModelRepository;
@@ -13,12 +14,15 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     @Autowired
     private ModelRepository modelRepository;
     @Autowired
+    private EquipmentService equipmentService;
+    @Autowired
     private ModelMapper modelMapper;
 
     @Override
     public ModelDto createPosition(ModelDto modelDto) {
+        EquipmentDto equipmentDto = equipmentService.searchForExistingEquipment(modelDto.getEquipmentDto());
+        modelDto.setEquipmentDto(equipmentDto);
         Model localModel = modelMapper.convertDtoToModel(modelDto);
-
         localModel = modelRepository.save(localModel);
         return modelMapper.convertModelToDto(localModel);
     }
@@ -35,11 +39,15 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     @Override
-    public ModelDto deletePosition(ModelDto modelDto) {
-        return null;
+    public boolean deletePosition(Integer idModel) {
+        if (idModel != null) {
+            modelRepository.deleteById(Long.valueOf(idModel));
+            return true;
+        }
+        return false;
     }
 
-    public ModelDto addModelNotSeparately(ModelDto modelDto){
+    public ModelDto addModelNotSeparately(ModelDto modelDto) {
         return modelDto;
     }
 

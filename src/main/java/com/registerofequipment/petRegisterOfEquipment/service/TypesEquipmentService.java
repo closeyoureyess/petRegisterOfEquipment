@@ -2,10 +2,7 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 
 import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
-import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.*;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
-import com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper.*;
-import com.registerofequipment.petRegisterOfEquipment.models.PersonalComputer;
 import com.registerofequipment.petRegisterOfEquipment.repository.TypesEquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,7 +33,7 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     }
 
     @Override
-    public TypesEquipmentDto deletePosition(TypesEquipmentDto deleteObject) {
+    public boolean deletePosition(Integer deleteObject) {
         return null;
     }
 }

@@ -5,10 +5,7 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.service.ModelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1")
@@ -24,6 +21,11 @@ public class ModelController {
             return ResponseEntity.ok(localModelDto);
         }
         return ResponseEntity.badRequest().build();
+    }
+
+    @DeleteMapping
+    public ResponseEntity<ModelDto> deleteModel(@PathVariable("id") Integer idModel){
+
     }
 
 }

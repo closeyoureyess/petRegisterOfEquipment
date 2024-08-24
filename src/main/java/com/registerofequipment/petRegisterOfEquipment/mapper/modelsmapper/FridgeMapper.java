@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class FridgeMapper {
 
-    public Fridge convertDtoToFridge(FridgeDto fridgeDto){
+    public Fridge convertDtoToFridge(FridgeDto fridgeDto) {
         Fridge fridge = new Fridge();
         if (fridgeDto != null) {
-            fridge.setId(fridge.getId());
+            fridge.setId(fridgeDto.getId());
             fridge.setCountsDoor(fridgeDto.getCountsDoor());
             fridge.setTypeCompressor(fridgeDto.getTypeCompressor());
         }
         return fridge;
     }
 
-    public FridgeDto convertFridgeToDto(Fridge fridge){
+    public FridgeDto convertFridgeToDto(Fridge fridge) {
         FridgeDto fridgeDto = new FridgeDto();
         if (fridge != null) {
             fridgeDto.setId(fridge.getId());
@@ -25,5 +25,17 @@ public class FridgeMapper {
             fridgeDto.setTypeCompressor(fridge.getTypeCompressor());
         }
         return fridgeDto;
+    }
+
+    public Fridge compareFridgeAndDto(FridgeDto fridgeDto, Fridge fridge) {
+        if (fridge != null && fridgeDto != null) {
+            if (!fridgeDto.getCountsDoor().equals(fridge.getCountsDoor())) {
+                fridge.setCountsDoor(fridgeDto.getCountsDoor());
+            }
+            if (!fridgeDto.getTypeCompressor().equals(fridge.getTypeCompressor())) {
+                fridge.setTypeCompressor(fridgeDto.getTypeCompressor());
+            }
+        }
+        return fridge;
     }
 }

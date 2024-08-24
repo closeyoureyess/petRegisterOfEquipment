@@ -15,7 +15,7 @@ public class TypesEquipment {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "fridge_id")
     private Fridge fridge;
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = true)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "hoover_id")
     private Hoover hoover;
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = true)

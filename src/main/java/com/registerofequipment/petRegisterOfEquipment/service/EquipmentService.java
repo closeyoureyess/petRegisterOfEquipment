@@ -38,4 +38,5 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     public EquipmentDto deletePosition(EquipmentDto equipmentDto) {
         return null;
     }
+
 }

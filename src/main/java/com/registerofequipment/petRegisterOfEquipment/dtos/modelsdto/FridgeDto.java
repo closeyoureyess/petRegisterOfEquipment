@@ -1,13 +1,32 @@
 package com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto;
 
+import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToOne;
+
 import java.io.Serializable;
 
 public class FridgeDto implements Serializable {
     private Integer id;
     private Integer countsDoor;
     private String typeCompressor;
+    @OneToOne(mappedBy = "fridge", fetch = FetchType.LAZY)
+    private TypesEquipment typesEquipment;
+
 
     public FridgeDto(Integer id, Integer countsDoor, String typeCompressor) {
+        this.id = id;
+        this.countsDoor = countsDoor;
+        this.typeCompressor = typeCompressor;
+    }
+
+    public FridgeDto(Integer countsDoor, String typeCompressor) {
+        this.id = id;
+        this.countsDoor = countsDoor;
+        this.typeCompressor = typeCompressor;
+    }
+
+    public FridgeDto(String typeCompressor) {
         this.id = id;
         this.countsDoor = countsDoor;
         this.typeCompressor = typeCompressor;

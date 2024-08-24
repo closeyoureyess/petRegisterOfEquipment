@@ -13,6 +13,8 @@ public class ModelMapper {
 
     @Autowired
     private TypesEquipmentMapper typesEquipmentMapper;
+    @Autowired
+    private EquipmentMapper equipmentMapper;
 
     public Model convertDtoToModel(ModelDto modelDto) {
         Model model = new Model();
@@ -26,7 +28,6 @@ public class ModelMapper {
             model.setSize(modelDto.getSize());
             model.setPrice(modelDto.getPrice());
             model.setAvailability(modelDto.getIsAvailability());
-            model.setEquipmentList(equipmentMapper.transferEquipmentDtoListToEquipment(modelDto.getEquipmentListDto()));
         }
         return model;
     }
@@ -43,7 +44,6 @@ public class ModelMapper {
             modelDto.setSize(model.getSize());
             modelDto.setPrice(model.getPrice());
             modelDto.setAvailability(model.getIsAvailability());
-            modelDto.setEquipmentListDto(equipmentMapper.transferEquipmentToEquipmentDtoList(model.getEquipmentList()));
         }
         return modelDto;
     }
@@ -52,10 +52,16 @@ public class ModelMapper {
         List<Model> modelList = new LinkedList<>();
         if (modelDtoList != null) {
             for (int i = 0; i < modelDtoList.size(); i++) {
-                modelList.add(new Model(modelDtoList.get(i).getId(), modelDtoList.get(i).getNameDevice(),
+                modelList.add(new Model(modelDtoList.get(i).getId(),
+                        modelDtoList.get(i).getNameDevice(),
                         typesEquipmentMapper.convertDtoToTypesEquipment(modelDtoList.get(i).getTypesEquipmentDto()),
-                        modelDtoList.get(i).getSerialNumber(), modelDtoList.get(i).getColor(), modelDtoList.get(i).getSize(),
-                        modelDtoList.get(i).getPrice(), modelDtoList.get(i).getIsAvailability()));
+                        equipmentMapper.convertDtoToEquipment(modelDtoList.get(i).getEquipmentDto()),
+                        modelDtoList.get(i).getSerialNumber(),
+                        modelDtoList.get(i).getColor(),
+                        modelDtoList.get(i).getSize(),
+                        modelDtoList.get(i).getPrice(),
+                        modelDtoList.get(i).getIsAvailability())
+                );
             }
         }
         return modelList;
@@ -65,10 +71,16 @@ public class ModelMapper {
         List<ModelDto> modelDtoList = new LinkedList<>();
         if (modelList != null) {
             for (int i = 0; i < modelList.size(); i++) {
-                modelDtoList.add(new ModelDto(modelList.get(i).getId(), modelList.get(i).getNameDevice(),
+                modelDtoList.add(new ModelDto(modelList.get(i).getId(),
+                        modelList.get(i).getNameDevice(),
                         typesEquipmentMapper.convertTypesEquipmentToDto(modelList.get(i).getTypesEquipment()),
-                        modelList.get(i).getSerialNumber(), modelList.get(i).getColor(), modelList.get(i).getSize(),
-                        modelList.get(i).getPrice(), modelList.get(i).getIsAvailability()));
+                        equipmentMapper.convertEquipmentToDto(modelList.get(i).getEquipment()),
+                        modelList.get(i).getSerialNumber(),
+                        modelList.get(i).getColor(),
+                        modelList.get(i).getSize(),
+                        modelList.get(i).getPrice(),
+                        modelList.get(i).getIsAvailability()
+                ));
             }
         }
         return modelDtoList;

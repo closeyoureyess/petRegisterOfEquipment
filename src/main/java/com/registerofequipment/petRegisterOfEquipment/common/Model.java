@@ -3,7 +3,7 @@ package com.registerofequipment.petRegisterOfEquipment.common;
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import jakarta.persistence.*;
 
-import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tmodel_tech")
@@ -17,6 +17,9 @@ public class Model {
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "types_equipment_id")
     private TypesEquipment typesEquipment;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "equipment_id")
+    private Equipment equipment;
     @Column(name = "serial_number")
     private Integer serialNumber;
     @Column(name = "color")
@@ -28,27 +31,13 @@ public class Model {
     private Integer price;
     @Column(name = "availability_tmodel")
     private boolean isAvailability;
-    @ManyToMany(mappedBy = "modelsAvailability", fetch = FetchType.LAZY)
-    private List<Equipment> equipmentList;
 
-    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Integer serialNumber, ColorEquipment color, Integer size,
-                 Integer price, boolean isAvailability, List<Equipment> equipmentList) {
+    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Equipment equipment, Integer serialNumber, ColorEquipment color,
+                 Integer size, Integer price, boolean isAvailability) {
         this.id = id;
         this.nameDevice = nameDevice;
         this.typesEquipment = typesEquipment;
-        this.serialNumber = serialNumber;
-        this.color = color;
-        this.size = size;
-        this.price = price;
-        this.isAvailability = isAvailability;
-        this.equipmentList = equipmentList;
-    }
-
-    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Integer serialNumber, ColorEquipment color, Integer size,
-                 Integer price, boolean isAvailability) {
-        this.id = id;
-        this.nameDevice = nameDevice;
-        this.typesEquipment = typesEquipment;
+        this.equipment = equipment;
         this.serialNumber = serialNumber;
         this.color = color;
         this.size = size;
@@ -124,11 +113,24 @@ public class Model {
         isAvailability = availability;
     }
 
-    public List<Equipment> getEquipmentList() {
-        return equipmentList;
+    public Equipment getEquipment() {
+        return equipment;
     }
 
-    public void setEquipmentList(List<Equipment> equipmentList) {
-        this.equipmentList = equipmentList;
+    public void setEquipment(Equipment equipment) {
+        this.equipment = equipment;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Model model = (Model) o;
+        return isAvailability == model.isAvailability && Objects.equals(id, model.id) && Objects.equals(nameDevice, model.nameDevice) && Objects.equals(typesEquipment, model.typesEquipment) && Objects.equals(equipment, model.equipment) && Objects.equals(serialNumber, model.serialNumber) && color == model.color && Objects.equals(size, model.size) && Objects.equals(price, model.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, nameDevice, typesEquipment, equipment, serialNumber, color, size, price, isAvailability);
     }
 }

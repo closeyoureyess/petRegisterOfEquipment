@@ -31,10 +31,12 @@ public class EquipmentController {
     public ResponseEntity<List<EquipmentDto>> getEquipment(@PathVariable("nameDevice") String nameTypeTechnicOrColorOrPrice,
                                                            @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
                                                            @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit) {
+
         Optional<List<EquipmentDto>> optionalEquipmentDtoList = equipmentService.getPosition(nameTypeTechnicOrColorOrPrice, offset, limit);
         if (optionalEquipmentDtoList.isPresent()) {
             return ResponseEntity.ok(optionalEquipmentDtoList.get());
         }
         return ResponseEntity.notFound().build();
     }
+
 }

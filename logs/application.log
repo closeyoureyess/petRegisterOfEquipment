@@ -508,3 +508,590 @@ Relying upon circular references is discouraged and they are prohibited by defau
 2024-08-25 21:44:24 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-08-25 21:44:24 - HikariPool-1 - Shutdown initiated...
 2024-08-25 21:44:24 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:45:06 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 29040 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:45:06 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:45:06 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:45:06 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:45:06 - Finished Spring Data repository scanning in 66 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:45:07 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:45:07 - Starting service [Tomcat]
+2024-08-25 21:45:07 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:45:07 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:45:07 - Root WebApplicationContext: initialization completed in 1205 ms
+2024-08-25 21:45:07 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:45:07 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:45:07 - HHH000026: Second-level cache disabled
+2024-08-25 21:45:07 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:45:07 - HikariPool-1 - Starting...
+2024-08-25 21:45:08 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d512652
+2024-08-25 21:45:08 - HikariPool-1 - Start completed.
+2024-08-25 21:45:08 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:45:08 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "equipment" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "television_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 21:45:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:45:08 - таблица "types_equipment" не существует, пропускается
+2024-08-25 21:45:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:45:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-25 21:45:09 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-25 21:45:09 - Started PetRegisterOfEquipmentApplication in 3.891 seconds (process running for 4.268)
+2024-08-25 21:45:55 - Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x070x000x010x000x060xfc0x030x030xf8z60xeb0xc3*"0xd10x010xc710xddM0xce0xe30xbdq0x0c0xf40xefe\}0xc9ox0x810xe30x130x89W0x97 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:262)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-25 22:16:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:16:21 - HikariPool-1 - Shutdown initiated...
+2024-08-25 22:16:21 - HikariPool-1 - Shutdown completed.
+2024-08-25 22:24:56 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 10584 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 22:24:56 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 22:24:56 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 22:24:57 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 22:24:57 - Finished Spring Data repository scanning in 61 ms. Found 8 JPA repository interfaces.
+2024-08-25 22:24:57 - Tomcat initialized with port 8080 (http)
+2024-08-25 22:24:57 - Starting service [Tomcat]
+2024-08-25 22:24:57 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 22:24:57 - Initializing Spring embedded WebApplicationContext
+2024-08-25 22:24:57 - Root WebApplicationContext: initialization completed in 1151 ms
+2024-08-25 22:24:58 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 22:24:58 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 22:24:58 - HHH000026: Second-level cache disabled
+2024-08-25 22:24:58 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 22:24:58 - HikariPool-1 - Starting...
+2024-08-25 22:24:58 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4416e18d
+2024-08-25 22:24:58 - HikariPool-1 - Start completed.
+2024-08-25 22:24:58 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 22:24:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "equipment" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "television_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 22:24:59 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:24:59 - таблица "types_equipment" не существует, пропускается
+2024-08-25 22:24:59 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:24:59 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-25 22:25:00 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-25 22:25:00 - Started PetRegisterOfEquipmentApplication in 3.932 seconds (process running for 4.365)
+2024-08-25 22:25:05 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:25:05 - HikariPool-1 - Shutdown initiated...
+2024-08-25 22:25:05 - HikariPool-1 - Shutdown completed.
+2024-08-25 22:25:34 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 8524 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 22:25:34 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 22:25:34 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 22:25:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 22:25:35 - Finished Spring Data repository scanning in 57 ms. Found 8 JPA repository interfaces.
+2024-08-25 22:25:35 - Tomcat initialized with port 8080 (http)
+2024-08-25 22:25:35 - Starting service [Tomcat]
+2024-08-25 22:25:35 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 22:25:35 - Initializing Spring embedded WebApplicationContext
+2024-08-25 22:25:35 - Root WebApplicationContext: initialization completed in 1104 ms
+2024-08-25 22:25:35 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 22:25:35 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 22:25:35 - HHH000026: Second-level cache disabled
+2024-08-25 22:25:36 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 22:25:36 - HikariPool-1 - Starting...
+2024-08-25 22:25:36 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c2e3460
+2024-08-25 22:25:36 - HikariPool-1 - Start completed.
+2024-08-25 22:25:36 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 22:25:37 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "equipment" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "television_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 22:25:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:25:37 - таблица "types_equipment" не существует, пропускается
+2024-08-25 22:25:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:25:37 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-25 22:25:37 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-25 22:25:37 - Started PetRegisterOfEquipmentApplication in 3.615 seconds (process running for 3.972)
+2024-08-25 22:33:30 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-25 22:33:30 - Initializing Servlet 'dispatcherServlet'
+2024-08-25 22:33:30 - Completed initialization in 1 ms
+2024-08-25 22:34:53 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: Argument [FRIDGE] of type [java.lang.String] did not match parameter type [com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum (n/a)]] with root cause
+org.hibernate.query.QueryArgumentException: Argument [FRIDGE] of type [java.lang.String] did not match parameter type [com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:85)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:32)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:362)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:137)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:1054)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:948)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1266)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:136)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery.setParameter(QueryParameterSetter.java:318)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.lambda$3(QueryParameterSetter.java:115)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1.execute(QueryParameterSetter.java:140)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.setParameter(QueryParameterSetter.java:115)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:86)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:78)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:100)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:346)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:253)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:114)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:243)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:129)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.findAllByNameTypeTechnic(Unknown Source)
+	at com.registerofequipment.petRegisterOfEquipment.service.EquipmentService.getPosition(EquipmentService.java:40)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.findAllEquipmentByNameTechnic(ModelService.java:79)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:41)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-25 22:41:08 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:41:08 - HikariPool-1 - Shutdown initiated...
+2024-08-25 22:41:08 - HikariPool-1 - Shutdown completed.
+2024-08-25 22:41:19 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 6256 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 22:41:19 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 22:41:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 22:41:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 22:41:20 - Finished Spring Data repository scanning in 55 ms. Found 8 JPA repository interfaces.
+2024-08-25 22:41:20 - Tomcat initialized with port 8080 (http)
+2024-08-25 22:41:20 - Starting service [Tomcat]
+2024-08-25 22:41:20 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 22:41:20 - Initializing Spring embedded WebApplicationContext
+2024-08-25 22:41:20 - Root WebApplicationContext: initialization completed in 1031 ms
+2024-08-25 22:41:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 22:41:21 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 22:41:21 - HHH000026: Second-level cache disabled
+2024-08-25 22:41:21 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 22:41:21 - HikariPool-1 - Starting...
+2024-08-25 22:41:21 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d512652
+2024-08-25 22:41:21 - HikariPool-1 - Start completed.
+2024-08-25 22:41:21 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 22:41:22 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "equipment" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "television_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 22:41:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:41:22 - таблица "types_equipment" не существует, пропускается
+2024-08-25 22:41:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:41:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-25 22:41:22 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-25 22:41:22 - Started PetRegisterOfEquipmentApplication in 3.511 seconds (process running for 3.857)
+2024-08-25 22:41:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-25 22:41:53 - Initializing Servlet 'dispatcherServlet'
+2024-08-25 22:41:53 - Completed initialization in 2 ms
+2024-08-25 22:41:53 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: Argument [FRIDGE] of type [java.lang.String] did not match parameter type [com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum (n/a)]] with root cause
+org.hibernate.query.QueryArgumentException: Argument [FRIDGE] of type [java.lang.String] did not match parameter type [com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:85)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:32)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:362)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:137)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:1054)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:948)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1266)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:136)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery.setParameter(QueryParameterSetter.java:318)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.lambda$3(QueryParameterSetter.java:115)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1.execute(QueryParameterSetter.java:140)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.setParameter(QueryParameterSetter.java:115)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:86)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:78)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:100)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:346)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:253)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:114)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:243)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:129)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.findAllByNameTypeTechnic(Unknown Source)
+	at com.registerofequipment.petRegisterOfEquipment.service.EquipmentService.getPosition(EquipmentService.java:40)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.findAllEquipmentByNameTechnic(ModelService.java:79)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:41)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-25 22:45:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:45:33 - HikariPool-1 - Shutdown initiated...
+2024-08-25 22:45:33 - HikariPool-1 - Shutdown completed.
+2024-08-25 22:45:37 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 10736 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 22:45:37 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 22:45:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 22:45:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 22:45:38 - Finished Spring Data repository scanning in 58 ms. Found 8 JPA repository interfaces.
+2024-08-25 22:45:38 - Tomcat initialized with port 8080 (http)
+2024-08-25 22:45:38 - Starting service [Tomcat]
+2024-08-25 22:45:38 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 22:45:38 - Initializing Spring embedded WebApplicationContext
+2024-08-25 22:45:38 - Root WebApplicationContext: initialization completed in 1079 ms
+2024-08-25 22:45:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 22:45:39 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 22:45:39 - HHH000026: Second-level cache disabled
+2024-08-25 22:45:39 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 22:45:39 - HikariPool-1 - Starting...
+2024-08-25 22:45:39 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c2e3460
+2024-08-25 22:45:39 - HikariPool-1 - Start completed.
+2024-08-25 22:45:39 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 22:45:40 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - отношение "types_equipment" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "equipment" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "television_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 22:45:40 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 22:45:40 - таблица "types_equipment" не существует, пропускается
+2024-08-25 22:45:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:45:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-25 22:45:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-25 22:45:40 - Started PetRegisterOfEquipmentApplication in 3.618 seconds (process running for 3.969)
+2024-08-25 22:45:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-25 22:45:45 - Initializing Servlet 'dispatcherServlet'
+2024-08-25 22:45:45 - Completed initialization in 1 ms
+2024-08-25 22:45:45 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: Argument [FRIDGE] of type [java.lang.String] did not match parameter type [com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum (n/a)]] with root cause
+org.hibernate.query.QueryArgumentException: Argument [FRIDGE] of type [java.lang.String] did not match parameter type [com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum (n/a)]
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:85)
+	at org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:32)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.validate(QueryParameterBindingImpl.java:362)
+	at org.hibernate.query.internal.QueryParameterBindingImpl.setBindValue(QueryParameterBindingImpl.java:137)
+	at org.hibernate.query.spi.AbstractCommonQueryContract.setParameter(AbstractCommonQueryContract.java:1054)
+	at org.hibernate.query.spi.AbstractSelectionQuery.setParameter(AbstractSelectionQuery.java:948)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:1266)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.setParameter(QuerySqmImpl.java:136)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$BindableQuery.setParameter(QueryParameterSetter.java:318)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.lambda$3(QueryParameterSetter.java:115)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$ErrorHandling$1.execute(QueryParameterSetter.java:140)
+	at org.springframework.data.jpa.repository.query.QueryParameterSetter$NamedOrIndexedQueryParameterSetter.setParameter(QueryParameterSetter.java:115)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:86)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bind(ParameterBinder.java:78)
+	at org.springframework.data.jpa.repository.query.ParameterBinder.bindAndPrepare(ParameterBinder.java:100)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.invokeBinding(PartTreeJpaQuery.java:346)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.createQuery(PartTreeJpaQuery.java:253)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.doCreateQuery(PartTreeJpaQuery.java:114)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.createQuery(AbstractJpaQuery.java:243)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$CollectionExecution.doExecute(JpaQueryExecution.java:129)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.findAllByNameTypeTechnic(Unknown Source)
+	at com.registerofequipment.petRegisterOfEquipment.service.EquipmentService.getPosition(EquipmentService.java:40)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.findAllEquipmentByNameTechnic(ModelService.java:79)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:41)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:23)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-25 22:58:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 22:58:12 - HikariPool-1 - Shutdown initiated...
+2024-08-25 22:58:12 - HikariPool-1 - Shutdown completed.

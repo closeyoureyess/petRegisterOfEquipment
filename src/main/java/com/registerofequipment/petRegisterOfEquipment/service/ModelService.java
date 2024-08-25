@@ -6,8 +6,8 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDt
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper;
+import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
-import com.registerofequipment.petRegisterOfEquipment.others.exeptions.handler.HandlerExeption;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.ModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -75,8 +75,8 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     private List<Equipment> findAllEquipmentByNameTechnic(ModelDto modelDto) throws NameTypeTechnicExeption {
-        String nameTypeTechnicFromEquipmentDto = equipmentMapper.pullNameTypeTechnicFromEquipmentDto(modelDto.getEquipmentDto());
-        Optional<List<EquipmentDto>> optionalEquipmentDtos = equipmentService.getPosition(nameTypeTechnicFromEquipmentDto, null, null);
+        String nameTypeTechnic = equipmentMapper.pullNameTypeTechnicFromEquipmentDto(modelDto.getEquipmentDto());
+        Optional<List<EquipmentDto>> optionalEquipmentDtos = equipmentService.getPosition(nameTypeTechnic, null, null);
         return equipmentMapper.transferEquipmentDtoListToEquipment(optionalEquipmentDtos.get());
     }
 }

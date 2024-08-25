@@ -1,8 +1,10 @@
 package com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
+import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
+import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 public class EquipmentMapper {
@@ -44,11 +47,21 @@ public class EquipmentMapper {
         EquipmentDto equipmentDto = new EquipmentDto();
         if (equipment != null) {
             equipmentDto.setId(equipment.getId());
-            equipmentDto.setNameTypeTechnic(equipment.getNameTypeTechnic());
-            equipmentDto.setManufacturerCountry(equipment.getManufacturerCountry());
-            equipmentDto.setManufacturerCompany(equipment.getManufacturerCompany());
-            equipmentDto.setIsOrderOnline(equipment.getIsOrderOnline());
-            equipmentDto.setIsPossibilityInstallments(equipment.getIsPossibilityInstallments());
+            if (equipment.getNameTypeTechnic() != null) {
+                equipmentDto.setNameTypeTechnic(equipment.getNameTypeTechnic());
+            }
+            if (equipment.getManufacturerCountry() != null) {
+                equipmentDto.setManufacturerCountry(equipment.getManufacturerCountry());
+            }
+            if (equipment.getManufacturerCompany() != null) {
+                equipmentDto.setManufacturerCompany(equipment.getManufacturerCompany());
+            }
+            if (equipment.getIsOrderOnline() != null) {
+                equipmentDto.setIsOrderOnline(equipment.getIsOrderOnline());
+            }
+            if (equipment.getIsPossibilityInstallments() != null) {
+                equipmentDto.setIsPossibilityInstallments(equipment.getIsPossibilityInstallments());
+            }
             equipmentDto.setServiceFlag(equipment.getServiceFlag());
         }
         return equipmentDto;
@@ -56,13 +69,23 @@ public class EquipmentMapper {
 
     public String pullNameTypeTechnicFromEquipmentDto(EquipmentDto equipmentDto) throws NameTypeTechnicExeption {
         if (equipmentDto != null) {
-            return String.valueOf(
-                    convertDtoToEquipment(equipmentDto)
+            return String.valueOf(convertDtoToEquipment(equipmentDto)
                             .getNameTypeTechnic());
         } else {
             throw new NameTypeTechnicExeption(DescriptionExeptions.GENERATION_ERROR.getDescription(),
                     new NameTypeTechnicExeption(DescriptionExeptions.NAME_TYPE_TECHNIC_NOT_FOUND.getDescription()));
         }
+    }
+
+    public Optional<TypeEquipmentEnum> compareStringAndEnum(String valueString) {
+        for (int i = 0; i < ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST.size(); i++) {
+            if (valueString.equals(ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST
+                    .get(i)
+                    .getTypeEquipmentEnum())) {
+                return Optional.of(ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST.get(i));
+            }
+        }
+        return Optional.empty();
     }
 
     public Equipment compareEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {

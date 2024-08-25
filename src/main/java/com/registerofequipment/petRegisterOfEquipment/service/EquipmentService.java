@@ -1,10 +1,12 @@
 package com.registerofequipment.petRegisterOfEquipment.service;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
+import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
+import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.EquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,26 +25,29 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     @Autowired
     private EquipmentMapper equipmentMapper;
 
-    @Override
     public EquipmentDto createPosition(EquipmentDto equipmentDto) {
         Equipment equipment = equipmentMapper.convertDtoToEquipment(equipmentDto);
         equipment = equipmentRepository.save(equipment);
         return equipmentMapper.convertEquipmentToDto(equipment);
     }
 
-    @Override
-    public Optional<List<EquipmentDto>> getPosition(String nameTypeTechnic, Integer offset, Integer limit) {
-        if (offset != null && limit != null) {
-            Pageable pageble = PageRequest.of(offset, limit);
-            Page<Equipment> pageModel = equipmentRepository.findAllByNameTypeTechnic(nameTypeTechnic, pageble);
-            return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(pageModel.stream().toList()));
-        } else if (offset == null && limit == null) {
-            return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(equipmentRepository.findAllByNameTypeTechnic(nameTypeTechnic)));
+    public Optional<List<EquipmentDto>> getPosition(String nameTypeTechnicString, Integer offset, Integer limit) {
+        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = equipmentMapper.compareStringAndEnum(nameTypeTechnicString);
+        if (optionalNameTypeTechnicEnum.isPresent()) {
+            if (offset != null && limit != null) {
+                Pageable pageble = PageRequest.of(offset, limit);
+                Page<Equipment> pageModel = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get(), pageble);
+                return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(pageModel.stream().toList()));
+            } else if (offset == null && limit == null) {
+                List<Equipment> equipmentList = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
+                if (equipmentList != null) {
+                    return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(equipmentList));
+                }
+            }
         }
         return Optional.empty();
     }
 
-    @Override
     public EquipmentDto changePosition(EquipmentDto equipmentDto) {
 
         return null;

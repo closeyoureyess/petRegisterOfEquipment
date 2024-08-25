@@ -1,0 +1,510 @@
+2024-08-25 21:00:12 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 15868 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:00:12 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:00:12 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:00:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:00:13 - Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:00:13 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:00:13 - Starting service [Tomcat]
+2024-08-25 21:00:13 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:00:13 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:00:13 - Root WebApplicationContext: initialization completed in 1284 ms
+2024-08-25 21:00:13 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:00:13 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:00:13 - HHH000026: Second-level cache disabled
+2024-08-25 21:00:14 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:00:14 - HikariPool-1 - Starting...
+2024-08-25 21:00:14 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b75b890
+2024-08-25 21:00:14 - HikariPool-1 - Start completed.
+2024-08-25 21:00:14 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:00:14 - Failed to initialize JPA EntityManagerFactory: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+2024-08-25 21:00:14 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+2024-08-25 21:00:14 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:00:14 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:00:14 - Stopping service [Tomcat]
+2024-08-25 21:00:14 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-25 21:00:14 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.registerofequipment.petRegisterOfEquipment.PetRegisterOfEquipmentApplication.main(PetRegisterOfEquipmentApplication.java:10)
+Caused by: org.hibernate.AnnotationException: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+	at org.hibernate.boot.model.internal.CollectionBinder.determineSemanticJavaType(CollectionBinder.java:1123)
+	at org.hibernate.boot.model.internal.CollectionBinder.determineCollectionClassification(CollectionBinder.java:1015)
+	at org.hibernate.boot.model.internal.CollectionBinder.createBinderAutomatically(CollectionBinder.java:857)
+	at org.hibernate.boot.model.internal.CollectionBinder.getCollectionBinder(CollectionBinder.java:850)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindCollection(CollectionBinder.java:286)
+	at org.hibernate.boot.model.internal.PropertyBinder.bindProperty(PropertyBinder.java:887)
+	at org.hibernate.boot.model.internal.PropertyBinder.buildProperty(PropertyBinder.java:801)
+	at org.hibernate.boot.model.internal.PropertyBinder.processElementAnnotations(PropertyBinder.java:722)
+	at org.hibernate.boot.model.internal.EntityBinder.processIdPropertiesIfNotAlready(EntityBinder.java:1083)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:416)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 15 common frames omitted
+2024-08-25 21:06:27 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 26016 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:06:27 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:06:27 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:06:27 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:06:27 - Finished Spring Data repository scanning in 65 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:06:28 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:06:28 - Starting service [Tomcat]
+2024-08-25 21:06:28 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:06:28 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:06:28 - Root WebApplicationContext: initialization completed in 1254 ms
+2024-08-25 21:06:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:06:28 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:06:28 - HHH000026: Second-level cache disabled
+2024-08-25 21:06:28 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:06:28 - HikariPool-1 - Starting...
+2024-08-25 21:06:29 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5dfc2a4
+2024-08-25 21:06:29 - HikariPool-1 - Start completed.
+2024-08-25 21:06:29 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:06:29 - Failed to initialize JPA EntityManagerFactory: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+2024-08-25 21:06:29 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+2024-08-25 21:06:29 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:06:29 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:06:29 - Stopping service [Tomcat]
+2024-08-25 21:06:29 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-25 21:06:29 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.registerofequipment.petRegisterOfEquipment.PetRegisterOfEquipmentApplication.main(PetRegisterOfEquipmentApplication.java:10)
+Caused by: org.hibernate.AnnotationException: Property 'com.registerofequipment.petRegisterOfEquipment.common.Model.equipment' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+	at org.hibernate.boot.model.internal.CollectionBinder.determineSemanticJavaType(CollectionBinder.java:1123)
+	at org.hibernate.boot.model.internal.CollectionBinder.determineCollectionClassification(CollectionBinder.java:1015)
+	at org.hibernate.boot.model.internal.CollectionBinder.createBinderAutomatically(CollectionBinder.java:857)
+	at org.hibernate.boot.model.internal.CollectionBinder.getCollectionBinder(CollectionBinder.java:850)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindCollection(CollectionBinder.java:286)
+	at org.hibernate.boot.model.internal.PropertyBinder.bindProperty(PropertyBinder.java:887)
+	at org.hibernate.boot.model.internal.PropertyBinder.buildProperty(PropertyBinder.java:801)
+	at org.hibernate.boot.model.internal.PropertyBinder.processElementAnnotations(PropertyBinder.java:722)
+	at org.hibernate.boot.model.internal.EntityBinder.processIdPropertiesIfNotAlready(EntityBinder.java:1083)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:416)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 15 common frames omitted
+2024-08-25 21:19:57 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 28192 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:19:57 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:19:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:19:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:19:58 - Finished Spring Data repository scanning in 74 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:19:59 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:19:59 - Starting service [Tomcat]
+2024-08-25 21:19:59 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:19:59 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:19:59 - Root WebApplicationContext: initialization completed in 1328 ms
+2024-08-25 21:19:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:19:59 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:19:59 - HHH000026: Second-level cache disabled
+2024-08-25 21:19:59 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:19:59 - HikariPool-1 - Starting...
+2024-08-25 21:19:59 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a3cf824
+2024-08-25 21:19:59 - HikariPool-1 - Start completed.
+2024-08-25 21:19:59 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:20:00 - Failed to initialize JPA EntityManagerFactory: Property 'com.registerofequipment.petRegisterOfEquipment.common.Equipment.model' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+2024-08-25 21:20:00 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Property 'com.registerofequipment.petRegisterOfEquipment.common.Equipment.model' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+2024-08-25 21:20:00 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:20:00 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:20:00 - Stopping service [Tomcat]
+2024-08-25 21:20:00 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-25 21:20:00 - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Property 'com.registerofequipment.petRegisterOfEquipment.common.Equipment.model' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.registerofequipment.petRegisterOfEquipment.PetRegisterOfEquipmentApplication.main(PetRegisterOfEquipmentApplication.java:10)
+Caused by: org.hibernate.AnnotationException: Property 'com.registerofequipment.petRegisterOfEquipment.common.Equipment.model' is not a collection and may not be a '@OneToMany', '@ManyToMany', or '@ElementCollection'
+	at org.hibernate.boot.model.internal.CollectionBinder.determineSemanticJavaType(CollectionBinder.java:1123)
+	at org.hibernate.boot.model.internal.CollectionBinder.determineCollectionClassification(CollectionBinder.java:1015)
+	at org.hibernate.boot.model.internal.CollectionBinder.createBinderAutomatically(CollectionBinder.java:857)
+	at org.hibernate.boot.model.internal.CollectionBinder.getCollectionBinder(CollectionBinder.java:850)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindCollection(CollectionBinder.java:286)
+	at org.hibernate.boot.model.internal.PropertyBinder.bindProperty(PropertyBinder.java:887)
+	at org.hibernate.boot.model.internal.PropertyBinder.buildProperty(PropertyBinder.java:801)
+	at org.hibernate.boot.model.internal.PropertyBinder.processElementAnnotations(PropertyBinder.java:722)
+	at org.hibernate.boot.model.internal.EntityBinder.processIdPropertiesIfNotAlready(EntityBinder.java:1083)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:416)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 15 common frames omitted
+2024-08-25 21:39:17 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 21916 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:39:17 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:39:17 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:39:17 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:39:17 - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:39:18 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:39:18 - Starting service [Tomcat]
+2024-08-25 21:39:18 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:39:18 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:39:18 - Root WebApplicationContext: initialization completed in 1260 ms
+2024-08-25 21:39:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:39:18 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:39:18 - HHH000026: Second-level cache disabled
+2024-08-25 21:39:18 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:39:18 - HikariPool-1 - Starting...
+2024-08-25 21:39:19 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a7163e3
+2024-08-25 21:39:19 - HikariPool-1 - Start completed.
+2024-08-25 21:39:19 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:39:19 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "equipment" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "television_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 21:39:19 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:39:19 - таблица "types_equipment" не существует, пропускается
+2024-08-25 21:39:19 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:39:20 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'equipmentController': Unsatisfied dependency expressed through field 'equipmentService': Error creating bean with name 'equipmentService': Unsatisfied dependency expressed through field 'equipmentMapper': Error creating bean with name 'equipmentMapper': Unsatisfied dependency expressed through field 'modelMapper': Error creating bean with name 'modelMapper': Unsatisfied dependency expressed through field 'equipmentMapper': Error creating bean with name 'equipmentMapper': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-08-25 21:39:20 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:39:20 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:39:20 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:39:20 - Stopping service [Tomcat]
+2024-08-25 21:39:20 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-25 21:39:20 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   equipmentController (field private com.registerofequipment.petRegisterOfEquipment.service.EquipmentService com.registerofequipment.petRegisterOfEquipment.controller.EquipmentController.equipmentService)
+      ↓
+   equipmentService (field private com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper com.registerofequipment.petRegisterOfEquipment.service.EquipmentService.equipmentMapper)
+┌─────┐
+|  equipmentMapper (field private com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper.modelMapper)
+↑     ↓
+|  modelMapper (field private com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper.equipmentMapper)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-08-25 21:41:18 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 29840 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:41:18 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:41:18 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:41:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:41:19 - Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:41:19 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:41:19 - Starting service [Tomcat]
+2024-08-25 21:41:19 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:41:19 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:41:19 - Root WebApplicationContext: initialization completed in 1164 ms
+2024-08-25 21:41:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:41:20 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:41:20 - HHH000026: Second-level cache disabled
+2024-08-25 21:41:20 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:41:20 - HikariPool-1 - Starting...
+2024-08-25 21:41:20 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5dfc2a4
+2024-08-25 21:41:20 - HikariPool-1 - Start completed.
+2024-08-25 21:41:20 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:41:21 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "equipment" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "television_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 21:41:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:41:21 - таблица "types_equipment" не существует, пропускается
+2024-08-25 21:41:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:41:21 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'equipmentController': Unsatisfied dependency expressed through field 'equipmentService': Error creating bean with name 'equipmentService': Unsatisfied dependency expressed through field 'equipmentMapper': Error creating bean with name 'equipmentMapper': Unsatisfied dependency expressed through field 'modelMapper': Error creating bean with name 'modelMapper': Unsatisfied dependency expressed through field 'equipmentMapper': Error creating bean with name 'equipmentMapper': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-08-25 21:41:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:41:21 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:41:21 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:41:21 - Stopping service [Tomcat]
+2024-08-25 21:41:21 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-25 21:41:21 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   equipmentController (field private com.registerofequipment.petRegisterOfEquipment.service.EquipmentService com.registerofequipment.petRegisterOfEquipment.controller.EquipmentController.equipmentService)
+      ↓
+   equipmentService (field private com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper com.registerofequipment.petRegisterOfEquipment.service.EquipmentService.equipmentMapper)
+┌─────┐
+|  equipmentMapper (field private com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper.modelMapper)
+↑     ↓
+|  modelMapper (field private com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper.equipmentMapper)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-08-25 21:42:07 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 28204 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:42:07 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:42:07 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:42:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:42:08 - Finished Spring Data repository scanning in 62 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:42:08 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:42:08 - Starting service [Tomcat]
+2024-08-25 21:42:08 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:42:08 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:42:08 - Root WebApplicationContext: initialization completed in 1157 ms
+2024-08-25 21:42:08 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:42:08 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:42:08 - HHH000026: Second-level cache disabled
+2024-08-25 21:42:09 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:42:09 - HikariPool-1 - Starting...
+2024-08-25 21:42:09 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4416e18d
+2024-08-25 21:42:09 - HikariPool-1 - Start completed.
+2024-08-25 21:42:09 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:42:10 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "equipment" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "television_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 21:42:10 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:42:10 - таблица "types_equipment" не существует, пропускается
+2024-08-25 21:42:10 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:42:10 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'equipmentController': Unsatisfied dependency expressed through field 'equipmentService': Error creating bean with name 'equipmentService': Unsatisfied dependency expressed through field 'modelService': Error creating bean with name 'modelService': Unsatisfied dependency expressed through field 'equipmentService': Error creating bean with name 'equipmentService': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2024-08-25 21:42:10 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:42:10 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:42:10 - HikariPool-1 - Shutdown completed.
+2024-08-25 21:42:10 - Stopping service [Tomcat]
+2024-08-25 21:42:10 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-25 21:42:10 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+   equipmentController (field private com.registerofequipment.petRegisterOfEquipment.service.EquipmentService com.registerofequipment.petRegisterOfEquipment.controller.EquipmentController.equipmentService)
+┌─────┐
+|  equipmentService (field private com.registerofequipment.petRegisterOfEquipment.service.ModelService com.registerofequipment.petRegisterOfEquipment.service.EquipmentService.modelService)
+↑     ↓
+|  modelService (field private com.registerofequipment.petRegisterOfEquipment.service.EquipmentService com.registerofequipment.petRegisterOfEquipment.service.ModelService.equipmentService)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2024-08-25 21:44:19 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 26116 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-25 21:44:19 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-25 21:44:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-25 21:44:19 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-25 21:44:19 - Finished Spring Data repository scanning in 65 ms. Found 8 JPA repository interfaces.
+2024-08-25 21:44:20 - Tomcat initialized with port 8080 (http)
+2024-08-25 21:44:20 - Starting service [Tomcat]
+2024-08-25 21:44:20 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-25 21:44:20 - Initializing Spring embedded WebApplicationContext
+2024-08-25 21:44:20 - Root WebApplicationContext: initialization completed in 1161 ms
+2024-08-25 21:44:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-25 21:44:20 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-25 21:44:20 - HHH000026: Second-level cache disabled
+2024-08-25 21:44:20 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-25 21:44:20 - HikariPool-1 - Starting...
+2024-08-25 21:44:20 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3120495d
+2024-08-25 21:44:20 - HikariPool-1 - Start completed.
+2024-08-25 21:44:20 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-25 21:44:21 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "tmodel_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - отношение "types_equipment" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "equipment" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "fridge_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "hoover_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "smartphone_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "television_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "tmodel_tech" не существует, пропускается
+2024-08-25 21:44:21 - SQL Warning Code: 0, SQLState: 00000
+2024-08-25 21:44:21 - таблица "types_equipment" не существует, пропускается
+2024-08-25 21:44:21 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:44:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-25 21:44:22 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-25 21:44:22 - Started PetRegisterOfEquipmentApplication in 3.912 seconds (process running for 4.291)
+2024-08-25 21:44:24 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-25 21:44:24 - HikariPool-1 - Shutdown initiated...
+2024-08-25 21:44:24 - HikariPool-1 - Shutdown completed.

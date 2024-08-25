@@ -22,8 +22,6 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     private EquipmentRepository equipmentRepository;
     @Autowired
     private EquipmentMapper equipmentMapper;
-    @Autowired
-    private ModelService modelService;
 
     @Override
     public EquipmentDto createPosition(EquipmentDto equipmentDto) {

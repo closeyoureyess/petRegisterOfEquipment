@@ -30,10 +30,10 @@ public class Model {
     @Column(name = "price")
     private Integer price;
     @Column(name = "availability_tmodel")
-    private boolean isAvailability;
+    private Boolean isAvailability;
 
     public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Equipment equipment, Integer serialNumber, ColorEquipment color,
-                 Integer size, Integer price, boolean isAvailability) {
+                 Integer size, Integer price, Boolean isAvailability) {
         this.id = id;
         this.nameDevice = nameDevice;
         this.typesEquipment = typesEquipment;
@@ -105,11 +105,11 @@ public class Model {
         this.price = price;
     }
 
-    public boolean getIsAvailability() {
+    public Boolean getIsAvailability() {
         return isAvailability;
     }
 
-    public void setAvailability(boolean availability) {
+    public void setAvailability(Boolean availability) {
         isAvailability = availability;
     }
 
@@ -126,7 +126,7 @@ public class Model {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Model model = (Model) o;
-        return isAvailability == model.isAvailability && Objects.equals(id, model.id) && Objects.equals(nameDevice, model.nameDevice) && Objects.equals(typesEquipment, model.typesEquipment) && Objects.equals(equipment, model.equipment) && Objects.equals(serialNumber, model.serialNumber) && color == model.color && Objects.equals(size, model.size) && Objects.equals(price, model.price);
+        return Objects.equals(id, model.id) && Objects.equals(nameDevice, model.nameDevice) && Objects.equals(typesEquipment, model.typesEquipment) && Objects.equals(equipment, model.equipment) && Objects.equals(serialNumber, model.serialNumber) && color == model.color && Objects.equals(size, model.size) && Objects.equals(price, model.price) && Objects.equals(isAvailability, model.isAvailability);
     }
 
     @Override

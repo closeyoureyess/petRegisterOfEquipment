@@ -7,6 +7,8 @@ import com.registerofequipment.petRegisterOfEquipment.repository.TypesEquipmentR
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, TypesEquipmentDto> {
 
@@ -23,7 +25,7 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     }
 
     @Override
-    public TypesEquipmentDto getPosition(TypesEquipmentDto incomingObject) {
+    public List<TypesEquipmentDto> getPosition(String incomingObject, Integer offset, Integer limit) {
         return null;
     }
 
@@ -34,6 +36,6 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
 
     @Override
     public boolean deletePosition(Integer deleteObject) {
-        return null;
+        return true;
     }
 }

@@ -9,6 +9,8 @@ import com.registerofequipment.petRegisterOfEquipment.repository.modelsrep.Fridg
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
 
@@ -41,7 +43,7 @@ public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
     }
 
     @Override
-    public FridgeDto getPosition(FridgeDto incomingObject) {
+    public List<FridgeDto> getPosition(String incomingObject, Integer offset, Integer limit) {
         return null;
     }
 
@@ -52,6 +54,6 @@ public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
 
     @Override
     public boolean deletePosition(Integer deleteObject) {
-        return null;
+        return true;
     }
 }

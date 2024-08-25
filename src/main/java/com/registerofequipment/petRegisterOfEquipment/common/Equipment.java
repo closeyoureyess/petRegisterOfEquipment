@@ -20,13 +20,13 @@ public class Equipment {
     @Column(name = "manufacturer_company")
     private String manufacturerCompany; // IBS
     @Column(name = "order_online")
-    private boolean isOrderOnline; // tr
+    private Boolean isOrderOnline; // tr
     @Column(name = "possibility_installments")
-    private boolean isPossibilityInstallments; // true
+    private Boolean isPossibilityInstallments; // true
     private Integer serviceFlag;
 
     public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,
-                     boolean isOrderOnline, boolean isPossibilityInstallments, Integer serviceFlag) {
+                     Boolean isOrderOnline, Boolean isPossibilityInstallments, Integer serviceFlag) {
         this.id = id;
         this.nameTypeTechnic = nameTypeTechnic;
         this.manufacturerCountry = manufacturerCountry;
@@ -37,7 +37,7 @@ public class Equipment {
     }
 
     public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,
-                     boolean isOrderOnline, boolean isPossibilityInstallments) {
+                     Boolean isOrderOnline, Boolean isPossibilityInstallments) {
         this.id = id;
         this.nameTypeTechnic = nameTypeTechnic;
         this.manufacturerCountry = manufacturerCountry;
@@ -82,19 +82,19 @@ public class Equipment {
         this.manufacturerCompany = manufacturerCompany;
     }
 
-    public boolean getIsOrderOnline() {
+    public Boolean getIsOrderOnline() {
         return isOrderOnline;
     }
 
-    public void setIsOrderOnline(boolean orderOnline) {
+    public void setIsOrderOnline(Boolean orderOnline) {
         isOrderOnline = orderOnline;
     }
 
-    public boolean getIsPossibilityInstallments() {
+    public Boolean getIsPossibilityInstallments() {
         return isPossibilityInstallments;
     }
 
-    public void setIsPossibilityInstallments(boolean possibilityInstallments) {
+    public void setIsPossibilityInstallments(Boolean possibilityInstallments) {
         isPossibilityInstallments = possibilityInstallments;
     }
 
@@ -111,7 +111,7 @@ public class Equipment {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Equipment equipment = (Equipment) o;
-        return isOrderOnline == equipment.isOrderOnline && isPossibilityInstallments == equipment.isPossibilityInstallments && Objects.equals(id, equipment.id) && nameTypeTechnic == equipment.nameTypeTechnic && Objects.equals(manufacturerCountry, equipment.manufacturerCountry) && Objects.equals(manufacturerCompany, equipment.manufacturerCompany) && Objects.equals(serviceFlag, equipment.serviceFlag);
+        return Objects.equals(id, equipment.id) && nameTypeTechnic == equipment.nameTypeTechnic && Objects.equals(manufacturerCountry, equipment.manufacturerCountry) && Objects.equals(manufacturerCompany, equipment.manufacturerCompany) && Objects.equals(isOrderOnline, equipment.isOrderOnline) && Objects.equals(isPossibilityInstallments, equipment.isPossibilityInstallments) && Objects.equals(serviceFlag, equipment.serviceFlag);
     }
 
     @Override

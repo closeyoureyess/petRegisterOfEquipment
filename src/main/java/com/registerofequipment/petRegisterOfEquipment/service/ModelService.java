@@ -6,7 +6,12 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.ModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ModelService implements CRUDServices<ModelDto, ModelDto> {
@@ -28,9 +33,10 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     @Override
-    public ModelDto getPosition(ModelDto modelDto) {
-
-        return modelDto;
+    public List<ModelDto> getPosition(String nameModelDto, Integer offset, Integer limit) {
+        Pageable pageble = PageRequest.of(offset, limit);
+        Page<Model> pageModel = modelRepository.findAllByNameDevice(nameModelDto, pageble);
+        return modelMapper.transferModelToModelDtoList(pageModel.stream().toList());
     }
 
     @Override

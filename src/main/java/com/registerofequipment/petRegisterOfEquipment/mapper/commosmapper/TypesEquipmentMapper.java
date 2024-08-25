@@ -23,7 +23,7 @@ public class TypesEquipmentMapper {
     public TypesEquipment convertDtoToTypesEquipment(TypesEquipmentDto typesEquipmentDto) {
         TypesEquipment typesEquipment = new TypesEquipment();
         if (typesEquipmentDto != null) {
-            typesEquipment.setId(typesEquipment.getId());
+            typesEquipment.setId(typesEquipmentDto.getId());
             if (typesEquipmentDto.getFridgeDto() != null) {
                 typesEquipment.setFridge(fridgeMapper.convertDtoToFridge(typesEquipmentDto.getFridgeDto()));
             }

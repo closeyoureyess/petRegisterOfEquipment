@@ -21,11 +21,21 @@ public class EquipmentMapper {
         Equipment equipment = new Equipment();
         if (equipmentDto != null) {
             equipment.setId(equipmentDto.getId());
-            equipment.setNameTypeTechnic(equipmentDto.getNameTypeTechnic());
-            equipment.setManufacturerCountry(equipmentDto.getManufacturerCountry());
-            equipment.setManufacturerCompany(equipmentDto.getManufacturerCompany());
-            equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
-            equipment.setIsPossibilityInstallments(equipmentDto.getIsPossibilityInstallments());
+            if (equipmentDto.getNameTypeTechnic() != null) {
+                equipment.setNameTypeTechnic(equipmentDto.getNameTypeTechnic());
+            }
+            if (equipmentDto.getManufacturerCountry() != null) {
+                equipment.setManufacturerCountry(equipmentDto.getManufacturerCountry());
+            }
+            if (equipmentDto.getManufacturerCompany() != null) {
+                equipment.setManufacturerCompany(equipmentDto.getManufacturerCompany());
+            }
+            if (equipmentDto.getIsOrderOnline() != null) {
+                equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
+            }
+            if (equipmentDto.getIsPossibilityInstallments() != null) {
+                equipment.setIsPossibilityInstallments(equipmentDto.getIsPossibilityInstallments());
+            }
             equipment.setServiceFlag(equipmentDto.getServiceFlag());
         }
         return equipment;
@@ -81,7 +91,7 @@ public class EquipmentMapper {
     }
 
     private Equipment compareIsOnlineEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if(equipmentDto.getIsOrderOnline() != equipment.getIsOrderOnline()){
+        if(equipmentDto.getIsOrderOnline().equals(equipment.getIsOrderOnline())){
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
         }

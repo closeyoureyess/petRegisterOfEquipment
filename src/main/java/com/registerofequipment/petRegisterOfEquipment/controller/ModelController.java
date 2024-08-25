@@ -3,18 +3,21 @@ package com.registerofequipment.petRegisterOfEquipment.controller;
 
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.service.ModelService;
+import jakarta.validation.constraints.Min;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("api/v1")
+@RequestMapping("api/v1/model")
 public class ModelController {
 
     @Autowired
     private ModelService modelService;
 
-    @PostMapping("/create/model")
+    @PostMapping("/create")
     public ResponseEntity<ModelDto> addModel(@RequestBody ModelDto modelDto){
         ModelDto localModelDto = modelService.createPosition(modelDto);
         if (localModelDto != null){
@@ -23,9 +26,26 @@ public class ModelController {
         return ResponseEntity.badRequest().build();
     }
 
-    @DeleteMapping
-    public ResponseEntity<ModelDto> deleteModel(@PathVariable("id") Integer idModel){
+    @GetMapping("/gen-info/model/{nameDevice}")
+    public ResponseEntity<List<ModelDto>> getModel(@PathVariable("nameDevice") String executorEmail,
+                                             @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
+                                             @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit
+    ){
+        List<ModelDto> listModel = modelService.getPosition(executorEmail, offset, limit);
+        if (listModel != null){
+            return ResponseEntity.ok(listModel);
+        }
+        return ResponseEntity.notFound().build();
 
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Boolean> deleteModel(@PathVariable("id") Integer idModel){
+        boolean resultDeleteModel = modelService.deletePosition(idModel);
+        if (resultDeleteModel){
+            return ResponseEntity.ok(resultDeleteModel);
+        }
+        return ResponseEntity.badRequest().body(!resultDeleteModel);
     }
 
 }

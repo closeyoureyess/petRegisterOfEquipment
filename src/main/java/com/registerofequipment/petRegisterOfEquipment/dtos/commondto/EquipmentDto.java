@@ -11,12 +11,12 @@ public class EquipmentDto implements Serializable {
     private TypeEquipmentEnum nameTypeTechnic; //TV
     private String manufacturerCountry; // Russia
     private String manufacturerCompany; // IBS
-    private boolean isOrderOnline; // true
-    private boolean isPossibilityInstallments; // true
+    private Boolean isOrderOnline; // true
+    private Boolean isPossibilityInstallments; // true
     private Integer serviceFlag;
 
     public EquipmentDto(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,
-                        boolean isOrderOnline, boolean isPossibilityInstallments, Integer serviceFlag) {
+                        Boolean isOrderOnline, Boolean isPossibilityInstallments, Integer serviceFlag) {
         this.id = id;
         this.nameTypeTechnic = nameTypeTechnic;
         this.manufacturerCountry = manufacturerCountry;
@@ -27,14 +27,13 @@ public class EquipmentDto implements Serializable {
     }
 
     public EquipmentDto(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,
-                        boolean isOrderOnline, boolean isPossibilityInstallments) {
+                        Boolean isOrderOnline, Boolean isPossibilityInstallments) {
         this.id = id;
         this.nameTypeTechnic = nameTypeTechnic;
         this.manufacturerCountry = manufacturerCountry;
         this.manufacturerCompany = manufacturerCompany;
         this.isOrderOnline = isOrderOnline;
         this.isPossibilityInstallments = isPossibilityInstallments;
-        this.serviceFlag = serviceFlag;
     }
 
     public EquipmentDto(){
@@ -73,19 +72,19 @@ public class EquipmentDto implements Serializable {
         this.manufacturerCompany = manufacturerCompany;
     }
 
-    public boolean getIsOrderOnline() {
+    public Boolean getIsOrderOnline() {
         return isOrderOnline;
     }
 
-    public void setIsOrderOnline(boolean orderOnline) {
+    public void setIsOrderOnline(Boolean orderOnline) {
         isOrderOnline = orderOnline;
     }
 
-    public boolean getIsPossibilityInstallments() {
+    public Boolean getIsPossibilityInstallments() {
         return isPossibilityInstallments;
     }
 
-    public void setIsPossibilityInstallments(boolean possibilityInstallments) {
+    public void setIsPossibilityInstallments(Boolean possibilityInstallments) {
         isPossibilityInstallments = possibilityInstallments;
     }
 
@@ -102,7 +101,7 @@ public class EquipmentDto implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         EquipmentDto that = (EquipmentDto) o;
-        return isOrderOnline == that.isOrderOnline && isPossibilityInstallments == that.isPossibilityInstallments && Objects.equals(id, that.id) && nameTypeTechnic == that.nameTypeTechnic && Objects.equals(manufacturerCountry, that.manufacturerCountry) && Objects.equals(manufacturerCompany, that.manufacturerCompany) && Objects.equals(serviceFlag, that.serviceFlag);
+        return Objects.equals(id, that.id) && nameTypeTechnic == that.nameTypeTechnic && Objects.equals(manufacturerCountry, that.manufacturerCountry) && Objects.equals(manufacturerCompany, that.manufacturerCompany) && Objects.equals(isOrderOnline, that.isOrderOnline) && Objects.equals(isPossibilityInstallments, that.isPossibilityInstallments) && Objects.equals(serviceFlag, that.serviceFlag);
     }
 
     @Override

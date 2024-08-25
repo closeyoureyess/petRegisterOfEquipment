@@ -28,7 +28,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     }
 
     @Override
-    public EquipmentDto getPosition(EquipmentDto equipmentDto) {
+    public List<EquipmentDto> getPosition(String equipmentDto, Integer offset, Integer limit) {
         return null;
     }
 
@@ -39,7 +39,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
 
     @Override
     public boolean deletePosition(Integer equipmentDto) {
-        return null;
+        return true;
     }
 
     public EquipmentDto searchForExistingEquipment(EquipmentDto equipmentDto) {

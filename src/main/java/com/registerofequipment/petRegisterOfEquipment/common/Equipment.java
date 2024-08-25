@@ -3,6 +3,7 @@ package com.registerofequipment.petRegisterOfEquipment.common;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -23,6 +24,10 @@ public class Equipment {
     private Boolean isOrderOnline; // tr
     @Column(name = "possibility_installments")
     private Boolean isPossibilityInstallments; // true
+    @OneToMany(mappedBy = "equipment")
+    private List<Model> models; // Обратите внимание на изменение типа поля
+    /*@OneToMany(mappedBy = "equipment")
+    private Model model;*/
     private Integer serviceFlag;
 
     public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,

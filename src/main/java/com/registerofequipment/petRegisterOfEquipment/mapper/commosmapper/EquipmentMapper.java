@@ -5,20 +5,14 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDt
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
-import com.registerofequipment.petRegisterOfEquipment.others.exeptions.handler.HandlerExeption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @Component
 public class EquipmentMapper {
-
-    @Autowired
-    private ModelMapper modelMapper;
     @Autowired
     private TypesEquipmentMapper typesEquipmentMapper;
 

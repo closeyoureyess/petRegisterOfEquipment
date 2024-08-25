@@ -1,9 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.others.exeptions.handler;
 
-import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
-import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.MainException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

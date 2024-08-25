@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
+
 @RestController
 @RequestMapping("api/v1/equipment")
 public class EquipmentController {
@@ -25,10 +28,13 @@ public class EquipmentController {
     }
 
     @GetMapping("/gen-info/{nameTypeTechnicOrColorOrPrice}")
-    public ResponseEntity<EquipmentDto> getEquipment(@PathVariable("nameDevice") String nameTypeTechnicOrColorOrPrice,
-                                                     @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
-                                                     @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit) {
-        /*equipmentService.verifyThatAllFieldsEqual(nameTypeTechnicOrColorOrPrice);*/
+    public ResponseEntity<List<EquipmentDto>> getEquipment(@PathVariable("nameDevice") String nameTypeTechnicOrColorOrPrice,
+                                                           @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
+                                                           @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit) {
+        Optional<List<EquipmentDto>> optionalEquipmentDtoList = equipmentService.getPosition(nameTypeTechnicOrColorOrPrice, offset, limit);
+        if (optionalEquipmentDtoList.isPresent()) {
+            return ResponseEntity.ok(optionalEquipmentDtoList.get());
+        }
         return ResponseEntity.notFound().build();
     }
 }

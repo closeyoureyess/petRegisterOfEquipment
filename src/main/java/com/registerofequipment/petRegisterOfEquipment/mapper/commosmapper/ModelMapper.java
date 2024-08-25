@@ -18,7 +18,6 @@ public class ModelMapper {
 
     public Model convertDtoToModel(ModelDto modelDto) {
         Model model = new Model();
-        EquipmentMapper equipmentMapper = new EquipmentMapper();
         if (modelDto != null) {
             model.setId(modelDto.getId());
             model.setNameDevice(modelDto.getNameDevice());
@@ -34,7 +33,6 @@ public class ModelMapper {
 
     public ModelDto convertModelToDto(Model model) {
         ModelDto modelDto = new ModelDto();
-        EquipmentMapper equipmentMapper = new EquipmentMapper();
         if (model != null) {
             modelDto.setId(model.getId());
             modelDto.setNameDevice(model.getNameDevice());

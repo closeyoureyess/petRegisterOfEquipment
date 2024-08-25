@@ -3,11 +3,16 @@ package com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper;
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.handler.HandlerExeption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 @Component
 public class EquipmentMapper {
@@ -55,51 +60,62 @@ public class EquipmentMapper {
         return equipmentDto;
     }
 
-    public Equipment compareEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if (equipmentDto != null && equipment != null){
+    public String pullNameTypeTechnicFromEquipmentDto(EquipmentDto equipmentDto) throws NameTypeTechnicExeption {
+        if (equipmentDto != null) {
+            return String.valueOf(
+                    convertDtoToEquipment(equipmentDto)
+                            .getNameTypeTechnic());
+        } else {
+            throw new NameTypeTechnicExeption(DescriptionExeptions.GENERATION_ERROR.getDescription(),
+                    new NameTypeTechnicExeption(DescriptionExeptions.NAME_TYPE_TECHNIC_NOT_FOUND.getDescription()));
+        }
+    }
+
+    public Equipment compareEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
+        if (equipmentDto != null && equipment != null) {
             equipment = compareManufacturerCountryEquipmentAndDto(equipmentDto, equipment);
             equipment = compareManufacturerCompanyEquipmentAndDto(equipmentDto, equipment);
             equipment = compareIsPossibilityInstallmentsEquipmentAndDto(equipmentDto, equipment);
             equipment = compareIsOnlineEquipmentAndDto(equipmentDto, equipment);
-            equipment = compareNameTypeTechnicEquipmentAndDto(equipmentDto,equipment);
+            equipment = compareNameTypeTechnicEquipmentAndDto(equipmentDto, equipment);
         }
         return equipment;
     }
 
-    private Equipment compareManufacturerCountryEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if (!equipmentDto.getManufacturerCountry().equals(equipment.getManufacturerCountry())){
+    private Equipment compareManufacturerCountryEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
+        if (!equipmentDto.getManufacturerCountry().equals(equipment.getManufacturerCountry())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setManufacturerCountry(equipmentDto.getManufacturerCountry());
         }
         return equipment;
     }
 
-    private Equipment compareManufacturerCompanyEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if (!equipmentDto.getManufacturerCompany().equals(equipment.getManufacturerCompany())){
+    private Equipment compareManufacturerCompanyEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
+        if (!equipmentDto.getManufacturerCompany().equals(equipment.getManufacturerCompany())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setManufacturerCompany(equipmentDto.getManufacturerCompany());
         }
         return equipment;
     }
 
-    private Equipment compareIsPossibilityInstallmentsEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if (equipmentDto.getIsPossibilityInstallments() != equipment.getIsPossibilityInstallments()){
+    private Equipment compareIsPossibilityInstallmentsEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
+        if (equipmentDto.getIsPossibilityInstallments() != equipment.getIsPossibilityInstallments()) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setIsPossibilityInstallments(equipmentDto.getIsPossibilityInstallments());
         }
         return equipment;
     }
 
-    private Equipment compareIsOnlineEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if(equipmentDto.getIsOrderOnline().equals(equipment.getIsOrderOnline())){
+    private Equipment compareIsOnlineEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
+        if (equipmentDto.getIsOrderOnline().equals(equipment.getIsOrderOnline())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
         }
         return equipment;
     }
 
-    private Equipment compareNameTypeTechnicEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment){
-        if (equipmentDto.getNameTypeTechnic().equals(equipment.getNameTypeTechnic())){
+    private Equipment compareNameTypeTechnicEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
+        if (equipmentDto.getNameTypeTechnic().equals(equipment.getNameTypeTechnic())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setNameTypeTechnic(equipmentDto.getNameTypeTechnic());
         }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
@@ -43,7 +44,7 @@ public class FridgeService implements CRUDServices<FridgeDto, FridgeDto> {
     }
 
     @Override
-    public List<FridgeDto> getPosition(String incomingObject, Integer offset, Integer limit) {
+    public Optional<List<FridgeDto>> getPosition(String incomingObject, Integer offset, Integer limit) {
         return null;
     }
 

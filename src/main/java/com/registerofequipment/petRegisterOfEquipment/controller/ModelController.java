@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/model")
@@ -26,14 +27,14 @@ public class ModelController {
         return ResponseEntity.badRequest().build();
     }
 
-    @GetMapping("/gen-info/model/{nameDevice}")
+    @GetMapping("/gen-info/{nameDevice}")
     public ResponseEntity<List<ModelDto>> getModel(@PathVariable("nameDevice") String executorEmail,
                                              @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
                                              @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit
     ){
-        List<ModelDto> listModel = modelService.getPosition(executorEmail, offset, limit);
-        if (listModel != null){
-            return ResponseEntity.ok(listModel);
+        Optional<List<ModelDto>> optionalListModel = modelService.getPosition(executorEmail, offset, limit);
+        if (optionalListModel.isPresent()){
+            return ResponseEntity.ok(optionalListModel.get());
         }
         return ResponseEntity.notFound().build();
 
@@ -41,11 +42,11 @@ public class ModelController {
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Boolean> deleteModel(@PathVariable("id") Integer idModel){
-        boolean resultDeleteModel = modelService.deletePosition(idModel);
+        Boolean resultDeleteModel = modelService.deletePosition(idModel);
         if (resultDeleteModel){
             return ResponseEntity.ok(resultDeleteModel);
         }
-        return ResponseEntity.badRequest().body(!resultDeleteModel);
+        return ResponseEntity.badRequest().build();
     }
 
 }

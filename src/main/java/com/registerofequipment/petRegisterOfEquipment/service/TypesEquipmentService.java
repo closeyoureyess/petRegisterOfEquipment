@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, TypesEquipmentDto> {
@@ -25,7 +26,7 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     }
 
     @Override
-    public List<TypesEquipmentDto> getPosition(String incomingObject, Integer offset, Integer limit) {
+    public Optional<List<TypesEquipmentDto>> getPosition(String incomingObject, Integer offset, Integer limit) {
         return null;
     }
 

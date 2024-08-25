@@ -16,10 +16,10 @@ public class ModelDto implements Serializable {
     private ColorEquipment color;
     private Integer size;
     private Integer price;
-    private boolean isAvailability;
+    private Boolean isAvailability;
 
     public ModelDto(Integer id, String nameDevice, TypesEquipmentDto typesEquipmentDto,
-                    EquipmentDto equipmentDto, Integer serialNumber, ColorEquipment color, Integer size, Integer price, boolean isAvailability) {
+                    EquipmentDto equipmentDto, Integer serialNumber, ColorEquipment color, Integer size, Integer price, Boolean isAvailability) {
         this.id = id;
         this.nameDevice = nameDevice;
         this.typesEquipmentDto = typesEquipmentDto;
@@ -91,11 +91,11 @@ public class ModelDto implements Serializable {
         this.price = price;
     }
 
-    public boolean getIsAvailability() {
+    public Boolean getIsAvailability() {
         return isAvailability;
     }
 
-    public void setAvailability(boolean availability) {
+    public void setAvailability(Boolean availability) {
         isAvailability = availability;
     }
 
@@ -112,10 +112,7 @@ public class ModelDto implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ModelDto modelDto = (ModelDto) o;
-        return isAvailability == modelDto.isAvailability && Objects.equals(id, modelDto.id) && Objects.equals(nameDevice, modelDto.nameDevice)
-                && Objects.equals(typesEquipmentDto, modelDto.typesEquipmentDto) && Objects.equals(equipmentDto, modelDto.equipmentDto)
-                && Objects.equals(serialNumber, modelDto.serialNumber) && color == modelDto.color && Objects.equals(size, modelDto.size)
-                && Objects.equals(price, modelDto.price);
+        return Objects.equals(id, modelDto.id) && Objects.equals(nameDevice, modelDto.nameDevice) && Objects.equals(typesEquipmentDto, modelDto.typesEquipmentDto) && Objects.equals(equipmentDto, modelDto.equipmentDto) && Objects.equals(serialNumber, modelDto.serialNumber) && color == modelDto.color && Objects.equals(size, modelDto.size) && Objects.equals(price, modelDto.price) && Objects.equals(isAvailability, modelDto.isAvailability);
     }
 
     @Override

@@ -7,6 +7,7 @@ import com.registerofequipment.petRegisterOfEquipment.others.exeptions.Different
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import com.registerofequipment.petRegisterOfEquipment.repository.TypesEquipmentRepository;
+import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.CRUDServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +43,4 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     public boolean deletePosition(Integer deleteObject) {
         return true;
     }
-
 }

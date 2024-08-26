@@ -14,6 +14,5 @@ public interface FridgeRepository extends JpaRepository<Fridge, Long> {
 
     Optional<List<Fridge>> findAllByCountsDoor(Integer countsDoor);
     Optional<List<Fridge>> findAllByTypeCompressor(String typeCompressor);
-    Page<Fridge> findAllByCountsDoor(Integer countsDoor, Pageable pageable);
 
 }

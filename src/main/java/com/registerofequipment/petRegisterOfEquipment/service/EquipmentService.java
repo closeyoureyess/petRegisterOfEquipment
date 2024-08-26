@@ -10,6 +10,8 @@ import com.registerofequipment.petRegisterOfEquipment.others.exeptions.Different
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.EquipmentRepository;
+import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.CRUDServices;
+import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.Verify;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

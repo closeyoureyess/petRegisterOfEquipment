@@ -1,4 +1,4 @@
-package com.registerofequipment.petRegisterOfEquipment.service;
+package com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces;
 
 import java.util.List;
 

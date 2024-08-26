@@ -1,4 +1,4 @@
-package com.registerofequipment.petRegisterOfEquipment.service;
+package com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces;
 
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;

@@ -28,7 +28,7 @@ public class PersonalComputerMapper {
         return personalComputerDto;
     }
 
-    public PersonalComputer compareHooverAndDto(PersonalComputerDto personalComputerDto, PersonalComputer personalComputer) {
+    public PersonalComputer comparePersonalComputerAndDto(PersonalComputerDto personalComputerDto, PersonalComputer personalComputer) {
         if (personalComputer != null && personalComputerDto != null) {
             personalComputer = compareTypeProcessorAndDto(personalComputerDto, personalComputer);
             personalComputer = compareCategoryAndDto(personalComputerDto, personalComputer);

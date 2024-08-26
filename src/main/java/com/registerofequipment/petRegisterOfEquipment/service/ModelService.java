@@ -88,7 +88,6 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
 
     private Optional<List<Equipment>> findAllEquipmentByNameTechnic(ModelDto modelDto) throws NameTypeTechnicExeption {
         String nameTypeTechnic = equipmentMapper.pullNameTypeTechnicFromEquipmentDto(modelDto.getEquipmentDto());
-        Optional<List<Equipment>> optionalEquipment = equipmentService.getPositionWithoutPages(nameTypeTechnic);
         return equipmentService.getPositionWithoutPages(nameTypeTechnic);
     }
 

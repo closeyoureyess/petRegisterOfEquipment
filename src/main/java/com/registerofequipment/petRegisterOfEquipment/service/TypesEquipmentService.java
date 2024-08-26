@@ -42,4 +42,5 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     public boolean deletePosition(Integer deleteObject) {
         return true;
     }
+
 }

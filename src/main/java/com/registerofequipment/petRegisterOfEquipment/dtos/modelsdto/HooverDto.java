@@ -9,12 +9,21 @@ public class HooverDto implements Serializable {
     private Integer id;
     private Integer sizeDustCollect;
     private Integer countsRegime;
+    private Integer serviceFlag;
+
+    public HooverDto(Integer id, Integer sizeDustCollect, Integer countsRegime, Integer serviceFlag) {
+        this.id = id;
+        this.sizeDustCollect = sizeDustCollect;
+        this.countsRegime = countsRegime;
+        this.serviceFlag = serviceFlag;
+    }
 
     public HooverDto(Integer id, Integer sizeDustCollect, Integer countsRegime) {
         this.id = id;
         this.sizeDustCollect = sizeDustCollect;
         this.countsRegime = countsRegime;
     }
+
 
     public HooverDto(){
 
@@ -42,6 +51,14 @@ public class HooverDto implements Serializable {
 
     public void setCountsRegime(Integer countsRegime) {
         this.countsRegime = countsRegime;
+    }
+
+    public Integer getServiceFlag() {
+        return serviceFlag;
+    }
+
+    public void setServiceFlag(Integer serviceFlag) {
+        this.serviceFlag = serviceFlag;
     }
 
     @Override

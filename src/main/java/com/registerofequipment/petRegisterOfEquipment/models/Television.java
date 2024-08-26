@@ -73,6 +73,14 @@ public class Television {
         this.technology = technology;
     }
 
+    public Integer getServiceFlag() {
+        return serviceFlag;
+    }
+
+    public void setServiceFlag(Integer serviceFlag) {
+        this.serviceFlag = serviceFlag;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

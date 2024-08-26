@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto> {
+public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto>, Verify<Equipment, EquipmentDto> {
 
     @Autowired
     private EquipmentRepository equipmentRepository;
@@ -69,6 +69,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
         return true;
     }
 
+    @Override
     public Equipment verifyThatAllFieldsEqual(List<Equipment> listEquipment, EquipmentDto equipmentDto) {
         Equipment equipmentForCycle;
         Equipment equipmentAfterCompare = new Equipment();

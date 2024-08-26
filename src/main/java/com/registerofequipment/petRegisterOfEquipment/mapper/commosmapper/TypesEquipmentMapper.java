@@ -121,7 +121,8 @@ public class TypesEquipmentMapper {
 
     public void ifTypeTypeOfEquipmentNotEqualSelectEquipment(String nameTypeTechnicInModelClass, String nameTypeTechnicInEquipmentClass) throws DifferentTypesEquipmentExeption {
         if (!nameTypeTechnicInModelClass.equalsIgnoreCase(nameTypeTechnicInEquipmentClass)) {
-            throw new DifferentTypesEquipmentExeption(DescriptionExeptions.GENERATION_ERROR.getDescription(), new DifferentTypesEquipmentExeption(DescriptionExeptions.DIFFERENT_TYPES_TECHNICS.getDescription()));
+            throw new DifferentTypesEquipmentExeption(DescriptionExeptions.GENERATION_ERROR.getDescription(),
+                    new DifferentTypesEquipmentExeption(DescriptionExeptions.DIFFERENT_TYPES_TECHNICS.getDescription()));
         }
     }
 

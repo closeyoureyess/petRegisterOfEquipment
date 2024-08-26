@@ -3,7 +3,6 @@ package com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper;
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
-import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
 @Component
 public class EquipmentMapper {
@@ -104,7 +102,7 @@ public class EquipmentMapper {
     }
 
     private Equipment compareIsPossibilityInstallmentsEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
-        if (equipmentDto.getIsPossibilityInstallments() != equipment.getIsPossibilityInstallments()) {
+        if (!equipmentDto.getIsPossibilityInstallments().equals(equipment.getIsPossibilityInstallments())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setIsPossibilityInstallments(equipmentDto.getIsPossibilityInstallments());
         }
@@ -112,7 +110,7 @@ public class EquipmentMapper {
     }
 
     private Equipment compareIsOnlineEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
-        if (equipmentDto.getIsOrderOnline().equals(equipment.getIsOrderOnline())) {
+        if (!equipmentDto.getIsOrderOnline().equals(equipment.getIsOrderOnline())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setIsOrderOnline(equipmentDto.getIsOrderOnline());
         }
@@ -120,7 +118,7 @@ public class EquipmentMapper {
     }
 
     private Equipment compareNameTypeTechnicEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
-        if (equipmentDto.getNameTypeTechnic().equals(equipment.getNameTypeTechnic())) {
+        if (!equipmentDto.getNameTypeTechnic().equals(equipment.getNameTypeTechnic())) {
             equipment.setServiceFlag(ConstantsClass.ONE_FLAG);
             equipment.setNameTypeTechnic(equipmentDto.getNameTypeTechnic());
         }

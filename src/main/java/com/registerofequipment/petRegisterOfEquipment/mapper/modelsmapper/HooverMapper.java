@@ -1,8 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper;
 
-import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.FridgeDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.HooverDto;
-import com.registerofequipment.petRegisterOfEquipment.models.Fridge;
 import com.registerofequipment.petRegisterOfEquipment.models.Hoover;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import org.springframework.stereotype.Component;

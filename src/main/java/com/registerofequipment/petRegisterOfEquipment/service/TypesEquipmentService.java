@@ -3,6 +3,9 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import com.registerofequipment.petRegisterOfEquipment.repository.TypesEquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +22,7 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     private TypesEquipmentMapper typesEquipmentMapper;
 
     @Override
-    public TypesEquipmentDto createPosition(TypesEquipmentDto incomingObject) {
+    public TypesEquipmentDto createPosition(TypesEquipmentDto incomingObject) throws NameTypeTechnicExeption, DifferentTypesEquipmentExeption, FieldsEmptyExeption {
         TypesEquipment typesEquipment = typesEquipmentMapper.convertDtoToTypesEquipment(incomingObject);
         typesEquipment = typesEquipmentRepository.save(typesEquipment);
         return typesEquipmentMapper.convertTypesEquipmentToDto(typesEquipment);

@@ -3,6 +3,7 @@ package com.registerofequipment.petRegisterOfEquipment.common;
 import com.registerofequipment.petRegisterOfEquipment.models.*;
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -27,6 +28,8 @@ public class TypesEquipment {
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, optional = true)
     @JoinColumn(name = "television_id")
     private Television television;
+    @OneToMany(mappedBy = "typesEquipment")
+    private List<Model> modelsList;
 
     public TypesEquipment(Integer id, Fridge fridge, Hoover hoover, PersonalComputer personalComputer, Smartphone smartphone, Television television) {
         this.id = id;

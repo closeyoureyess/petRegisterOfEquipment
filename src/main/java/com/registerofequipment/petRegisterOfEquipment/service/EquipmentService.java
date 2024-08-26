@@ -3,8 +3,12 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
+import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.EquipmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,8 +26,10 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     private EquipmentRepository equipmentRepository;
     @Autowired
     private EquipmentMapper equipmentMapper;
+    @Autowired
+    private TypesEquipmentMapper typesEquipmentMapper;
 
-    public EquipmentDto createPosition(EquipmentDto equipmentDto) {
+    public EquipmentDto createPosition(EquipmentDto equipmentDto) throws NameTypeTechnicExeption, DifferentTypesEquipmentExeption, FieldsEmptyExeption {
         Equipment equipment = equipmentMapper.convertDtoToEquipment(equipmentDto);
         equipment = equipmentRepository.save(equipment);
         return equipmentMapper.convertEquipmentToDto(equipment);
@@ -31,7 +37,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
 
     @Override
     public Optional<List<EquipmentDto>> getPositionPageByPage(String nameTypeTechnicString, Integer offset, Integer limit) {
-        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = equipmentMapper.compareStringAndEnum(nameTypeTechnicString);
+        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString);
         if (optionalNameTypeTechnicEnum.isPresent()) {
             if (offset != null && limit != null) {
                 Pageable pageble = PageRequest.of(offset, limit);
@@ -48,9 +54,8 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     }
 
     public Optional<List<Equipment>> getPositionWithoutPages(String nameTypeTechnicString) {
-        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = equipmentMapper.compareStringAndEnum(nameTypeTechnicString);
-        Optional<List<Equipment>> optionalEquipmentList = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
-        return optionalEquipmentList;
+        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString);
+        return equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
     }
 
     @Override
@@ -77,5 +82,4 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
         }
         return equipmentAfterCompare;
     }
-
 }

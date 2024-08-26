@@ -26,6 +26,7 @@ public class Equipment {
     private Boolean isPossibilityInstallments; // true
     @OneToMany(mappedBy = "equipmentField")
     private List<Model> models;
+    @Transient
     private Integer serviceFlag;
 
     public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,

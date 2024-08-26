@@ -9,6 +9,9 @@ public class ConstantsClass {
 
     public static final String WHITESPACE = " ";
     public static final String LINE_BREAK_SYMBOL = "\n";
+    public static final String DOT = ".";
+    public static final String D_LETTER_ENG_ALPHABET = "D";
+    public static final String NAME_TYPE_DTO = "Dto";
     public static final Integer ONE_FLAG = 1;
     public static final Integer ZERO_FLAG = 0;
     public static final List<TypeEquipmentEnum> TYPE_EQUIPMENT_ENUM_LIST = List.of(FRIDGE, HOOVER, PERSONAL_COMPUTER, SMARTPHONE, TELEVISION);

@@ -2,6 +2,7 @@ package com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper;
 
 import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.FridgeDto;
 import com.registerofequipment.petRegisterOfEquipment.models.Fridge;
+import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -29,12 +30,23 @@ public class FridgeMapper {
 
     public Fridge compareFridgeAndDto(FridgeDto fridgeDto, Fridge fridge) {
         if (fridge != null && fridgeDto != null) {
-            if (!fridgeDto.getCountsDoor().equals(fridge.getCountsDoor())) {
-                fridge.setCountsDoor(fridgeDto.getCountsDoor());
-            }
-            if (!fridgeDto.getTypeCompressor().equals(fridge.getTypeCompressor())) {
-                fridge.setTypeCompressor(fridgeDto.getTypeCompressor());
-            }
+            fridge = compareCountsDoorAndDto(fridgeDto, fridge);
+            fridge = compareTypeCompressor(fridgeDto, fridge);
+        }
+        return fridge;
+    }
+    private Fridge compareCountsDoorAndDto(FridgeDto fridgeDto, Fridge fridge){
+        if (!fridgeDto.getCountsDoor().equals(fridge.getCountsDoor())) {
+            fridge.setServiceFlag(ConstantsClass.ONE_FLAG);
+            fridge.setCountsDoor(fridgeDto.getCountsDoor());
+        }
+        return fridge;
+    }
+
+    private Fridge compareTypeCompressor(FridgeDto fridgeDto, Fridge fridge){
+        if (!fridgeDto.getTypeCompressor().equals(fridge.getTypeCompressor())) {
+            fridge.setServiceFlag(ConstantsClass.ONE_FLAG);
+            fridge.setTypeCompressor(fridgeDto.getTypeCompressor());
         }
         return fridge;
     }

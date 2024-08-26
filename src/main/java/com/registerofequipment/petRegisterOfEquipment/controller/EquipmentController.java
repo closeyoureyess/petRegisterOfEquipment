@@ -20,7 +20,19 @@ public class EquipmentController {
 
     @PostMapping("/create/equipment")
     public ResponseEntity<EquipmentDto> addEquipment(@RequestBody EquipmentDto equipmentDto) {
-        EquipmentDto localEquipment = equipmentService.createPosition(equipmentDto);
+        EquipmentDto localEquipment = null;
+        try {
+            localEquipment = equipmentService.createPosition(equipmentDto);
+        } catch (
+                com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption nameTypeTechnicExeption) {
+            throw new RuntimeException(nameTypeTechnicExeption);
+        } catch (
+                com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption differentTypesEquipmentExeption) {
+            throw new RuntimeException(differentTypesEquipmentExeption);
+        } catch (
+                com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption fieldsEmptyExeption) {
+            throw new RuntimeException(fieldsEmptyExeption);
+        }
         if (localEquipment != null) {
             return ResponseEntity.ok(localEquipment);
         }

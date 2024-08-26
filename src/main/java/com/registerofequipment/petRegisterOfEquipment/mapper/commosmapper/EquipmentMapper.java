@@ -76,17 +76,6 @@ public class EquipmentMapper {
         }
     }
 
-    public Optional<TypeEquipmentEnum> compareStringAndEnum(String valueString) {
-        for (int i = 0; i < ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST.size(); i++) {
-            if (valueString.equals(ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST
-                    .get(i)
-                    .getTypeEquipmentEnum())) {
-                return Optional.of(ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST.get(i));
-            }
-        }
-        return Optional.empty();
-    }
-
     public Equipment compareEquipmentAndDto(EquipmentDto equipmentDto, Equipment equipment) {
         if (equipmentDto != null && equipment != null) {
             equipment = compareManufacturerCountryEquipmentAndDto(equipmentDto, equipment);

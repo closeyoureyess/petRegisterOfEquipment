@@ -15,6 +15,15 @@ public class Television {
     private String category;
     @Column(name = "technology_tv")
     private String technology;
+    @Transient
+    private Integer serviceFlag;
+
+    public Television(Integer id, String category, String technology, Integer serviceFlag) {
+        this.id = id;
+        this.category = category;
+        this.technology = technology;
+        this.serviceFlag = serviceFlag;
+    }
 
     public Television(Integer id, String category, String technology) {
         this.id = id;
@@ -69,11 +78,11 @@ public class Television {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Television that = (Television) o;
-        return Objects.equals(id, that.id) && Objects.equals(category, that.category) && Objects.equals(technology, that.technology);
+        return Objects.equals(id, that.id) && Objects.equals(category, that.category) && Objects.equals(technology, that.technology) && Objects.equals(serviceFlag, that.serviceFlag);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, category, technology);
+        return Objects.hash(id, category, technology, serviceFlag);
     }
 }

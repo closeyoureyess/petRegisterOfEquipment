@@ -10,9 +10,17 @@ public class FridgeDto implements Serializable {
     private Integer id;
     private Integer countsDoor;
     private String typeCompressor;
+    private Integer serviceFlag;
     @OneToOne(mappedBy = "fridge", fetch = FetchType.LAZY)
     private TypesEquipment typesEquipment;
 
+
+    public FridgeDto(Integer id, Integer countsDoor, String typeCompressor, Integer serviceFlag) {
+        this.id = id;
+        this.countsDoor = countsDoor;
+        this.typeCompressor = typeCompressor;
+        this.serviceFlag = serviceFlag;
+    }
 
     public FridgeDto(Integer id, Integer countsDoor, String typeCompressor) {
         this.id = id;
@@ -55,5 +63,13 @@ public class FridgeDto implements Serializable {
 
     public void setTypeCompressor(String typeCompressor) {
         this.typeCompressor = typeCompressor;
+    }
+
+    public Integer getServiceFlag() {
+        return serviceFlag;
+    }
+
+    public void setServiceFlag(Integer serviceFlag) {
+        this.serviceFlag = serviceFlag;
     }
 }

@@ -9,7 +9,6 @@ public class EquipmentDto implements Serializable {
 
     private Integer id;
     private TypeEquipmentEnum nameTypeTechnic; //TV
-
     private String manufacturerCountry; // Russia
     private String manufacturerCompany; // IBS
     private Boolean isOrderOnline; // true

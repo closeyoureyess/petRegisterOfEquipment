@@ -1,9 +1,7 @@
 package com.registerofequipment.petRegisterOfEquipment.service;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
-import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
-import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
@@ -31,7 +29,8 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
         return equipmentMapper.convertEquipmentToDto(equipment);
     }
 
-    public Optional<List<EquipmentDto>> getPosition(String nameTypeTechnicString, Integer offset, Integer limit) {
+    @Override
+    public Optional<List<EquipmentDto>> getPositionPageByPage(String nameTypeTechnicString, Integer offset, Integer limit) {
         Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = equipmentMapper.compareStringAndEnum(nameTypeTechnicString);
         if (optionalNameTypeTechnicEnum.isPresent()) {
             if (offset != null && limit != null) {
@@ -39,15 +38,22 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
                 Page<Equipment> pageModel = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get(), pageble);
                 return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(pageModel.stream().toList()));
             } else if (offset == null && limit == null) {
-                List<Equipment> equipmentList = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
-                if (equipmentList != null) {
-                    return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(equipmentList));
+                Optional<List<Equipment>> optionalEquipmentList = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
+                if (optionalEquipmentList.isPresent()) {
+                    return Optional.of(equipmentMapper.transferEquipmentToEquipmentDtoList(optionalEquipmentList.get()));
                 }
             }
         }
         return Optional.empty();
     }
 
+    public Optional<List<Equipment>> getPositionWithoutPages(String nameTypeTechnicString) {
+        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = equipmentMapper.compareStringAndEnum(nameTypeTechnicString);
+        Optional<List<Equipment>> optionalEquipmentList = equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
+        return optionalEquipmentList;
+    }
+
+    @Override
     public EquipmentDto changePosition(EquipmentDto equipmentDto) {
 
         return null;
@@ -58,7 +64,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
         return true;
     }
 
-    public EquipmentDto verifyThatAllFieldsEqual(List<Equipment> listEquipment, EquipmentDto equipmentDto) {
+    public Equipment verifyThatAllFieldsEqual(List<Equipment> listEquipment, EquipmentDto equipmentDto) {
         Equipment equipmentForCycle;
         Equipment equipmentAfterCompare = new Equipment();
         for (int i = 0; i < listEquipment.size(); i++) {
@@ -69,7 +75,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
                 break;
             }
         }
-        return equipmentMapper.convertEquipmentToDto(equipmentAfterCompare);
+        return equipmentAfterCompare;
     }
 
 }

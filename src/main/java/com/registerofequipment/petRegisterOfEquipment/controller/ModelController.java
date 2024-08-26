@@ -32,7 +32,7 @@ public class ModelController {
                                              @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
                                              @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit
     ){
-        Optional<List<ModelDto>> optionalListModel = modelService.getPosition(executorEmail, offset, limit);
+        Optional<List<ModelDto>> optionalListModel = modelService.getPositionPageByPage(executorEmail, offset, limit);
         if (optionalListModel.isPresent()){
             return ResponseEntity.ok(optionalListModel.get());
         }

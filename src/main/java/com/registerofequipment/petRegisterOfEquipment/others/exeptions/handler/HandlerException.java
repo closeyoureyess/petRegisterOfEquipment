@@ -9,9 +9,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @ControllerAdvice
-public class HandlerExeption {
+public class HandlerException {
 
-    private static final Logger logger = Logger.getLogger(HandlerExeption.class.getName());
+    private static final Logger logger = Logger.getLogger(HandlerException.class.getName());
 
     @ExceptionHandler(MainException.class)
     public ResponseEntity<String> handlerCustomExceptions(MainException mainException){

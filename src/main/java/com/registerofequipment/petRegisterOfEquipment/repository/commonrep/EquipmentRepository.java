@@ -10,11 +10,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface EquipmentRepository extends JpaRepository<Equipment, Long> {
 
-    List<Equipment> findAllByNameTypeTechnic(TypeEquipmentEnum nameTypeTechnicEnum);
+    Optional<List<Equipment>> findAllByNameTypeTechnic(TypeEquipmentEnum nameTypeTechnicEnum);
     Page<Equipment> findAllByNameTypeTechnic(TypeEquipmentEnum nameTypeTechnicEnum, Pageable pageable);
 
 }

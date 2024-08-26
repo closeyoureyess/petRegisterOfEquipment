@@ -1,7 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
-import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;

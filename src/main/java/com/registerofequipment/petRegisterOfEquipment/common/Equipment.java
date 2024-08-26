@@ -24,10 +24,8 @@ public class Equipment {
     private Boolean isOrderOnline; // tr
     @Column(name = "possibility_installments")
     private Boolean isPossibilityInstallments; // true
-    @OneToMany(mappedBy = "equipment")
-    private List<Model> models; // Обратите внимание на изменение типа поля
-    /*@OneToMany(mappedBy = "equipment")
-    private Model model;*/
+    @OneToMany(mappedBy = "equipmentField")
+    private List<Model> models;
     private Integer serviceFlag;
 
     public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,

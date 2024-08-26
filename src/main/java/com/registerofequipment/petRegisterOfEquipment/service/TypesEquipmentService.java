@@ -26,7 +26,7 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     }
 
     @Override
-    public Optional<List<TypesEquipmentDto>> getPosition(String incomingObject, Integer offset, Integer limit) {
+    public Optional<List<TypesEquipmentDto>> getPositionPageByPage(String incomingObject, Integer offset, Integer limit) {
         return null;
     }
 

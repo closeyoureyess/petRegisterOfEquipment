@@ -2,12 +2,11 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
 import com.registerofequipment.petRegisterOfEquipment.common.Model;
-import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper;
-import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
+import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.EquipmentRepository;
 import com.registerofequipment.petRegisterOfEquipment.repository.commonrep.ModelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,7 +14,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Level;
@@ -27,6 +25,8 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     @Autowired
     private ModelRepository modelRepository;
     @Autowired
+    private EquipmentRepository equipmentRepository;
+    @Autowired
     private EquipmentService equipmentService;
     @Autowired
     private EquipmentMapper equipmentMapper;
@@ -36,21 +36,29 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
 
     @Override
     public ModelDto createPosition(ModelDto modelDto) {
-        List<Equipment> equipmentList = new LinkedList<>();
+        Optional<List<Equipment>> optionalEquipmentList = Optional.empty();
+        Model localModelForSave;
         try {
-            equipmentList = findAllEquipmentByNameTechnic(modelDto);
-        } catch (NameTypeTechnicExeption e){
+            optionalEquipmentList = findAllEquipmentByNameTechnic(modelDto);
+        } catch (NameTypeTechnicExeption e) {
             logger.log(Level.SEVERE, e.getMessage(), e);
         }
-        EquipmentDto equipmentDto = equipmentService.verifyThatAllFieldsEqual(equipmentList, modelDto.getEquipmentDto());
-        modelDto.setEquipmentDto(equipmentDto);
-        Model localModel = modelMapper.convertDtoToModel(modelDto);
-        localModel = modelRepository.save(localModel);
-        return modelMapper.convertModelToDto(localModel);
+
+        if (optionalEquipmentList.isPresent() && !optionalEquipmentList.get().isEmpty()) {
+            Equipment resultCheckEquipment = equipmentService.verifyThatAllFieldsEqual(optionalEquipmentList.get(), modelDto.getEquipmentDto());
+            modelDto.setEquipmentDto(null);
+            localModelForSave = modelMapper.convertDtoToModel(modelDto);
+            localModelForSave.setEquipmentField(resultCheckEquipment);
+        } else {
+            localModelForSave = modelMapper.convertDtoToModel(modelDto);
+        }
+        localModelForSave = modelRepository.save(localModelForSave);
+        return modelMapper.convertModelToDto(localModelForSave);
     }
 
+
     @Override
-    public Optional<List<ModelDto>> getPosition(String nameModelDto, Integer offset, Integer limit) {
+    public Optional<List<ModelDto>> getPositionPageByPage(String nameModelDto, Integer offset, Integer limit) {
         Pageable pageble = PageRequest.of(offset, limit);
         Page<Model> pageModel = modelRepository.findAllByNameDevice(nameModelDto, pageble);
         return Optional.of(modelMapper.transferModelToModelDtoList(pageModel.stream().toList()));
@@ -74,9 +82,9 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
         return modelDto;
     }
 
-    private List<Equipment> findAllEquipmentByNameTechnic(ModelDto modelDto) throws NameTypeTechnicExeption {
+    private Optional<List<Equipment>> findAllEquipmentByNameTechnic(ModelDto modelDto) throws NameTypeTechnicExeption {
         String nameTypeTechnic = equipmentMapper.pullNameTypeTechnicFromEquipmentDto(modelDto.getEquipmentDto());
-        Optional<List<EquipmentDto>> optionalEquipmentDtos = equipmentService.getPosition(nameTypeTechnic, null, null);
-        return equipmentMapper.transferEquipmentDtoListToEquipment(optionalEquipmentDtos.get());
+        Optional<List<Equipment>> optionalEquipment = equipmentService.getPositionWithoutPages(nameTypeTechnic);
+        return equipmentService.getPositionWithoutPages(nameTypeTechnic);
     }
 }

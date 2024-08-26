@@ -14,17 +14,12 @@ public class Model {
     private Integer id;
     @Column(name = "name_device")
     private String nameDevice;
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "types_equipment_id")
     private TypesEquipment typesEquipment;
-    /*@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "equipment_id")*/
-    /*@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "equipment_id")
-    private Equipment equipment;*/
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
-    @JoinColumn(name = "equipment_id")
-    private Equipment equipment;
+    private Equipment equipmentField;
     @Column(name = "serial_number")
     private Integer serialNumber;
     @Column(name = "color")
@@ -37,12 +32,12 @@ public class Model {
     @Column(name = "availability_tmodel")
     private Boolean isAvailability;
 
-    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Equipment equipment, Integer serialNumber, ColorEquipment color,
+    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Equipment equipmentField, Integer serialNumber, ColorEquipment color,
                  Integer size, Integer price, Boolean isAvailability) {
         this.id = id;
         this.nameDevice = nameDevice;
         this.typesEquipment = typesEquipment;
-        this.equipment = equipment;
+        this.equipmentField = equipmentField;
         this.serialNumber = serialNumber;
         this.color = color;
         this.size = size;
@@ -118,12 +113,12 @@ public class Model {
         isAvailability = availability;
     }
 
-    public Equipment getEquipment() {
-        return equipment;
+    public Equipment getEquipmentField() {
+        return equipmentField;
     }
 
-    public void setEquipment(Equipment equipment) {
-        this.equipment = equipment;
+    public void setEquipmentField(Equipment equipmentField) {
+        this.equipmentField = equipmentField;
     }
 
     @Override
@@ -131,11 +126,11 @@ public class Model {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Model model = (Model) o;
-        return Objects.equals(id, model.id) && Objects.equals(nameDevice, model.nameDevice) && Objects.equals(typesEquipment, model.typesEquipment) && Objects.equals(equipment, model.equipment) && Objects.equals(serialNumber, model.serialNumber) && color == model.color && Objects.equals(size, model.size) && Objects.equals(price, model.price) && Objects.equals(isAvailability, model.isAvailability);
+        return Objects.equals(id, model.id) && Objects.equals(nameDevice, model.nameDevice) && Objects.equals(typesEquipment, model.typesEquipment) && Objects.equals(equipmentField, model.equipmentField) && Objects.equals(serialNumber, model.serialNumber) && color == model.color && Objects.equals(size, model.size) && Objects.equals(price, model.price) && Objects.equals(isAvailability, model.isAvailability);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nameDevice, typesEquipment, equipment, serialNumber, color, size, price, isAvailability);
+        return Objects.hash(id, nameDevice, typesEquipment, equipmentField, serialNumber, color, size, price, isAvailability);
     }
 }

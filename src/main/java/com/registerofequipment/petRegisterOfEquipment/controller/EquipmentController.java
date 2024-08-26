@@ -32,7 +32,7 @@ public class EquipmentController {
                                                            @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
                                                            @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit) {
 
-        Optional<List<EquipmentDto>> optionalEquipmentDtoList = equipmentService.getPosition(nameTypeTechnicOrColorOrPrice, offset, limit);
+        Optional<List<EquipmentDto>> optionalEquipmentDtoList = equipmentService.getPositionPageByPage(nameTypeTechnicOrColorOrPrice, offset, limit);
         if (optionalEquipmentDtoList.isPresent()) {
             return ResponseEntity.ok(optionalEquipmentDtoList.get());
         }

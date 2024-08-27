@@ -2983,3 +2983,540 @@ Caused by: com.registerofequipment.petRegisterOfEquipment.others.exeptions.Diffe
 2024-08-27 06:03:09 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-08-27 06:03:09 - HikariPool-1 - Shutdown initiated...
 2024-08-27 06:03:09 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:07:22 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 35992 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:07:22 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:07:22 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:07:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:07:23 - Finished Spring Data repository scanning in 87 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:07:24 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:07:24 - Starting service [Tomcat]
+2024-08-27 11:07:24 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:07:24 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:07:24 - Root WebApplicationContext: initialization completed in 1643 ms
+2024-08-27 11:07:24 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 38804 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:07:24 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:07:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:07:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:07:24 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:07:24 - HHH000026: Second-level cache disabled
+2024-08-27 11:07:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:07:24 - HikariPool-1 - Starting...
+2024-08-27 11:07:25 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75cacb3e
+2024-08-27 11:07:25 - HikariPool-1 - Start completed.
+2024-08-27 11:07:25 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:07:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:07:25 - Finished Spring Data repository scanning in 78 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:07:25 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:07:25 - Starting service [Tomcat]
+2024-08-27 11:07:25 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:07:25 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:07:25 - Root WebApplicationContext: initialization completed in 1449 ms
+2024-08-27 11:07:26 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:07:26 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:07:26 - HHH000026: Second-level cache disabled
+2024-08-27 11:07:26 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "equipment" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:26 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:07:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:07:26 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:07:26 - HikariPool-1 - Starting...
+2024-08-27 11:07:26 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1231a1be
+2024-08-27 11:07:26 - HikariPool-1 - Start completed.
+2024-08-27 11:07:26 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:07:26 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:07:27 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:07:27 - Started PetRegisterOfEquipmentApplication in 5.235 seconds (process running for 5.934)
+2024-08-27 11:07:27 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:07:27 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:07:27 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:07:27 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "equipment" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:27 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:27 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:07:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:07:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:07:28 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:07:28 - Started PetRegisterOfEquipmentApplication in 4.524 seconds (process running for 4.947)
+2024-08-27 11:07:28 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:07:28 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:07:28 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:07:32 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 34388 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:07:32 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:07:32 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:07:32 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:07:32 - Finished Spring Data repository scanning in 60 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:07:33 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:07:33 - Starting service [Tomcat]
+2024-08-27 11:07:33 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:07:33 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:07:33 - Root WebApplicationContext: initialization completed in 1184 ms
+2024-08-27 11:07:33 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:07:33 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:07:33 - HHH000026: Second-level cache disabled
+2024-08-27 11:07:33 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:07:33 - HikariPool-1 - Starting...
+2024-08-27 11:07:33 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4656fcc5
+2024-08-27 11:07:33 - HikariPool-1 - Start completed.
+2024-08-27 11:07:33 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:07:34 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "equipment" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:07:34 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:07:34 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:07:34 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:07:35 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:07:35 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:07:35 - Started PetRegisterOfEquipmentApplication in 3.946 seconds (process running for 4.304)
+2024-08-27 11:07:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 11:07:51 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 11:07:51 - Completed initialization in 1 ms
+2024-08-27 11:10:03 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:10:03 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:10:03 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:10:11 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 34056 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:10:11 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:10:11 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:10:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:10:12 - Finished Spring Data repository scanning in 61 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:10:12 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:10:12 - Starting service [Tomcat]
+2024-08-27 11:10:12 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:10:12 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:10:12 - Root WebApplicationContext: initialization completed in 1175 ms
+2024-08-27 11:10:12 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:10:13 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:10:13 - HHH000026: Second-level cache disabled
+2024-08-27 11:10:13 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:10:13 - HikariPool-1 - Starting...
+2024-08-27 11:10:13 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e162a35
+2024-08-27 11:10:13 - HikariPool-1 - Start completed.
+2024-08-27 11:10:13 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:10:14 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "equipment" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:10:14 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:10:14 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:10:14 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:10:14 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:10:15 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:10:15 - Started PetRegisterOfEquipmentApplication in 3.961 seconds (process running for 4.294)
+2024-08-27 11:10:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 11:10:21 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 11:10:21 - Completed initialization in 1 ms
+2024-08-27 11:11:20 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum` from String "Hoover": not one of the values accepted for Enum class: [PERSONAL_COMPUTER, HOOVER, SMARTPHONE, TELEVISION, FRIDGE]]
+2024-08-27 11:11:42 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum` from String "Hoover": not one of the values accepted for Enum class: [PERSONAL_COMPUTER, HOOVER, SMARTPHONE, TELEVISION, FRIDGE]]
+2024-08-27 11:15:12 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalStateException: No target Validator set] with root cause
+java.lang.IllegalStateException: No target Validator set
+	at org.springframework.util.Assert.state(Assert.java:76)
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.forExecutables(SpringValidatorAdapter.java:403)
+	at org.springframework.validation.beanvalidation.MethodValidationAdapter.invokeValidatorForArguments(MethodValidationAdapter.java:257)
+	at org.springframework.validation.beanvalidation.MethodValidationAdapter.validateArguments(MethodValidationAdapter.java:240)
+	at org.springframework.web.method.annotation.HandlerMethodValidator.validateArguments(HandlerMethodValidator.java:115)
+	at org.springframework.web.method.annotation.HandlerMethodValidator.applyArgumentValidation(HandlerMethodValidator.java:83)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 11:18:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:18:11 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:18:11 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:18:34 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 18696 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:18:34 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:18:34 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:18:35 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:18:35 - Finished Spring Data repository scanning in 60 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:18:36 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:18:36 - Starting service [Tomcat]
+2024-08-27 11:18:36 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:18:36 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:18:36 - Root WebApplicationContext: initialization completed in 1419 ms
+2024-08-27 11:18:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:18:36 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:18:36 - HHH000026: Second-level cache disabled
+2024-08-27 11:18:36 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:18:36 - HikariPool-1 - Starting...
+2024-08-27 11:18:36 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d20616a
+2024-08-27 11:18:36 - HikariPool-1 - Start completed.
+2024-08-27 11:18:36 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:18:37 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "equipment" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:18:37 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:18:37 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:18:37 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:18:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:18:38 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:18:38 - Started PetRegisterOfEquipmentApplication in 4.53 seconds (process running for 4.937)
+2024-08-27 11:18:45 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 11:18:45 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 11:18:45 - Completed initialization in 1 ms
+2024-08-27 11:18:55 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:18:55 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:18:55 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:18:57 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 29688 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:18:57 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:18:57 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:18:58 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:18:58 - Finished Spring Data repository scanning in 61 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:18:59 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:18:59 - Starting service [Tomcat]
+2024-08-27 11:18:59 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:18:59 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:18:59 - Root WebApplicationContext: initialization completed in 1288 ms
+2024-08-27 11:18:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:18:59 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:18:59 - HHH000026: Second-level cache disabled
+2024-08-27 11:18:59 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:18:59 - HikariPool-1 - Starting...
+2024-08-27 11:18:59 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@153cfd86
+2024-08-27 11:18:59 - HikariPool-1 - Start completed.
+2024-08-27 11:19:00 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:19:00 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "equipment" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:19:00 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:19:00 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:19:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:19:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:19:01 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:19:01 - Started PetRegisterOfEquipmentApplication in 4.411 seconds (process running for 4.769)
+2024-08-27 11:19:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 11:19:04 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 11:19:04 - Completed initialization in 1 ms
+2024-08-27 11:20:22 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:20:22 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:20:22 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:22:08 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 25936 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:22:08 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:22:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:22:08 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:22:09 - Finished Spring Data repository scanning in 65 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:22:09 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:22:09 - Starting service [Tomcat]
+2024-08-27 11:22:09 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:22:09 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:22:09 - Root WebApplicationContext: initialization completed in 1423 ms
+2024-08-27 11:22:09 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:22:09 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:22:09 - HHH000026: Second-level cache disabled
+2024-08-27 11:22:10 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:22:10 - HikariPool-1 - Starting...
+2024-08-27 11:22:10 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6eed46e9
+2024-08-27 11:22:10 - HikariPool-1 - Start completed.
+2024-08-27 11:22:10 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:22:11 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "equipment" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:22:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:22:11 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:22:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:22:11 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:22:12 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:22:12 - Started PetRegisterOfEquipmentApplication in 4.497 seconds (process running for 4.85)
+2024-08-27 11:22:12 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 11:22:12 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 11:22:12 - Completed initialization in 1 ms
+2024-08-27 11:22:13 - Init duration for springdoc-openapi is: 279 ms
+2024-08-27 11:33:53 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:33:53 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:33:53 - HikariPool-1 - Shutdown completed.
+2024-08-27 11:36:16 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 36828 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:36:16 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:36:16 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:36:17 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:36:17 - Finished Spring Data repository scanning in 59 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:36:18 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:36:18 - Root WebApplicationContext: initialization completed in 1353 ms
+2024-08-27 11:36:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:36:18 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:36:18 - HHH000026: Second-level cache disabled
+2024-08-27 11:36:18 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:36:18 - HikariPool-1 - Starting...
+2024-08-27 11:36:18 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@531ec2ca
+2024-08-27 11:36:18 - HikariPool-1 - Start completed.
+2024-08-27 11:36:18 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:36:21 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 27308 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 11:36:21 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 11:36:21 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 11:36:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 11:36:21 - Finished Spring Data repository scanning in 59 ms. Found 8 JPA repository interfaces.
+2024-08-27 11:36:22 - Tomcat initialized with port 8080 (http)
+2024-08-27 11:36:22 - Starting service [Tomcat]
+2024-08-27 11:36:22 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 11:36:22 - Initializing Spring embedded WebApplicationContext
+2024-08-27 11:36:22 - Root WebApplicationContext: initialization completed in 1249 ms
+2024-08-27 11:36:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 11:36:22 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 11:36:22 - HHH000026: Second-level cache disabled
+2024-08-27 11:36:22 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 11:36:22 - HikariPool-1 - Starting...
+2024-08-27 11:36:22 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ce9771c
+2024-08-27 11:36:22 - HikariPool-1 - Start completed.
+2024-08-27 11:36:22 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 11:36:23 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "equipment" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "television_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 11:36:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 11:36:23 - таблица "types_equipment" не существует, пропускается
+2024-08-27 11:36:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:36:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 11:36:24 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 11:36:24 - Started PetRegisterOfEquipmentApplication in 4.237 seconds (process running for 4.573)
+2024-08-27 11:36:32 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 11:36:32 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 11:36:32 - Completed initialization in 1 ms
+2024-08-27 11:37:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 11:37:11 - HikariPool-1 - Shutdown initiated...
+2024-08-27 11:37:11 - HikariPool-1 - Shutdown completed.

@@ -33,18 +33,28 @@ public class ModelController {
 
     @GetMapping("/gen-info/{nameDevice}")
     public ResponseEntity<List<ModelDto>> getModel(@PathVariable("nameDevice") String nameDevice,
-                                                   @RequestParam(value = "typeOfEquipment") String typeOfEquipment,
-                                                   @RequestParam(value = "color") ColorEquipment colorEquipment,
-                                                   @RequestParam(value = "price") Integer price,
+                                                   @RequestParam(value = "typeOfEquipment",required = false) String typeOfEquipment,
+                                                   @RequestParam(value = "color", required = false) ColorEquipment colorEquipment,
+                                                   @RequestParam(value = "price", required = false) Integer price,
                                                    @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
                                                    @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit
     ) {
-        Optional<List<ModelDto>> optionalListModel = modelService.getPositionPageByPage(nameDevice, typeOfEquipment, colorEquipment, price, offset, limit);
-        if (optionalListModel.isPresent()) {
-            return ResponseEntity.ok(optionalListModel.get());
+        List<ModelDto> listModel = modelService.getFilteredModels(nameDevice, typeOfEquipment, colorEquipment, price, offset, limit);
+        if (listModel != null) {
+            return ResponseEntity.ok(listModel);
         }
         return ResponseEntity.notFound().build();
 
+    }
+
+    @PutMapping("/change")
+    public ResponseEntity<ModelDto> updateModel(@RequestBody ModelDto modelDto) {
+            // Обновляем модель с помощью сервиса
+            ModelDto updatedModelDto = modelService.changePosition(modelDto);
+            if (updatedModelDto != null) {
+                return ResponseEntity.ok(updatedModelDto);
+            }
+                return ResponseEntity.notFound().build(); // Модель не найдена
     }
 
     @DeleteMapping("/delete/{id}")

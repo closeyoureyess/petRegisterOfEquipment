@@ -11,6 +11,7 @@ import com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper.*;
 import com.registerofequipment.petRegisterOfEquipment.models.*;
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
+import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
@@ -26,6 +27,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -101,7 +103,40 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
         Pageable pageble = PageRequest.of(offset, limit);
         Page<Model> pageModel = modelRepository.findAllByNameDevice(nameModelDto, pageble);
         List<Model> modelList = pageModel.stream().toList();
+        filterCollection(typeOfEquipment, colorEquipment,price,
+                offset,limit)
         return Optional.of(modelMapper.transferModelToModelDtoList(modelList));
+    }
+
+    private ModelDto filterModelByCriteries(List<Model> modelList, ColorEquipment colorEquipment) {
+        Optional<ColorEquipment> optional = typesEquipmentMapper.compareStringAndEnumColor(colorEquipment.getColorName(), ConstantsClass.COLOR_EQUIPMENTS);
+        if (optional.isPresent()) {
+
+        }
+    }
+
+    private String filterCollection(List<Model> modelList, String typeOfEquipment, ColorEquipment colorEquipment, Integer price) {
+        List<Model> filterList = new LinkedList<>();
+        for (int i = 0; i < modelList.size(); i++) {
+
+            if (typeOfEquipment == null && colorEquipment == null && price == null) {
+                filterList.add(modelList.get(i));
+            } else if (typeOfEquipment != null && colorEquipment == null && price == null) {
+
+            } else if (typeOfEquipment == null && colorEquipment != null && price == null) {
+
+            } else if (typeOfEquipment == null && colorEquipment == null && price != null) {
+
+            } else if (typeOfEquipment != null && colorEquipment != null && price == null) {
+
+            } else if (typeOfEquipment != null && colorEquipment == null && price != null) {
+
+            } else if (typeOfEquipment == null && colorEquipment != null && price != null) {
+
+            } else if (typeOfEquipment != null && colorEquipment != null && price != null) {
+
+            }
+        }
     }
 
     @Override

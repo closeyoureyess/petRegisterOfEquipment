@@ -3,6 +3,7 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
+import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
@@ -30,7 +31,7 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
     }
 
     @Override
-    public Optional<List<TypesEquipmentDto>> getPositionPageByPage(String incomingObject, Integer offset, Integer limit) {
+    public Optional<List<TypesEquipmentDto>> getPositionPageByPage(String incomingObject, String typeOfEquipment, ColorEquipment colorEquipment, Integer price, Integer offset, Integer limit) {
         return null;
     }
 

@@ -4,6 +4,7 @@ import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
+import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
@@ -39,7 +40,11 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     }
 
     @Override
-    public Optional<List<EquipmentDto>> getPositionPageByPage(String nameTypeTechnicString, Integer offset, Integer limit) {
+    public Optional<List<EquipmentDto>> getPositionPageByPage(String incomingObject, String typeOfEquipment, ColorEquipment colorEquipment, Integer price, Integer offset, Integer limit) {
+        return Optional.empty();
+    }
+
+    public Optional<List<EquipmentDto>> getPositionPageByPageSpecial(String nameTypeTechnicString, Integer offset, Integer limit) {
         Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString, ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST);
         if (optionalNameTypeTechnicEnum.isPresent()) {
             if (offset != null && limit != null) {

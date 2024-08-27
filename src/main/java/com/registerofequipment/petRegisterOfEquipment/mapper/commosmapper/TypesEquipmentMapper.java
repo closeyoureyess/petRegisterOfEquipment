@@ -4,6 +4,7 @@ import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper.*;
+import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
@@ -79,6 +80,17 @@ public class TypesEquipmentMapper {
             if (valueString.equalsIgnoreCase(typeEquipmentEnums
                     .get(i)
                     .getTypeEquipmentEnum())) {
+                return Optional.of(typeEquipmentEnums.get(i));
+            }
+        }
+        return Optional.empty();
+    }
+
+    public Optional<ColorEquipment> compareStringAndEnumColor(String valueString, List<ColorEquipment> typeEquipmentEnums) {
+        for (int i = 0; i < typeEquipmentEnums.size(); i++) {
+            if (valueString.equalsIgnoreCase(typeEquipmentEnums
+                    .get(i)
+                    .getColorName())) {
                 return Optional.of(typeEquipmentEnums.get(i));
             }
         }

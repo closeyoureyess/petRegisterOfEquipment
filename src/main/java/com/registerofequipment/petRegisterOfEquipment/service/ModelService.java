@@ -24,6 +24,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -103,14 +104,38 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
         return Optional.of(modelMapper.transferModelToModelDtoList(modelList));
     }
 
-    public List<ModelDto> getFilteredModels(String nameDevice, String typeOfEquipment, ColorEquipment colorEquipment, Integer price, Integer offset, Integer limit) {
+    public List<ModelDto> getFilteredModels(
+            String nameDevice,
+            String typeOfEquipment,
+            ColorEquipment colorEquipment,
+            Integer price,
+            Integer size,
+            Boolean isAvailability,
+            Integer offset,
+            Integer limit,
+            String sortBy,  // Параметр для сортировки
+            String sortOrder // Параметр для порядка сортировки (asc/desc)
+    ) {
+        // Формируем запрос для получения моделей
         List<Model> models = modelRepository.findAll();
 
+        // Фильтрация
         return models.stream()
-                .filter(model -> model.getNameDevice().equalsIgnoreCase(nameDevice))
+                .filter(model -> nameDevice == null || model.getNameDevice().equalsIgnoreCase(nameDevice))
                 .filter(model -> typeOfEquipment == null || model.getTypesEquipment().getClass().getSimpleName().equalsIgnoreCase(typeOfEquipment))
                 .filter(model -> colorEquipment == null || model.getColor() == colorEquipment)
                 .filter(model -> price == null || model.getPrice().equals(price))
+                .filter(model -> size == null || model.getSize().equals(size))
+                .filter(model -> isAvailability == null || model.getIsAvailability().equals(isAvailability))
+                .sorted((m1, m2) -> {
+                    if ("price".equalsIgnoreCase(sortBy)) {
+                        return "asc".equalsIgnoreCase(sortOrder) ? m1.getPrice().compareTo(m2.getPrice()) : m2.getPrice().compareTo(m1.getPrice());
+                    } else if ("name".equalsIgnoreCase(sortBy)) {
+                        return "asc".equalsIgnoreCase(sortOrder) ? m1.getNameDevice().compareToIgnoreCase(m2.getNameDevice()) : m2.getNameDevice().compareToIgnoreCase(m1.getNameDevice());
+                    } else {
+                        return 0;
+                    }
+                })
                 .skip(offset)
                 .limit(limit)
                 .map(modelMapper::convertModelToDto)

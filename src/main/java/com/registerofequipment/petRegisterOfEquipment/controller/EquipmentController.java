@@ -1,3 +1,4 @@
+/*
 package com.registerofequipment.petRegisterOfEquipment.controller;
 
 
@@ -43,3 +44,4 @@ public class EquipmentController {
     }
 
 }
+*/

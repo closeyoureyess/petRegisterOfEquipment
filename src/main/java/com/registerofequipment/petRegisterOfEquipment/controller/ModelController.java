@@ -32,14 +32,18 @@ public class ModelController {
     }
 
     @GetMapping("/gen-info/{nameDevice}")
-    public ResponseEntity<List<ModelDto>> getModel(@PathVariable("nameDevice") String nameDevice,
-                                                   @RequestParam(value = "typeOfEquipment",required = false) String typeOfEquipment,
+    public ResponseEntity<List<ModelDto>> getModel(@RequestParam(value = "nameDevice", required = false) String nameDevice,
+                                                   @RequestParam(value = "typeOfEquipment", required = false) String typeOfEquipment,
                                                    @RequestParam(value = "color", required = false) ColorEquipment colorEquipment,
                                                    @RequestParam(value = "price", required = false) Integer price,
+                                                   @RequestParam(value = "size", required = false) Integer size,
+                                                   @RequestParam(value = "isAvailability", required = false) Boolean isAvailability,
                                                    @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
-                                                   @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit
+                                                   @RequestParam(value = "limit", defaultValue = "10") @Min(1) Integer limit,
+                                                   @RequestParam(value = "sortBy", defaultValue = "name") String sortBy,
+                                                   @RequestParam(value = "sortOrder", defaultValue = "asc") String sortOrder
     ) {
-        List<ModelDto> listModel = modelService.getFilteredModels(nameDevice, typeOfEquipment, colorEquipment, price, offset, limit);
+        List<ModelDto> listModel = modelService.getFilteredModels(nameDevice, typeOfEquipment, colorEquipment, price, size, isAvailability, offset, limit, sortBy, sortOrder);
         if (listModel != null) {
             return ResponseEntity.ok(listModel);
         }

@@ -1,8 +1,6 @@
 package com.registerofequipment.petRegisterOfEquipment.repository.commonrep;
 
 import com.registerofequipment.petRegisterOfEquipment.common.Equipment;
-import com.registerofequipment.petRegisterOfEquipment.common.Model;
-import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

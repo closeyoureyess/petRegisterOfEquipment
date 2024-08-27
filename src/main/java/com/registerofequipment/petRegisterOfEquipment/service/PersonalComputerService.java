@@ -2,17 +2,18 @@ package com.registerofequipment.petRegisterOfEquipment.service;
 
 import com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto.PersonalComputerDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper.PersonalComputerMapper;
-import com.registerofequipment.petRegisterOfEquipment.models.Hoover;
 import com.registerofequipment.petRegisterOfEquipment.models.PersonalComputer;
 import com.registerofequipment.petRegisterOfEquipment.repository.modelsrep.PersonalComputerRepository;
 import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.RESTGetAll;
 import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.RESTGetId;
 import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.Verify;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class PersonalComputerService implements Verify<PersonalComputer, PersonalComputerDto>, RESTGetAll<PersonalComputer, PersonalComputerDto>, RESTGetId<PersonalComputerDto, Integer> {
 
     @Autowired

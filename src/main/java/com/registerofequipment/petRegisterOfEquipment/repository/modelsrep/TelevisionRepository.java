@@ -1,6 +1,5 @@
 package com.registerofequipment.petRegisterOfEquipment.repository.modelsrep;
 
-import com.registerofequipment.petRegisterOfEquipment.models.Smartphone;
 import com.registerofequipment.petRegisterOfEquipment.models.Television;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

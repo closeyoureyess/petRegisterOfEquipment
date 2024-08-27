@@ -6,6 +6,7 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.EquipmentMapper;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.ModelMapper;
 import com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper;
+import com.registerofequipment.petRegisterOfEquipment.mapper.modelsmapper.*;
 import com.registerofequipment.petRegisterOfEquipment.models.*;
 import com.registerofequipment.petRegisterOfEquipment.others.ConstantsClass;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DescriptionExeptions;
@@ -35,11 +36,31 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     @Autowired
     private EquipmentService equipmentService;
     @Autowired
+    private FridgeService fridgeService;
+    @Autowired
+    private HooverService hooverService;
+    @Autowired
+    private PersonalComputerService personalComputerService;
+    @Autowired
+    private SmartphoneService smartphoneService;
+    @Autowired
+    private TelevisionService televisionService;
+    @Autowired
     private EquipmentMapper equipmentMapper;
     @Autowired
     private TypesEquipmentMapper typesEquipmentMapper;
     @Autowired
     private ModelMapper modelMapper;
+    @Autowired
+    private FridgeMapper fridgeMapper;
+    @Autowired
+    private HooverMapper hooverMapper;
+    @Autowired
+    private PersonalComputerMapper personalComputerMapper;
+    @Autowired
+    private SmartphoneMapper smartphoneMapper;
+    @Autowired
+    private TelevisionMapper televisionMapper;
     private static final Logger logger = Logger.getLogger(ModelService.class.getName());
 
     @Override
@@ -52,6 +73,24 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
             optionalEquipmentList = findAllEquipmentByNameTechnic(modelDto);
             validateThatTypeTypeOfEquipmentModelsEqualSelectEquipment(modelDto);
             modelDto = validateFridgeHooverAndEtcAlreadyExist(modelDto);
+            if (modelDto.getTypesEquipmentDto().getFridgeDto() != null) {
+                localModelForSave.getTypesEquipment().setFridge(fridgeMapper.convertDtoToFridge(modelDto.getTypesEquipmentDto().getFridgeDto()));
+            }
+            if (modelDto.getTypesEquipmentDto().getHooverDto() != null) {
+                localModelForSave.getTypesEquipment().setHoover(hooverMapper.convertDtoToHoover(modelDto.getTypesEquipmentDto().getHooverDto()));
+            }
+            if (modelDto.getTypesEquipmentDto().getPersonalComputerDto() != null) {
+                localModelForSave.getTypesEquipment().setPersonalComputer(personalComputerMapper.convertDtoToPersonalComputer(
+                        modelDto.getTypesEquipmentDto().getPersonalComputerDto()));
+            }
+            if (modelDto.getTypesEquipmentDto().getSmartphoneDto() != null) {
+                localModelForSave.getTypesEquipment().setSmartphone(smartphoneMapper.convertDtoToSmartphone(
+                        modelDto.getTypesEquipmentDto().getSmartphoneDto()));
+            }
+            if (modelDto.getTypesEquipmentDto().getTelevisionDto() != null) {
+                localModelForSave.getTypesEquipment().setTelevision(televisionMapper.convertDtoToTelevision(
+                        modelDto.getTypesEquipmentDto().getTelevisionDto()));
+            }
             if (optionalEquipmentList.isPresent() && !optionalEquipmentList.get().isEmpty()) {
                 Equipment resultCheckEquipment = equipmentService.verifyThatAllFieldsEqual(optionalEquipmentList.get(), modelDto.getEquipmentDto());
                 if (resultCheckEquipment.getServiceFlag().equals(ConstantsClass.ZERO_FLAG)) {
@@ -87,7 +126,6 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     private ModelDto verifyFridgeAlreadyExist(ModelDto modelDto){
-        FridgeService fridgeService = new FridgeService();
         if (modelDto.getTypesEquipmentDto().getFridgeDto() != null) {
             List<Fridge> listWithFridgeFromDB = fridgeService.getAllByFields(modelDto.getTypesEquipmentDto().getFridgeDto());
             if (!listWithFridgeFromDB.isEmpty()) {
@@ -95,14 +133,13 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
                         .getTypesEquipmentDto()
                         .getFridgeDto());
                 if (resultFridgeAfterEqual.getServiceFlag().equals(ConstantsClass.ZERO_FLAG)){
-                    modelDto.getTypesEquipmentDto().setFridgeDto(null);
+                    modelDto.getTypesEquipmentDto().setFridgeDto(fridgeMapper.convertFridgeToDto(resultFridgeAfterEqual));
                 }
             }
         }
         return modelDto;
     }
     private ModelDto verifyHooverAlreadyExist(ModelDto modelDto){
-        HooverService hooverService = new HooverService();
         if (modelDto.getTypesEquipmentDto().getHooverDto() != null) {
             List<Hoover> listWithFHooverFromDB = hooverService.getAllByFields(modelDto.getTypesEquipmentDto().getHooverDto());
             if (!listWithFHooverFromDB.isEmpty()) {
@@ -118,7 +155,6 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     private ModelDto verifyPersonalComputerAlreadyExist(ModelDto modelDto){
-        PersonalComputerService personalComputerService = new PersonalComputerService();
         if (modelDto.getTypesEquipmentDto().getPersonalComputerDto() != null) {
             List<PersonalComputer> listWithFPersonalComputerFromDB = personalComputerService.getAllByFields(modelDto.getTypesEquipmentDto().getPersonalComputerDto());
             if (!listWithFPersonalComputerFromDB.isEmpty()) {
@@ -134,7 +170,6 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     private ModelDto verifySmartphoneAlreadyExist(ModelDto modelDto){
-        SmartphoneService smartphoneService = new SmartphoneService();
         if (modelDto.getTypesEquipmentDto().getSmartphoneDto() != null) {
             List<Smartphone> listWithFSmartphoneComputerFromDB = smartphoneService.getAllByFields(modelDto.getTypesEquipmentDto().getSmartphoneDto());
             if (!listWithFSmartphoneComputerFromDB.isEmpty()) {
@@ -150,7 +185,6 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
     }
 
     private ModelDto verifyTelevisionAlreadyExist(ModelDto modelDto){
-        TelevisionService televisionService = new TelevisionService();
         if (modelDto.getTypesEquipmentDto().getTelevisionDto() != null){
             List<Television> listWithFTelevisionComputerFromDB = televisionService.getAllByFields(modelDto.getTypesEquipmentDto().getTelevisionDto());
             if (!listWithFTelevisionComputerFromDB.isEmpty()) {

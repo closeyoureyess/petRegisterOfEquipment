@@ -9,10 +9,12 @@ import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.
 import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.RESTGetId;
 import com.registerofequipment.petRegisterOfEquipment.service.serviceinterfaces.Verify;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class HooverService implements Verify<Hoover, HooverDto>, RESTGetAll<Hoover, HooverDto>, RESTGetId<HooverDto, Integer> {
     @Autowired
     private HooverMapper hooverMapper;

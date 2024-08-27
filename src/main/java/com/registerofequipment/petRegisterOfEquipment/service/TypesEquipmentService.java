@@ -34,6 +34,25 @@ public class TypesEquipmentService implements CRUDServices<TypesEquipmentDto, Ty
         return null;
     }
 
+    public TypesEquipment getTypesWithFridgeEntity(Integer fridgeId){
+        return typesEquipmentRepository.findByFridgeId(Long.valueOf(fridgeId));
+    }
+
+    public TypesEquipment getTypesWithHooverEntity(Integer hooverId) {
+        return typesEquipmentRepository.findByHooverId(Long.valueOf(hooverId));
+    }
+
+    public TypesEquipment getTypesWithPersonalComputerEntity(Integer personalComputerId){
+        return typesEquipmentRepository.findByPersonalComputerId(Long.valueOf(personalComputerId));
+    }
+
+    public TypesEquipment getTypesWithSmartphoneEntity(Integer smartphoneId){
+        return typesEquipmentRepository.findBySmartphoneId(Long.valueOf(smartphoneId));
+    }
+
+    public TypesEquipment getTypesWithTelevisionEntity(Integer televisionId){
+        return typesEquipmentRepository.findByTelevisionId(Long.valueOf(televisionId));
+    }
     @Override
     public TypesEquipmentDto changePosition(TypesEquipmentDto incomingObjectForChange) {
         return null;

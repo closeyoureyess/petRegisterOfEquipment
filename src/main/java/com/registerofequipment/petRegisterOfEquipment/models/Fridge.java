@@ -1,6 +1,5 @@
 package com.registerofequipment.petRegisterOfEquipment.models;
 
-import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import jakarta.persistence.*;
 
 import java.util.Objects;

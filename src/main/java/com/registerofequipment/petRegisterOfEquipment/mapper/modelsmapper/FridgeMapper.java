@@ -12,8 +12,12 @@ public class FridgeMapper {
         Fridge fridge = new Fridge();
         if (fridgeDto != null) {
             fridge.setId(fridgeDto.getId());
-            fridge.setCountsDoor(fridgeDto.getCountsDoor());
-            fridge.setTypeCompressor(fridgeDto.getTypeCompressor());
+            if (fridgeDto.getCountsDoor() != null) {
+                fridge.setCountsDoor(fridgeDto.getCountsDoor());
+            }
+            if (fridgeDto.getTypeCompressor() != null) {
+                fridge.setTypeCompressor(fridgeDto.getTypeCompressor());
+            }
         }
         return fridge;
     }
@@ -22,8 +26,12 @@ public class FridgeMapper {
         FridgeDto fridgeDto = new FridgeDto();
         if (fridge != null) {
             fridgeDto.setId(fridge.getId());
-            fridgeDto.setCountsDoor(fridge.getCountsDoor());
-            fridgeDto.setTypeCompressor(fridge.getTypeCompressor());
+            if (fridge.getCountsDoor() != null) {
+                fridgeDto.setCountsDoor(fridge.getCountsDoor());
+            }
+            if (fridge.getTypeCompressor() != null) {
+                fridgeDto.setTypeCompressor(fridge.getTypeCompressor());
+            }
         }
         return fridgeDto;
     }

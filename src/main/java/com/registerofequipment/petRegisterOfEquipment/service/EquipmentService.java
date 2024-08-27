@@ -31,6 +31,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     @Autowired
     private TypesEquipmentMapper typesEquipmentMapper;
 
+    @Override
     public EquipmentDto createPosition(EquipmentDto equipmentDto) throws NameTypeTechnicExeption, DifferentTypesEquipmentExeption, FieldsEmptyExeption {
         Equipment equipment = equipmentMapper.convertDtoToEquipment(equipmentDto);
         equipment = equipmentRepository.save(equipment);
@@ -39,7 +40,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
 
     @Override
     public Optional<List<EquipmentDto>> getPositionPageByPage(String nameTypeTechnicString, Integer offset, Integer limit) {
-        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString);
+        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString, ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST);
         if (optionalNameTypeTechnicEnum.isPresent()) {
             if (offset != null && limit != null) {
                 Pageable pageble = PageRequest.of(offset, limit);
@@ -56,7 +57,7 @@ public class EquipmentService implements CRUDServices<EquipmentDto, EquipmentDto
     }
 
     public Optional<List<Equipment>> getPositionWithoutPages(String nameTypeTechnicString) {
-        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString);
+        Optional<TypeEquipmentEnum> optionalNameTypeTechnicEnum = typesEquipmentMapper.compareStringAndEnum(nameTypeTechnicString, ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST);
         return equipmentRepository.findAllByNameTypeTechnic(optionalNameTypeTechnicEnum.get());
     }
 

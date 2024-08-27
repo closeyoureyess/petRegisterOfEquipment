@@ -11,6 +11,7 @@ import com.registerofequipment.petRegisterOfEquipment.others.exeptions.Different
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -73,12 +74,12 @@ public class TypesEquipmentMapper {
         return typesEquipmentDto;
     }
 
-    public Optional<TypeEquipmentEnum> compareStringAndEnum(String valueString) {
-        for (int i = 0; i < ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST.size(); i++) {
-            if (valueString.equalsIgnoreCase(ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST
+    public Optional<TypeEquipmentEnum> compareStringAndEnum(String valueString, List<TypeEquipmentEnum> typeEquipmentEnums) {
+        for (int i = 0; i < typeEquipmentEnums.size(); i++) {
+            if (valueString.equalsIgnoreCase(typeEquipmentEnums
                     .get(i)
                     .getTypeEquipmentEnum())) {
-                return Optional.of(ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST.get(i));
+                return Optional.of(typeEquipmentEnums.get(i));
             }
         }
         return Optional.empty();
@@ -109,7 +110,7 @@ public class TypesEquipmentMapper {
                 index = nameClassTypeEquipmentmodelDto.lastIndexOf(ConstantsClass.D_LETTER_ENG_ALPHABET);
                 nameClassTypeEquipmentmodelDto = nameClassTypeEquipmentmodelDto.substring(ConstantsClass.ZERO_FLAG, index);
             }
-            Optional<TypeEquipmentEnum> optionalString = compareStringAndEnum(nameClassTypeEquipmentmodelDto);
+            Optional<TypeEquipmentEnum> optionalString = compareStringAndEnum(nameClassTypeEquipmentmodelDto, ConstantsClass.TYPE_EQUIPMENT_ENUM_LIST);
             if (optionalString.isPresent()){
                 return Optional.of(String.valueOf(optionalString.get()));
             }

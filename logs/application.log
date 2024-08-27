@@ -1153,3 +1153,1833 @@ java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegist
 2024-08-27 04:06:44 - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-08-27 04:06:44 - HikariPool-1 - Shutdown initiated...
 2024-08-27 04:06:44 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:16:20 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 2436 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:16:20 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:16:20 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:16:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:16:21 - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:16:22 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:16:22 - Starting service [Tomcat]
+2024-08-27 04:16:22 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:16:22 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:16:22 - Root WebApplicationContext: initialization completed in 1377 ms
+2024-08-27 04:16:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:16:22 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:16:22 - HHH000026: Second-level cache disabled
+2024-08-27 04:16:22 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:16:22 - HikariPool-1 - Starting...
+2024-08-27 04:16:22 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@734a149a
+2024-08-27 04:16:22 - HikariPool-1 - Start completed.
+2024-08-27 04:16:22 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:16:23 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "equipment" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:16:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:16:23 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:16:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:16:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:16:24 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:16:24 - Started PetRegisterOfEquipmentApplication in 4.466 seconds (process running for 4.855)
+2024-08-27 04:16:28 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:16:28 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:16:28 - Completed initialization in 1 ms
+2024-08-27 04:18:12 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: detached entity passed to persist: com.registerofequipment.petRegisterOfEquipment.models.Fridge] with root cause
+org.hibernate.PersistentObjectException: detached entity passed to persist: com.registerofequipment.petRegisterOfEquipment.models.Fridge
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:88)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:629)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy130.save(Unknown Source)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:106)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 04:27:01 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:27:01 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:27:01 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:27:19 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 30688 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:27:19 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:27:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:27:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:27:20 - Finished Spring Data repository scanning in 68 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:27:20 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:27:20 - Starting service [Tomcat]
+2024-08-27 04:27:20 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:27:20 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:27:20 - Root WebApplicationContext: initialization completed in 1282 ms
+2024-08-27 04:27:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:27:20 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:27:20 - HHH000026: Second-level cache disabled
+2024-08-27 04:27:21 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:27:21 - HikariPool-1 - Starting...
+2024-08-27 04:27:21 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ced17f3
+2024-08-27 04:27:21 - HikariPool-1 - Start completed.
+2024-08-27 04:27:21 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:27:22 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "equipment" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:27:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:27:22 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:27:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:27:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:27:23 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:27:23 - Started PetRegisterOfEquipmentApplication in 4.177 seconds (process running for 4.544)
+2024-08-27 04:27:27 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:27:27 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:27:27 - Completed initialization in 0 ms
+2024-08-27 04:27:36 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: detached entity passed to persist: com.registerofequipment.petRegisterOfEquipment.models.Fridge] with root cause
+org.hibernate.PersistentObjectException: detached entity passed to persist: com.registerofequipment.petRegisterOfEquipment.models.Fridge
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:88)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:629)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy130.save(Unknown Source)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:144)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 04:33:01 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:33:01 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:33:01 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:33:08 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 8196 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:33:08 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:33:08 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:33:09 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:33:09 - Finished Spring Data repository scanning in 65 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:33:09 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:33:09 - Starting service [Tomcat]
+2024-08-27 04:33:09 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:33:09 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:33:09 - Root WebApplicationContext: initialization completed in 1325 ms
+2024-08-27 04:33:10 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:33:10 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:33:10 - HHH000026: Second-level cache disabled
+2024-08-27 04:33:10 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:33:10 - HikariPool-1 - Starting...
+2024-08-27 04:33:10 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27d73d22
+2024-08-27 04:33:10 - HikariPool-1 - Start completed.
+2024-08-27 04:33:10 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:33:11 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "equipment" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:33:11 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:33:11 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:33:11 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:33:12 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:33:12 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:33:12 - Started PetRegisterOfEquipmentApplication in 4.221 seconds (process running for 4.584)
+2024-08-27 04:33:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:33:21 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:33:21 - Completed initialization in 1 ms
+2024-08-27 04:33:23 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessApiUsageException: detached entity passed to persist: com.registerofequipment.petRegisterOfEquipment.models.Fridge] with root cause
+org.hibernate.PersistentObjectException: detached entity passed to persist: com.registerofequipment.petRegisterOfEquipment.models.Fridge
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:88)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:799)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:747)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:290)
+	at org.hibernate.engine.spi.CascadingActions$7.cascade(CascadingActions.java:280)
+	at org.hibernate.engine.internal.Cascade.cascadeToOne(Cascade.java:517)
+	at org.hibernate.engine.internal.Cascade.cascadeAssociation(Cascade.java:439)
+	at org.hibernate.engine.internal.Cascade.cascadeProperty(Cascade.java:224)
+	at org.hibernate.engine.internal.Cascade.cascade(Cascade.java:157)
+	at org.hibernate.event.internal.AbstractSaveEventListener.cascadeBeforeSave(AbstractSaveEventListener.java:487)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:303)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:364)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
+	at jdk.proxy2/jdk.proxy2.$Proxy123.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:629)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy130.save(Unknown Source)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:146)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 04:34:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:34:52 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:34:52 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:34:59 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 11592 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:34:59 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:34:59 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:35:00 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:35:00 - Finished Spring Data repository scanning in 67 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:35:01 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:35:01 - Starting service [Tomcat]
+2024-08-27 04:35:01 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:35:01 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:35:01 - Root WebApplicationContext: initialization completed in 1354 ms
+2024-08-27 04:35:01 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:35:01 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:35:01 - HHH000026: Second-level cache disabled
+2024-08-27 04:35:01 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:35:01 - HikariPool-1 - Starting...
+2024-08-27 04:35:01 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a84338a
+2024-08-27 04:35:01 - HikariPool-1 - Start completed.
+2024-08-27 04:35:01 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:35:02 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "equipment" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:35:02 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:35:02 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:35:02 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:35:03 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:35:03 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:35:03 - Started PetRegisterOfEquipmentApplication in 4.417 seconds (process running for 5.163)
+2024-08-27 04:35:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:35:06 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:35:06 - Completed initialization in 0 ms
+2024-08-27 04:36:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:36:11 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:36:11 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:36:15 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 28784 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:36:15 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:36:15 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:36:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:36:16 - Finished Spring Data repository scanning in 70 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:36:17 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:36:17 - Starting service [Tomcat]
+2024-08-27 04:36:17 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:36:17 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:36:17 - Root WebApplicationContext: initialization completed in 1367 ms
+2024-08-27 04:36:17 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:36:17 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:36:17 - HHH000026: Second-level cache disabled
+2024-08-27 04:36:17 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:36:17 - HikariPool-1 - Starting...
+2024-08-27 04:36:17 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17d76ebb
+2024-08-27 04:36:17 - HikariPool-1 - Start completed.
+2024-08-27 04:36:17 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:36:18 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "equipment" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:36:18 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:36:18 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:36:18 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:36:19 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:36:19 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:36:19 - Started PetRegisterOfEquipmentApplication in 4.621 seconds (process running for 5.097)
+2024-08-27 04:36:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:36:23 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:36:23 - Completed initialization in 1 ms
+2024-08-27 04:37:12 - Resolved [org.springframework.web.context.request.async.AsyncRequestNotUsableException: ServletOutputStream failed to flush: java.nio.channels.ClosedChannelException]
+2024-08-27 04:37:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:37:12 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:37:12 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:37:21 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 2160 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:37:21 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:37:21 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:37:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:37:21 - Finished Spring Data repository scanning in 70 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:37:22 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:37:22 - Starting service [Tomcat]
+2024-08-27 04:37:22 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:37:22 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:37:22 - Root WebApplicationContext: initialization completed in 1325 ms
+2024-08-27 04:37:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:37:22 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:37:22 - HHH000026: Second-level cache disabled
+2024-08-27 04:37:22 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:37:22 - HikariPool-1 - Starting...
+2024-08-27 04:37:23 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b94c789
+2024-08-27 04:37:23 - HikariPool-1 - Start completed.
+2024-08-27 04:37:23 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:37:24 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "equipment" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:37:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:24 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:37:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:37:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:37:25 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:37:25 - Started PetRegisterOfEquipmentApplication in 4.472 seconds (process running for 4.912)
+2024-08-27 04:37:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:37:26 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:37:26 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:37:28 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 26812 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:37:28 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:37:28 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:37:29 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:37:29 - Finished Spring Data repository scanning in 74 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:37:29 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:37:30 - Starting service [Tomcat]
+2024-08-27 04:37:30 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:37:30 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:37:30 - Root WebApplicationContext: initialization completed in 1478 ms
+2024-08-27 04:37:30 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:37:30 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:37:30 - HHH000026: Second-level cache disabled
+2024-08-27 04:37:30 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:37:30 - HikariPool-1 - Starting...
+2024-08-27 04:37:30 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4bbf20d1
+2024-08-27 04:37:30 - HikariPool-1 - Start completed.
+2024-08-27 04:37:30 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:37:31 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "equipment" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:37:31 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:37:31 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:37:31 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:37:32 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:37:32 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:37:32 - Started PetRegisterOfEquipmentApplication in 4.725 seconds (process running for 5.184)
+2024-08-27 04:37:35 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:37:35 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:37:35 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:39:22 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 10988 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:39:22 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:39:22 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:39:23 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:39:23 - Finished Spring Data repository scanning in 71 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:39:23 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:39:24 - Starting service [Tomcat]
+2024-08-27 04:39:24 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:39:24 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:39:24 - Root WebApplicationContext: initialization completed in 1423 ms
+2024-08-27 04:39:24 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:39:24 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:39:24 - HHH000026: Second-level cache disabled
+2024-08-27 04:39:24 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:39:24 - HikariPool-1 - Starting...
+2024-08-27 04:39:24 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7540160e
+2024-08-27 04:39:24 - HikariPool-1 - Start completed.
+2024-08-27 04:39:24 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:39:25 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "equipment" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:39:25 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:25 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:39:25 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:39:26 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:39:26 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:39:26 - Started PetRegisterOfEquipmentApplication in 4.682 seconds (process running for 5.158)
+2024-08-27 04:39:26 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:39:26 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:39:26 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:39:30 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 5808 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:39:30 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:39:30 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:39:31 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:39:31 - Finished Spring Data repository scanning in 68 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:39:32 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:39:32 - Starting service [Tomcat]
+2024-08-27 04:39:32 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:39:32 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:39:32 - Root WebApplicationContext: initialization completed in 1350 ms
+2024-08-27 04:39:32 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:39:32 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:39:32 - HHH000026: Second-level cache disabled
+2024-08-27 04:39:32 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:39:32 - HikariPool-1 - Starting...
+2024-08-27 04:39:32 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38a38ed4
+2024-08-27 04:39:32 - HikariPool-1 - Start completed.
+2024-08-27 04:39:32 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:39:33 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "equipment" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:39:33 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:39:33 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:39:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:39:34 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:39:34 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:39:34 - Started PetRegisterOfEquipmentApplication in 4.414 seconds (process running for 4.885)
+2024-08-27 04:39:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:39:38 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:39:38 - Completed initialization in 1 ms
+2024-08-27 04:51:12 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:51:12 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:51:12 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:51:19 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 26584 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:51:19 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:51:19 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:51:20 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:51:20 - Finished Spring Data repository scanning in 66 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:51:20 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:51:20 - Starting service [Tomcat]
+2024-08-27 04:51:20 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:51:20 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:51:20 - Root WebApplicationContext: initialization completed in 1296 ms
+2024-08-27 04:51:20 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:51:20 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:51:20 - HHH000026: Second-level cache disabled
+2024-08-27 04:51:21 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:51:21 - HikariPool-1 - Starting...
+2024-08-27 04:51:21 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@734a149a
+2024-08-27 04:51:21 - HikariPool-1 - Start completed.
+2024-08-27 04:51:21 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:51:22 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "equipment" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:51:22 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:51:22 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:51:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:51:22 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:51:23 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:51:23 - Started PetRegisterOfEquipmentApplication in 4.19 seconds (process running for 4.57)
+2024-08-27 04:51:25 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:51:25 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:51:25 - Completed initialization in 1 ms
+2024-08-27 04:53:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:53:21 - HikariPool-1 - Shutdown initiated...
+2024-08-27 04:53:21 - HikariPool-1 - Shutdown completed.
+2024-08-27 04:53:24 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 14760 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 04:53:24 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 04:53:24 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 04:53:24 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 04:53:24 - Finished Spring Data repository scanning in 61 ms. Found 8 JPA repository interfaces.
+2024-08-27 04:53:25 - Tomcat initialized with port 8080 (http)
+2024-08-27 04:53:25 - Starting service [Tomcat]
+2024-08-27 04:53:25 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 04:53:25 - Initializing Spring embedded WebApplicationContext
+2024-08-27 04:53:25 - Root WebApplicationContext: initialization completed in 1207 ms
+2024-08-27 04:53:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 04:53:25 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 04:53:25 - HHH000026: Second-level cache disabled
+2024-08-27 04:53:25 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 04:53:25 - HikariPool-1 - Starting...
+2024-08-27 04:53:26 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@734a149a
+2024-08-27 04:53:26 - HikariPool-1 - Start completed.
+2024-08-27 04:53:26 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 04:53:26 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - отношение "types_equipment" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "equipment" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "television_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 04:53:26 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 04:53:26 - таблица "types_equipment" не существует, пропускается
+2024-08-27 04:53:26 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 04:53:27 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 04:53:27 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 04:53:27 - Started PetRegisterOfEquipmentApplication in 4.05 seconds (process running for 4.412)
+2024-08-27 04:53:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 04:53:29 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 04:53:29 - Completed initialization in 0 ms
+2024-08-27 05:02:27 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:02:27 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:02:27 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:02:36 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 12232 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:02:36 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:02:36 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:02:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:02:37 - Finished Spring Data repository scanning in 69 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:02:37 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:02:37 - Starting service [Tomcat]
+2024-08-27 05:02:37 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:02:37 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:02:37 - Root WebApplicationContext: initialization completed in 1292 ms
+2024-08-27 05:02:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:02:37 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:02:37 - HHH000026: Second-level cache disabled
+2024-08-27 05:02:37 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:02:37 - HikariPool-1 - Starting...
+2024-08-27 05:02:38 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6eed46e9
+2024-08-27 05:02:38 - HikariPool-1 - Start completed.
+2024-08-27 05:02:38 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:02:39 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "equipment" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:02:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:02:39 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:02:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:02:39 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:02:39 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:02:39 - Started PetRegisterOfEquipmentApplication in 4.212 seconds (process running for 4.591)
+2024-08-27 05:02:42 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:02:42 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:02:42 - Completed initialization in 1 ms
+2024-08-27 05:02:46 - com.registerofequipment.petRegisterOfEquipment.models.Fridge@77ce820e 1
+2024-08-27 05:04:28 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:04:28 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:04:28 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:04:46 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 18156 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:04:46 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:04:46 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:04:46 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:04:46 - Finished Spring Data repository scanning in 65 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:04:47 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:04:47 - Starting service [Tomcat]
+2024-08-27 05:04:47 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:04:47 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:04:47 - Root WebApplicationContext: initialization completed in 1392 ms
+2024-08-27 05:04:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:04:47 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:04:47 - HHH000026: Second-level cache disabled
+2024-08-27 05:04:48 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:04:48 - HikariPool-1 - Starting...
+2024-08-27 05:04:48 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4656fcc5
+2024-08-27 05:04:48 - HikariPool-1 - Start completed.
+2024-08-27 05:04:48 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:04:49 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "equipment" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:04:49 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:04:49 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:04:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:04:49 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:04:50 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:04:50 - Started PetRegisterOfEquipmentApplication in 4.59 seconds (process running for 4.97)
+2024-08-27 05:04:56 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:04:56 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:04:56 - Completed initialization in 0 ms
+2024-08-27 05:05:07 - RESSSULT Baylise-900 1
+2024-08-27 05:06:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:06:48 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:06:48 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:06:52 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 23212 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:06:52 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:06:52 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:06:53 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:06:53 - Finished Spring Data repository scanning in 71 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:06:53 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:06:53 - Starting service [Tomcat]
+2024-08-27 05:06:53 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:06:53 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:06:53 - Root WebApplicationContext: initialization completed in 1352 ms
+2024-08-27 05:06:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:06:54 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:06:54 - HHH000026: Second-level cache disabled
+2024-08-27 05:06:54 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:06:54 - HikariPool-1 - Starting...
+2024-08-27 05:06:54 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@628ba266
+2024-08-27 05:06:54 - HikariPool-1 - Start completed.
+2024-08-27 05:06:54 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:06:55 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "equipment" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:06:55 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:06:55 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:06:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:06:56 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:06:56 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:06:56 - Started PetRegisterOfEquipmentApplication in 4.498 seconds (process running for 4.851)
+2024-08-27 05:07:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:07:03 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:07:03 - Completed initialization in 1 ms
+2024-08-27 05:07:05 - RESSSULT Baylise-900 1
+2024-08-27 05:07:05 - RESSSULT 222222
+2024-08-27 05:08:29 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:08:29 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:08:29 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:08:32 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 14616 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:08:32 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:08:32 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:08:33 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:08:33 - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:08:34 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:08:34 - Starting service [Tomcat]
+2024-08-27 05:08:34 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:08:34 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:08:34 - Root WebApplicationContext: initialization completed in 1262 ms
+2024-08-27 05:08:34 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:08:34 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:08:34 - HHH000026: Second-level cache disabled
+2024-08-27 05:08:34 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:08:34 - HikariPool-1 - Starting...
+2024-08-27 05:08:34 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ad6ae45
+2024-08-27 05:08:34 - HikariPool-1 - Start completed.
+2024-08-27 05:08:34 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:08:35 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "equipment" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:08:35 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:08:35 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:08:35 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:08:36 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:08:36 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:08:36 - Started PetRegisterOfEquipmentApplication in 4.312 seconds (process running for 4.694)
+2024-08-27 05:08:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:08:38 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:08:38 - Completed initialization in 0 ms
+2024-08-27 05:08:38 - RESSSULT 233223232null
+2024-08-27 05:08:44 - RESSSULT Baylise-900 1
+2024-08-27 05:08:44 - RESSSULT 222222
+2024-08-27 05:08:44 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegisterOfEquipment.models.Fridge.getId()" because the return value of "com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment.getFridge()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegisterOfEquipment.models.Fridge.getId()" because the return value of "com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment.getFridge()" is null
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:149)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 05:10:33 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:10:33 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:10:33 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:10:37 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 28888 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:10:37 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:10:37 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:10:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:10:37 - Finished Spring Data repository scanning in 65 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:10:38 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:10:38 - Starting service [Tomcat]
+2024-08-27 05:10:38 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:10:38 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:10:38 - Root WebApplicationContext: initialization completed in 1242 ms
+2024-08-27 05:10:38 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:10:38 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:10:38 - HHH000026: Second-level cache disabled
+2024-08-27 05:10:38 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:10:38 - HikariPool-1 - Starting...
+2024-08-27 05:10:38 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75e0a54c
+2024-08-27 05:10:38 - HikariPool-1 - Start completed.
+2024-08-27 05:10:38 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:10:39 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "equipment" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:10:39 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:10:39 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:10:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:10:40 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:10:40 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:10:41 - Started PetRegisterOfEquipmentApplication in 4.411 seconds (process running for 4.797)
+2024-08-27 05:12:13 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:12:13 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:12:13 - Completed initialization in 0 ms
+2024-08-27 05:12:14 - RESSSULT 233223232null
+2024-08-27 05:12:15 - RESULT THIS THIS1
+2024-08-27 05:12:15 - RESSSULT 222222
+2024-08-27 05:12:15 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegisterOfEquipment.models.Fridge.getId()" because the return value of "com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment.getFridge()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegisterOfEquipment.models.Fridge.getId()" because the return value of "com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment.getFridge()" is null
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:148)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 05:19:11 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:19:11 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:19:11 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:19:20 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 10488 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:19:20 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:19:20 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:19:21 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:19:21 - Finished Spring Data repository scanning in 64 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:19:21 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:19:21 - Starting service [Tomcat]
+2024-08-27 05:19:21 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:19:21 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:19:21 - Root WebApplicationContext: initialization completed in 1281 ms
+2024-08-27 05:19:21 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:19:21 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:19:21 - HHH000026: Second-level cache disabled
+2024-08-27 05:19:22 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:19:22 - HikariPool-1 - Starting...
+2024-08-27 05:19:22 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c16677c
+2024-08-27 05:19:22 - HikariPool-1 - Start completed.
+2024-08-27 05:19:22 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:19:23 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "equipment" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:19:23 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:19:23 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:19:23 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:19:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:19:23 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:19:24 - Started PetRegisterOfEquipmentApplication in 4.177 seconds (process running for 4.535)
+2024-08-27 05:19:25 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:19:25 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:19:25 - Completed initialization in 1 ms
+2024-08-27 05:19:26 - RESSSULT 233223232null
+2024-08-27 05:19:27 - RESULT THIS THIS1
+2024-08-27 05:19:27 - RESSSULT 222222
+2024-08-27 05:19:27 - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegisterOfEquipment.models.Fridge.getId()" because the return value of "com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment.getFridge()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.registerofequipment.petRegisterOfEquipment.models.Fridge.getId()" because the return value of "com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment.getFridge()" is null
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:148)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-27 05:35:17 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:35:17 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:35:18 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:35:21 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 6296 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:35:21 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:35:21 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:35:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:35:22 - Finished Spring Data repository scanning in 64 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:35:22 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:35:22 - Starting service [Tomcat]
+2024-08-27 05:35:22 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:35:22 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:35:22 - Root WebApplicationContext: initialization completed in 1242 ms
+2024-08-27 05:35:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:35:23 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:35:23 - HHH000026: Second-level cache disabled
+2024-08-27 05:35:23 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:35:23 - HikariPool-1 - Starting...
+2024-08-27 05:35:23 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30dd00b6
+2024-08-27 05:35:23 - HikariPool-1 - Start completed.
+2024-08-27 05:35:23 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:35:24 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "equipment" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:35:24 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:35:24 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:35:24 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:35:24 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:35:25 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:35:25 - Started PetRegisterOfEquipmentApplication in 4.066 seconds (process running for 4.443)
+2024-08-27 05:35:26 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:35:26 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:35:26 - Completed initialization in 1 ms
+2024-08-27 05:35:29 - RESULT THIS THIS1
+2024-08-27 05:35:29 - RESSSULT 222222
+2024-08-27 05:38:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:38:31 - HikariPool-1 - Shutdown initiated...
+2024-08-27 05:38:31 - HikariPool-1 - Shutdown completed.
+2024-08-27 05:38:35 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 20640 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 05:38:35 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 05:38:35 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 05:38:36 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 05:38:36 - Finished Spring Data repository scanning in 63 ms. Found 8 JPA repository interfaces.
+2024-08-27 05:38:36 - Tomcat initialized with port 8080 (http)
+2024-08-27 05:38:36 - Starting service [Tomcat]
+2024-08-27 05:38:36 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 05:38:36 - Initializing Spring embedded WebApplicationContext
+2024-08-27 05:38:36 - Root WebApplicationContext: initialization completed in 1345 ms
+2024-08-27 05:38:36 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 05:38:37 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 05:38:37 - HHH000026: Second-level cache disabled
+2024-08-27 05:38:37 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 05:38:37 - HikariPool-1 - Starting...
+2024-08-27 05:38:37 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27d73d22
+2024-08-27 05:38:37 - HikariPool-1 - Start completed.
+2024-08-27 05:38:37 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 05:38:38 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - отношение "types_equipment" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "equipment" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "television_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 05:38:38 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 05:38:38 - таблица "types_equipment" не существует, пропускается
+2024-08-27 05:38:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 05:38:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 05:38:39 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 05:38:39 - Started PetRegisterOfEquipmentApplication in 4.26 seconds (process running for 4.645)
+2024-08-27 05:38:41 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 05:38:41 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 05:38:41 - Completed initialization in 1 ms
+2024-08-27 05:38:43 - RESSSULT 222222
+2024-08-27 05:38:44 - RESSSULT 222222
+2024-08-27 05:38:45 - RESSSULT 222222
+2024-08-27 05:41:16 - Возникла ошибка в системе
+com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption: Возникла ошибка в системе
+	at com.registerofequipment.petRegisterOfEquipment.mapper.commosmapper.TypesEquipmentMapper.ifTypeTypeOfEquipmentNotEqualSelectEquipment(TypesEquipmentMapper.java:125)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.validateThatTypeTypeOfEquipmentModelsEqualSelectEquipment(ModelService.java:129)
+	at com.registerofequipment.petRegisterOfEquipment.service.ModelService.createPosition(ModelService.java:78)
+	at com.registerofequipment.petRegisterOfEquipment.controller.ModelController.addModel(ModelController.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption: выбранный вид техники в классе-модели не совпадает с видом техники в позиции, к которой привязана модель. Проверьте запрос и попробуйте ещё раз
+	... 52 common frames omitted
+2024-08-27 06:01:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 06:01:18 - HikariPool-1 - Shutdown initiated...
+2024-08-27 06:01:18 - HikariPool-1 - Shutdown completed.
+2024-08-27 06:01:28 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 21828 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 06:01:28 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 06:01:28 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 06:01:29 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 06:01:29 - Finished Spring Data repository scanning in 110 ms. Found 8 JPA repository interfaces.
+2024-08-27 06:01:30 - Tomcat initialized with port 8080 (http)
+2024-08-27 06:01:30 - Starting service [Tomcat]
+2024-08-27 06:01:30 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-27 06:01:30 - Initializing Spring embedded WebApplicationContext
+2024-08-27 06:01:30 - Root WebApplicationContext: initialization completed in 2119 ms
+2024-08-27 06:01:30 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 06:01:30 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 06:01:30 - HHH000026: Second-level cache disabled
+2024-08-27 06:01:31 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 06:01:31 - HikariPool-1 - Starting...
+2024-08-27 06:01:31 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a9869a8
+2024-08-27 06:01:31 - HikariPool-1 - Start completed.
+2024-08-27 06:01:31 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 06:01:32 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "equipment" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "television_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 06:01:32 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:01:32 - таблица "types_equipment" не существует, пропускается
+2024-08-27 06:01:33 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 06:01:33 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 06:01:34 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 06:01:34 - Started PetRegisterOfEquipmentApplication in 7.071 seconds (process running for 7.708)
+2024-08-27 06:01:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-27 06:01:53 - Initializing Servlet 'dispatcherServlet'
+2024-08-27 06:01:53 - Completed initialization in 2 ms
+2024-08-27 06:02:56 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 06:02:56 - HikariPool-1 - Shutdown initiated...
+2024-08-27 06:02:56 - HikariPool-1 - Shutdown completed.
+2024-08-27 06:03:02 - Starting PetRegisterOfEquipmentApplication using Java 21.0.4 with PID 12540 (D:\petRegisterOfEquipment\target\classes started by vadim in D:\petRegisterOfEquipment)
+2024-08-27 06:03:02 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-27 06:03:02 - No active profile set, falling back to 1 default profile: "default"
+2024-08-27 06:03:04 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-27 06:03:04 - Finished Spring Data repository scanning in 138 ms. Found 8 JPA repository interfaces.
+2024-08-27 06:03:05 - Tomcat initialized with port 8080 (http)
+2024-08-27 06:03:05 - Root WebApplicationContext: initialization completed in 2382 ms
+2024-08-27 06:03:05 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-27 06:03:05 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-27 06:03:05 - HHH000026: Second-level cache disabled
+2024-08-27 06:03:06 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-27 06:03:06 - HikariPool-1 - Starting...
+2024-08-27 06:03:06 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e97f115
+2024-08-27 06:03:06 - HikariPool-1 - Start completed.
+2024-08-27 06:03:06 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-27 06:03:08 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "tmodel_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - отношение "types_equipment" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "equipment" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "fridge_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "hoover_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "personal_computer_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "smartphone_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "television_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "tmodel_tech" не существует, пропускается
+2024-08-27 06:03:08 - SQL Warning Code: 0, SQLState: 00000
+2024-08-27 06:03:08 - таблица "types_equipment" не существует, пропускается
+2024-08-27 06:03:08 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 06:03:09 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-27 06:03:09 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-27 06:03:09 - Started PetRegisterOfEquipmentApplication in 7.722 seconds (process running for 8.495)
+2024-08-27 06:03:09 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-27 06:03:09 - HikariPool-1 - Shutdown initiated...
+2024-08-27 06:03:09 - HikariPool-1 - Shutdown completed.

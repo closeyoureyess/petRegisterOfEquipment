@@ -2,6 +2,9 @@ package com.registerofequipment.petRegisterOfEquipment.controller;
 
 
 import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDto;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import com.registerofequipment.petRegisterOfEquipment.service.EquipmentService;
 import jakarta.validation.constraints.Min;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,24 +22,12 @@ public class EquipmentController {
     private EquipmentService equipmentService;
 
     @PostMapping("/create/equipment")
-    public ResponseEntity<EquipmentDto> addEquipment(@RequestBody EquipmentDto equipmentDto) {
-        EquipmentDto localEquipment = null;
-        try {
-            localEquipment = equipmentService.createPosition(equipmentDto);
-        } catch (
-                com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption nameTypeTechnicExeption) {
-            throw new RuntimeException(nameTypeTechnicExeption);
-        } catch (
-                com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption differentTypesEquipmentExeption) {
-            throw new RuntimeException(differentTypesEquipmentExeption);
-        } catch (
-                com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption fieldsEmptyExeption) {
-            throw new RuntimeException(fieldsEmptyExeption);
+    public ResponseEntity<EquipmentDto> addEquipment(@RequestBody EquipmentDto equipmentDto) throws NameTypeTechnicExeption, DifferentTypesEquipmentExeption, FieldsEmptyExeption {
+        EquipmentDto localEquipment = equipmentService.createPosition(equipmentDto);
+            if (localEquipment != null){
+                return ResponseEntity.ok(localEquipment);
         }
-        if (localEquipment != null) {
-            return ResponseEntity.ok(localEquipment);
-        }
-        return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().build();
     }
 
     @GetMapping("/gen-info/{nameTypeTechnicOrColorOrPrice}")

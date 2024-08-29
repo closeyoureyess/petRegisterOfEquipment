@@ -2,11 +2,17 @@ package com.registerofequipment.petRegisterOfEquipment.common;
 
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "tmodel_tech")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Model {
 
     @Id
@@ -31,95 +37,6 @@ public class Model {
     private Integer price;
     @Column(name = "availability_tmodel")
     private Boolean isAvailability;
-
-    public Model(Integer id, String nameDevice, TypesEquipment typesEquipment, Equipment equipmentField, Integer serialNumber, ColorEquipment color,
-                 Integer size, Integer price, Boolean isAvailability) {
-        this.id = id;
-        this.nameDevice = nameDevice;
-        this.typesEquipment = typesEquipment;
-        this.equipmentField = equipmentField;
-        this.serialNumber = serialNumber;
-        this.color = color;
-        this.size = size;
-        this.price = price;
-        this.isAvailability = isAvailability;
-    }
-
-    public Model(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNameDevice() {
-        return nameDevice;
-    }
-
-    public void setNameDevice(String nameDevice) {
-        this.nameDevice = nameDevice;
-    }
-
-    public TypesEquipment getTypesEquipment() {
-        return typesEquipment;
-    }
-
-    public void setTypesEquipment(TypesEquipment typesEquipment) {
-        this.typesEquipment = typesEquipment;
-    }
-
-    public Integer getSerialNumber() {
-        return serialNumber;
-    }
-
-    public void setSerialNumber(Integer serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public ColorEquipment getColor() {
-        return color;
-    }
-
-    public void setColor(ColorEquipment color) {
-        this.color = color;
-    }
-
-    public Integer getSize() {
-        return size;
-    }
-
-    public void setSize(Integer size) {
-        this.size = size;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public Boolean getIsAvailability() {
-        return isAvailability;
-    }
-
-    public void setAvailability(Boolean availability) {
-        isAvailability = availability;
-    }
-
-    public Equipment getEquipmentField() {
-        return equipmentField;
-    }
-
-    public void setEquipmentField(Equipment equipmentField) {
-        this.equipmentField = equipmentField;
-    }
 
     @Override
     public boolean equals(Object o) {

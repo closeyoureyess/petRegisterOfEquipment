@@ -173,7 +173,7 @@ public class ModelService implements CRUDServices<ModelDto, ModelDto> {
             existingModel.setPrice(modelDto.getPrice());
         }
         if (modelDto.getIsAvailability() != null) {
-            existingModel.setAvailability(modelDto.getIsAvailability());
+            existingModel.setIsAvailability(modelDto.getIsAvailability());
         }
 
         // Сохраняем обновленную модель

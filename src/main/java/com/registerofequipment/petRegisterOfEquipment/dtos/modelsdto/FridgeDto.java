@@ -3,73 +3,18 @@ package com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto;
 import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToOne;
+import lombok.*;
 
 import java.io.Serializable;
 
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class FridgeDto implements Serializable {
     private Integer id;
     private Integer countsDoor;
     private String typeCompressor;
     private Integer serviceFlag;
-    @OneToOne(mappedBy = "fridge", fetch = FetchType.LAZY)
-    private TypesEquipment typesEquipment;
-
-
-    public FridgeDto(Integer id, Integer countsDoor, String typeCompressor, Integer serviceFlag) {
-        this.id = id;
-        this.countsDoor = countsDoor;
-        this.typeCompressor = typeCompressor;
-        this.serviceFlag = serviceFlag;
-    }
-
-    public FridgeDto(Integer id, Integer countsDoor, String typeCompressor) {
-        this.id = id;
-        this.countsDoor = countsDoor;
-        this.typeCompressor = typeCompressor;
-    }
-
-    public FridgeDto(Integer countsDoor, String typeCompressor) {
-        this.countsDoor = countsDoor;
-        this.typeCompressor = typeCompressor;
-    }
-
-    public FridgeDto(String typeCompressor) {
-        this.typeCompressor = typeCompressor;
-    }
-
-    public FridgeDto(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getCountsDoor() {
-        return countsDoor;
-    }
-
-    public void setCountsDoor(Integer countsDoor) {
-        this.countsDoor = countsDoor;
-    }
-
-    public String getTypeCompressor() {
-        return typeCompressor;
-    }
-
-    public void setTypeCompressor(String typeCompressor) {
-        this.typeCompressor = typeCompressor;
-    }
-
-    public Integer getServiceFlag() {
-        return serviceFlag;
-    }
-
-    public void setServiceFlag(Integer serviceFlag) {
-        this.serviceFlag = serviceFlag;
-    }
 }

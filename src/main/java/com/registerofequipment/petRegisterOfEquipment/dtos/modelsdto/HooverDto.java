@@ -1,65 +1,21 @@
 package com.registerofequipment.petRegisterOfEquipment.dtos.modelsdto;
 
+import lombok.*;
+
 import java.io.Serializable;
 import java.util.Objects;
 
-
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class HooverDto implements Serializable {
 
     private Integer id;
     private Integer sizeDustCollect;
     private Integer countsRegime;
     private Integer serviceFlag;
-
-    public HooverDto(Integer id, Integer sizeDustCollect, Integer countsRegime, Integer serviceFlag) {
-        this.id = id;
-        this.sizeDustCollect = sizeDustCollect;
-        this.countsRegime = countsRegime;
-        this.serviceFlag = serviceFlag;
-    }
-
-    public HooverDto(Integer id, Integer sizeDustCollect, Integer countsRegime) {
-        this.id = id;
-        this.sizeDustCollect = sizeDustCollect;
-        this.countsRegime = countsRegime;
-    }
-
-
-    public HooverDto(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getSizeDustCollect() {
-        return sizeDustCollect;
-    }
-
-    public void setSizeDustCollect(Integer sizeDustCollect) {
-        this.sizeDustCollect = sizeDustCollect;
-    }
-
-    public Integer getCountsRegime() {
-        return countsRegime;
-    }
-
-    public void setCountsRegime(Integer countsRegime) {
-        this.countsRegime = countsRegime;
-    }
-
-    public Integer getServiceFlag() {
-        return serviceFlag;
-    }
-
-    public void setServiceFlag(Integer serviceFlag) {
-        this.serviceFlag = serviceFlag;
-    }
 
     @Override
     public boolean equals(Object o) {

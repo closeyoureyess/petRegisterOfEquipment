@@ -42,7 +42,7 @@ public class ModelMapper {
                 model.setPrice(modelDto.getPrice());
             }
             if (modelDto.getIsAvailability() != null) {
-                model.setAvailability(modelDto.getIsAvailability());
+                model.setIsAvailability(modelDto.getIsAvailability());
             }
         }
         return model;
@@ -74,7 +74,7 @@ public class ModelMapper {
                 modelDto.setPrice(model.getPrice());
             }
             if (model.getIsAvailability() != null) {
-                modelDto.setAvailability(model.getIsAvailability());
+                modelDto.setIsAvailability(model.getIsAvailability());
             }
         }
         return modelDto;

@@ -2,10 +2,16 @@ package com.registerofequipment.petRegisterOfEquipment.dtos.commondto;
 
 import com.registerofequipment.petRegisterOfEquipment.dtos.TypesEquipmentDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Objects;
 
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class ModelDto implements Serializable {
 
     private Integer id;
@@ -17,96 +23,6 @@ public class ModelDto implements Serializable {
     private Integer size;
     private Integer price;
     private Boolean isAvailability;
-
-    public ModelDto(Integer id, String nameDevice, TypesEquipmentDto typesEquipmentDto,
-                    EquipmentDto equipmentDto, Integer serialNumber, ColorEquipment color, Integer size, Integer price, Boolean isAvailability) {
-        this.id = id;
-        this.nameDevice = nameDevice;
-        this.typesEquipmentDto = typesEquipmentDto;
-        this.equipmentDto = equipmentDto;
-        this.serialNumber = serialNumber;
-        this.color = color;
-        this.size = size;
-        this.price = price;
-        this.isAvailability = isAvailability;
-    }
-
-    public ModelDto(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNameDevice() {
-        return nameDevice;
-    }
-
-    public void setNameDevice(String nameDevice) {
-        this.nameDevice = nameDevice;
-    }
-
-    public TypesEquipmentDto getTypesEquipmentDto() {
-        return typesEquipmentDto;
-    }
-
-    public void setTypesEquipmentDto(TypesEquipmentDto typesEquipmentDto) {
-        this.typesEquipmentDto = typesEquipmentDto;
-    }
-
-    public Integer getSerialNumber() {
-        return serialNumber;
-    }
-
-    public void setSerialNumber(Integer serialNumber) {
-        this.serialNumber = serialNumber;
-    }
-
-    public ColorEquipment getColor() {
-        return color;
-    }
-
-    public void setColor(ColorEquipment color) {
-        this.color = color;
-    }
-
-    public Integer getSize() {
-        return size;
-    }
-
-    public void setSize(Integer size) {
-        this.size = size;
-    }
-
-    public Integer getPrice() {
-        return price;
-    }
-
-    public void setPrice(Integer price) {
-        this.price = price;
-    }
-
-    public Boolean getIsAvailability() {
-        return isAvailability;
-    }
-
-    public void setAvailability(Boolean availability) {
-        isAvailability = availability;
-    }
-
-    public EquipmentDto getEquipmentDto() {
-        return equipmentDto;
-    }
-
-    public void setEquipmentDto(EquipmentDto equipmentDto) {
-        this.equipmentDto = equipmentDto;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

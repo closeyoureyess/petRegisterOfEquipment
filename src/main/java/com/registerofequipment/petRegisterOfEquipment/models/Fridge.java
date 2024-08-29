@@ -2,11 +2,17 @@ package com.registerofequipment.petRegisterOfEquipment.models;
 
 import com.registerofequipment.petRegisterOfEquipment.common.TypesEquipment;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "fridge_tech")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Fridge {
 
     @Id
@@ -18,69 +24,6 @@ public class Fridge {
     private String typeCompressor;
     @Transient
     private Integer serviceFlag;
-
-    public Fridge(Integer id, Integer countsDoor, String typeCompressor, Integer serviceFlag) {
-        this.id = id;
-        this.countsDoor = countsDoor;
-        this.typeCompressor = typeCompressor;
-        this.serviceFlag = serviceFlag;
-    }
-
-    public Fridge(Integer id, Integer countsDoor, String typeCompressor) {
-        this.id = id;
-        this.countsDoor = countsDoor;
-        this.typeCompressor = typeCompressor;
-    }
-
-    public Fridge(Integer id, Integer countsDoor){
-        this.id = id;
-        this.countsDoor = countsDoor;
-    }
-
-    public Fridge(Integer countsDoor, String typeCompressor){
-        this.countsDoor = countsDoor;
-        this.typeCompressor = typeCompressor;
-    }
-
-    public Fridge(Integer id){
-        this.id = id;
-    }
-
-    public Fridge(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getCountsDoor() {
-        return countsDoor;
-    }
-
-    public void setCountsDoor(Integer countsDoor) {
-        this.countsDoor = countsDoor;
-    }
-
-    public String getTypeCompressor() {
-        return typeCompressor;
-    }
-
-    public void setTypeCompressor(String typeCompressor) {
-        this.typeCompressor = typeCompressor;
-    }
-
-    public Integer getServiceFlag() {
-        return serviceFlag;
-    }
-
-    public void setServiceFlag(Integer serviceFlag) {
-        this.serviceFlag = serviceFlag;
-    }
 
     @Override
     public boolean equals(Object o) {

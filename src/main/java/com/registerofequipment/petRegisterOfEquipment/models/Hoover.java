@@ -1,12 +1,18 @@
 package com.registerofequipment.petRegisterOfEquipment.models;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Objects;
 
 
 @Entity
 @Table(name = "hoover_tech")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Hoover {
 
     @Id
@@ -18,64 +24,6 @@ public class Hoover {
     private Integer countsRegime;
     @Transient
     private Integer serviceFlag;
-
-    public Hoover(Integer id, Integer sizeDustCollect, Integer countsRegime, Integer serviceFlag) {
-        this.id = id;
-        this.sizeDustCollect = sizeDustCollect;
-        this.countsRegime = countsRegime;
-        this.serviceFlag = serviceFlag;
-    }
-
-    public Hoover(Integer id, Integer sizeDustCollect, Integer countsRegime) {
-        this.id = id;
-        this.sizeDustCollect = sizeDustCollect;
-        this.countsRegime = countsRegime;
-    }
-
-    public Hoover(Integer id, Integer sizeDustCollect) {
-        this.id = id;
-        this.sizeDustCollect = sizeDustCollect;
-    }
-
-    public Hoover(Integer id) {
-        this.id = id;
-    }
-
-    public Hoover(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public Integer getSizeDustCollect() {
-        return sizeDustCollect;
-    }
-
-    public void setSizeDustCollect(Integer sizeDustCollect) {
-        this.sizeDustCollect = sizeDustCollect;
-    }
-
-    public Integer getCountsRegime() {
-        return countsRegime;
-    }
-
-    public void setCountsRegime(Integer countsRegime) {
-        this.countsRegime = countsRegime;
-    }
-
-    public Integer getServiceFlag() {
-        return serviceFlag;
-    }
-
-    public void setServiceFlag(Integer serviceFlag) {
-        this.serviceFlag = serviceFlag;
-    }
 
     @Override
     public boolean equals(Object o) {

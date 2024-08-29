@@ -2,12 +2,18 @@ package com.registerofequipment.petRegisterOfEquipment.common;
 
 import com.registerofequipment.petRegisterOfEquipment.others.TypeEquipmentEnum;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "equipment")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Equipment {
 
     @Id
@@ -29,85 +35,14 @@ public class Equipment {
     @Transient
     private Integer serviceFlag;
 
-    public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,
-                     Boolean isOrderOnline, Boolean isPossibilityInstallments, Integer serviceFlag) {
+    public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany, Boolean isOrderOnline,
+                     Boolean isPossibilityInstallments) {
         this.id = id;
         this.nameTypeTechnic = nameTypeTechnic;
         this.manufacturerCountry = manufacturerCountry;
         this.manufacturerCompany = manufacturerCompany;
         this.isOrderOnline = isOrderOnline;
         this.isPossibilityInstallments = isPossibilityInstallments;
-        this.serviceFlag = serviceFlag;
-    }
-
-    public Equipment(Integer id, TypeEquipmentEnum nameTypeTechnic, String manufacturerCountry, String manufacturerCompany,
-                     Boolean isOrderOnline, Boolean isPossibilityInstallments) {
-        this.id = id;
-        this.nameTypeTechnic = nameTypeTechnic;
-        this.manufacturerCountry = manufacturerCountry;
-        this.manufacturerCompany = manufacturerCompany;
-        this.isOrderOnline = isOrderOnline;
-        this.isPossibilityInstallments = isPossibilityInstallments;
-    }
-
-    public Equipment() {
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public TypeEquipmentEnum getNameTypeTechnic() {
-        return nameTypeTechnic;
-    }
-
-    public void setNameTypeTechnic(TypeEquipmentEnum nameTypeTechnic) {
-        this.nameTypeTechnic = nameTypeTechnic;
-    }
-
-    public String getManufacturerCountry() {
-        return manufacturerCountry;
-    }
-
-    public void setManufacturerCountry(String manufacturerCountry) {
-        this.manufacturerCountry = manufacturerCountry;
-    }
-
-    public String getManufacturerCompany() {
-        return manufacturerCompany;
-    }
-
-    public void setManufacturerCompany(String manufacturerCompany) {
-        this.manufacturerCompany = manufacturerCompany;
-    }
-
-    public Boolean getIsOrderOnline() {
-        return isOrderOnline;
-    }
-
-    public void setIsOrderOnline(Boolean orderOnline) {
-        isOrderOnline = orderOnline;
-    }
-
-    public Boolean getIsPossibilityInstallments() {
-        return isPossibilityInstallments;
-    }
-
-    public void setIsPossibilityInstallments(Boolean possibilityInstallments) {
-        isPossibilityInstallments = possibilityInstallments;
-    }
-
-    public Integer getServiceFlag() {
-        return serviceFlag;
-    }
-
-    public void setServiceFlag(Integer serviceFlag) {
-        this.serviceFlag = serviceFlag;
     }
 
     @Override

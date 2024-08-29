@@ -1,11 +1,17 @@
 package com.registerofequipment.petRegisterOfEquipment.models;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "television_tech")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Television {
 
     @Id
@@ -17,69 +23,6 @@ public class Television {
     private String technology;
     @Transient
     private Integer serviceFlag;
-
-    public Television(Integer id, String category, String technology, Integer serviceFlag) {
-        this.id = id;
-        this.category = category;
-        this.technology = technology;
-        this.serviceFlag = serviceFlag;
-    }
-
-    public Television(Integer id, String category, String technology) {
-        this.id = id;
-        this.category = category;
-        this.technology = technology;
-    }
-
-    public Television(Integer id, String category) {
-        this.id = id;
-        this.category = category;
-    }
-
-    public Television(String category, String technology) {
-        this.category = category;
-        this.technology = technology;
-    }
-
-    public Television(Integer id) {
-        this.id = id;
-    }
-
-    public Television(){
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getTechnology() {
-        return technology;
-    }
-
-    public void setTechnology(String technology) {
-        this.technology = technology;
-    }
-
-    public Integer getServiceFlag() {
-        return serviceFlag;
-    }
-
-    public void setServiceFlag(Integer serviceFlag) {
-        this.serviceFlag = serviceFlag;
-    }
 
     @Override
     public boolean equals(Object o) {

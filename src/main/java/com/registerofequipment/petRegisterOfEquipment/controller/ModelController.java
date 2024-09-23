@@ -5,6 +5,7 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.ModelDto;
 import com.registerofequipment.petRegisterOfEquipment.others.ColorEquipment;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
+import com.registerofequipment.petRegisterOfEquipment.others.exeptions.MainException;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
 import com.registerofequipment.petRegisterOfEquipment.service.ModelService;
 import jakarta.validation.constraints.Min;
@@ -13,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/model")
@@ -23,7 +23,7 @@ public class ModelController {
     private ModelService modelService;
 
     @PostMapping("/create")
-    public ResponseEntity<ModelDto> addModel(@RequestBody ModelDto modelDto) throws NameTypeTechnicExeption, DifferentTypesEquipmentExeption, FieldsEmptyExeption {
+    public ResponseEntity<ModelDto> addModel(@RequestBody ModelDto modelDto) throws MainException {
         ModelDto localModelDto = modelService.createPosition(modelDto);
         if (localModelDto != null) {
             return ResponseEntity.ok(localModelDto);

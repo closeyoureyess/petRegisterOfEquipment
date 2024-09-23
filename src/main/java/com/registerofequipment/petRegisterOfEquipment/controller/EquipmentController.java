@@ -6,7 +6,7 @@ import com.registerofequipment.petRegisterOfEquipment.dtos.commondto.EquipmentDt
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.DifferentTypesEquipmentExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.FieldsEmptyExeption;
 import com.registerofequipment.petRegisterOfEquipment.others.exeptions.NameTypeTechnicExeption;
-import com.registerofequipment.petRegisterOfEquipment.service.EquipmentService;
+import com.registerofequipment.petRegisterOfEquipment.service.EquipmentServiceImpl;
 import jakarta.validation.constraints.Min;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +20,7 @@ import java.util.Optional;
 public class EquipmentController {
 
     @Autowired
-    private EquipmentService equipmentService;
+    private EquipmentServiceImpl equipmentService;
 
     @PostMapping("/create/equipment")
     public ResponseEntity<EquipmentDto> addEquipment(@RequestBody EquipmentDto equipmentDto) throws NameTypeTechnicExeption, DifferentTypesEquipmentExeption, FieldsEmptyExeption {
